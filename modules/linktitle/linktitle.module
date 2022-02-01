@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * Linktitle module.
+ */
+
+use Drupal\Core\Url;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function linktitle_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.linktitle':
+      $formats_overview = Url::fromRoute('filter.admin_overview');
+
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('To use the <em>Link title</em> filter, enable it for one or more of your <a href=":text_formats">text formats</a>.', [
+        ':text_formats' => $formats_overview->toString(),
+      ]) . '</p>';
+      $output .= '<p>' . t('If you also enable other filters that act on links make sure that the one that needs to take precedence is the last one called in the filter processing order. For instance when using the <em>Convert URLs into links</em> filter from core, the <em>Linkt title</em> filter should be placed after the <em>Convert URLs</em> filter in the filter processing order.') . '</p>';
+      $output .= '<p>' . t('Because the <code>title</code> attribute will be added in the output only, there is no need to add the title attribute to an <code>a</code> element when HTML tags are limited.') . '</p>';
+      return $output;
+  }
+}

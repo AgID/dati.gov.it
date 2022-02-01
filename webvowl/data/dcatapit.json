@@ -1,0 +1,1874 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.2.0), http://vowl.visualdataweb.org",
+  "namespace" : [ ],
+  "header" : {
+    "languages" : [ "IRI-based", "t", "en", "it", "undefined" ],
+    "title" : {
+      "en" : "DCAT-AP IT - The Italian application profile for metadata of datasets",
+      "it" : "DCAT-AP IT - Ontologia del profilo nazionale  dei metadati dei dati della PA"
+    },
+    "iri" : "http://dati.gov.it/onto/dcatapit",
+    "version" : "http://dati.gov.it/onto/dcatapit/2.0",
+    "author" : [ "AgID - Agenzia per l'Italia Digitale" ],
+    "description" : {
+      "en" : "This is version 2.0 (2016-03-18) of the ontology of the Italian application profile for the metadata that describe catalogues and data of  Italian Public Administrations (DCAT-AP_IT).",
+      "it" : "Versione 2.0 del 18-03-2016 dell'ontologia del Profilo italiano dei metadati che descrivono dati, e cataloghi di dati, delle pubbliche amministrazioni (DCAT-AP_IT).",
+      "undefined" : "http://www.dati.gov.it/sites/default/files/DCAT-AP_IT_UML.png"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://creativecommons.org/licenses/by/3.0/it/",
+        "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "it",
+        "value" : "Gruppo di lavoro su Profilo Nazionale Metadati - Regione Piemonte, Provincia autonoma di Trento, CISIS, Protezione Civile e Istat",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "en",
+        "value" : "Working Group on National metadata profile DCAT-AP IT - Regione Piemonte, Provincia Autonoma di Trento, CISIS, Protezione Civile and ISTAT",
+        "type" : "label"
+      } ],
+      "rights" : [ {
+        "identifier" : "rights",
+        "language" : "it",
+        "value" : "Attribuzione - http://creativecommons.org/licenses/by/3.0/it/legalcode",
+        "type" : "label"
+      }, {
+        "identifier" : "rights",
+        "language" : "en",
+        "value" : "Attribution - http://creativecommons.org/licenses/by/3.0/it/legalcode",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2016-03-18",
+        "type" : "label"
+      } ],
+      "comment" : [ {
+        "identifier" : "comment",
+        "language" : "it",
+        "value" : "Questa è la versione 2.0 dell'ontologia  - Ultima modifica del 18 marzo 2016. L'ontologia è definita sulla base del profilo DCAT-AP 1.1 rilasciato dalla Commissione Europea, nel contesto del programma ISA, lo scorso Novembre 2015.",
+        "type" : "label"
+      }, {
+        "identifier" : "comment",
+        "language" : "en",
+        "value" : "This is 2.0 version  of the ontology - last update on 18th March 2016. The ontology is built upon DCAT-AP version 1.1 released by the European Commission, in the context of the ISA programme, on November 2015.",
+        "type" : "label"
+      } ]
+    }
+  },
+  "metrics" : {
+    "classCount" : 32,
+    "datatypeCount" : 19,
+    "objectPropertyCount" : 29,
+    "datatypePropertyCount" : 19,
+    "propertyCount" : 48,
+    "nodeCount" : 51,
+    "axiomCount" : 634,
+    "individualCount" : 1
+  },
+  "class" : [ {
+    "id" : "class17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class13",
+    "type" : "externalclass"
+  }, {
+    "id" : "class26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class23",
+    "type" : "externalclass"
+  }, {
+    "id" : "class19",
+    "type" : "externalclass"
+  }, {
+    "id" : "class12",
+    "type" : "externalclass"
+  }, {
+    "id" : "class22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class29",
+    "type" : "externalclass"
+  }, {
+    "id" : "class2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class5",
+    "type" : "externalclass"
+  }, {
+    "id" : "class21",
+    "type" : "externalclass"
+  }, {
+    "id" : "class20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class1",
+    "type" : "externalclass"
+  }, {
+    "id" : "class8",
+    "type" : "externalclass"
+  }, {
+    "id" : "class27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class4",
+    "type" : "externalclass"
+  }, {
+    "id" : "class3",
+    "type" : "externalclass"
+  }, {
+    "id" : "class14",
+    "type" : "externalclass"
+  }, {
+    "id" : "class16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class9",
+    "type" : "externalclass"
+  }, {
+    "id" : "class15",
+    "type" : "externalclass"
+  }, {
+    "id" : "class25",
+    "type" : "externalclass"
+  }, {
+    "id" : "class6",
+    "type" : "externalclass"
+  }, {
+    "id" : "class30",
+    "type" : "externalclass"
+  }, {
+    "id" : "class28",
+    "type" : "externalclass"
+  }, {
+    "id" : "class18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class10",
+    "type" : "externalclass"
+  }, {
+    "id" : "class24",
+    "type" : "externalclass"
+  }, {
+    "id" : "class7",
+    "type" : "externalclass"
+  }, {
+    "id" : "class31",
+    "type" : "externalclass"
+  }, {
+    "id" : "thing3",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "thing2",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "thing1",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "class33",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "class35",
+    "type" : "owl:unionOf"
+  } ],
+  "classAttribute" : [ {
+    "id" : "class17",
+    "label" : {
+      "IRI-based" : "date"
+    },
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "attributes" : [ "external" ],
+    "instances" : 0
+  }, {
+    "id" : "class13",
+    "label" : {
+      "IRI-based" : "Organization",
+      "undefined" : "Organization"
+    },
+    "iri" : "http://www.w3.org/2006/vcard/ns#Organization",
+    "comment" : {
+      "en" : "This class is defined in vCard and it has been added in order to guarantee the alignment with the vcard:Kind as required in DCAT.",
+      "it" : "Questa classe è definita in vCard ed è stata aggiunta al fine di garantire l'allineamento con vCard:Kind definito in ambito DCAT.",
+      "undefined" : "http://www.w3.org/2006/vcard/ns"
+    },
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class18" ],
+    "superClasses" : [ "class9" ],
+    "instances" : 0
+  }, {
+    "id" : "class26",
+    "label" : {
+      "IRI-based" : "Catalog",
+      "en" : "Catalogue",
+      "it" : "Catalogo"
+    },
+    "iri" : "https://dati.gov.it/onto/dcatapit#Catalog",
+    "comment" : {
+      "en" : "A catalogue or repository that hosts the datasets to be described. Typically it is used to represent catalogs such as CKAN/DKAN catalogs containing open data of public administrations. However, the class can be used to define even catalog of any type of data, not necessarily open data (e.g., a catalog of the databases of a public administration).\nThe class has been defined in the context of the Italian application profile DCAT-AP IT as a sub class of dcat:Catalog. This allows maintaining a fully alignment to that external ontology but guaranteeing, at the same time, the possibility to add additional propertie,s and restrictions on those properties, according to the DCAT-AP IT requirements.\n\nThis class is mandatory.\n\nAn example in turtle can be the following (where datiCatalogo can be <http://dati.gov.it/resource/Catalogo/>):\n\n<pre>\ndatiCatalogo:SPCDataCatalog\n   a dcatapit:Catalog , dcat:Catalog ;\n   dct:title \"Catalogo SPCData\"@it ;\n   dct:description \"Una descrizione del catalogo\" ;\n   dct:modified\t\"2015-05-25\"^^xsd:date ;\n   dct:issued \"2012-01-15\"^^xsd:date ;\n   dct:publisher  <http://dati.gov.it/resource/Amministrazione/agid> ;\n   dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;\n   dcat:dataset <http://dati.gov.it/resource/Dataset/LinkedOpenIPA> ;\n   dcat:dataset <http://dati.gov.it/resource/Dataset/ContrattiSPC> ;\n   foaf:homepage <http://spcdata.digitpa.gov.it/index.html> ;\n   dcat:themeTaxonomy <http://publications.europa.eu/resource/authority/data-theme> .",
+      "it" : "Un catalogo o un repository che contiene i dataset che si vogliono descrivere. Tipicamente utilizzata per rappresentare cataloghi come per esempio CKAN/DKAN che contengono dati aperti delle pubbliche amministrazioni, la classe comunque può essere riutilizzata per specificare anche cataloghi di dati di ogni tipo, non necessariamente aperti (e.g., un catalogo di banche dati di una pubblica amministrazione).\nLa classe è definita nell'ambito del profilo DCAT-AP IT come sottoclasse di dcat:Catalog per mantenere l'allineamento con l'ontologia esterna assicurando la possibilità di aggiungere proprietà o restringere le cardinalità di tali proprietà in accordo con i requisiti del profilo italiano DCAT-AP IT.\n\nE' obbligatorio specificare la classe.\n\nUn esempio in turtle è il seguente (dove datiCatalogo potrebbe essere <http://dati.gov.it/resource/Catalogo/>):\n\n<pre>\ndatiCatalogo:SPCDataCatalog\n   a dcatapit:Catalog , dcat:Catalog ;\n   dct:title \"Catalogo SPCData\"@it ;\n   dct:description \"Una descrizione del catalogo\" ;\n   dct:modified\t\"2015-05-25\"^^xsd:date ;\n   dct:issued \"2012-01-15\"^^xsd:date ;\n   dct:publisher  <http://dati.gov.it/resource/Amministrazione/agid> ;\n   dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;\n   dcat:dataset <http://dati.gov.it/resource/Dataset/LinkedOpenIPA> ;\n   dcat:dataset <http://dati.gov.it/resource/Dataset/ContrattiSPC> ;\n   foaf:homepage <http://spcdata.digitpa.gov.it/index.html> ;\n   dcat:themeTaxonomy <http://publications.europa.eu/resource/authority/data-theme> ."
+    },
+    "isDefinedBy" : "https://dati.gov.it/onto/dcatapit",
+    "attributes" : [ "external" ],
+    "superClasses" : [ "class8" ],
+    "instances" : 0
+  }, {
+    "id" : "class23",
+    "label" : {
+      "IRI-based" : "SemanticAsset"
+    },
+    "iri" : "http://www.w3.org/ns/adms#SemanticAsset",
+    "attributes" : [ "external" ],
+    "instances" : 1,
+    "individuals" : [ {
+      "iri" : "http://dati.gov.it/onto/dcatapit",
+      "labels" : {
+        "IRI-based" : "http://dati.gov.it/onto/dcatapit"
+      },
+      "annotations" : { }
+    } ]
+  }, {
+    "id" : "class19",
+    "label" : {
+      "IRI-based" : "MediaTypeOrExtent",
+      "en" : "Media Type or Extent",
+      "it" : "Formato"
+    },
+    "iri" : "http://purl.org/dc/terms/MediaTypeOrExtent",
+    "comment" : {
+      "en" : "A media Type or Extent.",
+      "it" : "Un tipo di supporto o estensione, es. il formato di un file. La classe è utilizzata per rappresentare il formato della distribuzione dei dataset. E' raccomandato l'uso del seguente vocabolario: http://www.iana.org/assignments/media-types/media-types.xhtml."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "instances" : 0
+  }, {
+    "id" : "class12",
+    "label" : {
+      "IRI-based" : "Agent",
+      "undefined" : "Agent"
+    },
+    "iri" : "http://xmlns.com/foaf/0.1/Agent",
+    "comment" : {
+      "en" : "This class is defined in FOAF and it has been added in order to align it with the class Agent of the DCAT Italian application profile, i.e., DCAT-AP IT. In particular, only a few properties of the FOAF:Agent class have been used with some restrictions that were specified for the definition of DCAT-AP IT.",
+      "it" : "Questa classe è definita in FOAF ed è stata aggiunta per allinearla con l'Agente definito nel contesto del profilo italiano DCAT-AP IT. In particolare, si sono utilizzate solo alcune delle proprietà dell'Agente definito in FOAF con alcune restrizioni utili per la definizione del profilo italiano."
+    },
+    "isDefinedBy" : "http://xmlns.com/foaf/0.1/",
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class2" ],
+    "instances" : 0
+  }, {
+    "id" : "class22",
+    "label" : {
+      "IRI-based" : "dateTime"
+    },
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "attributes" : [ "external" ],
+    "instances" : 0
+  }, {
+    "id" : "class29",
+    "label" : {
+      "IRI-based" : "Concept",
+      "en" : "Category",
+      "it" : "Categoria"
+    },
+    "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
+    "comment" : {
+      "en" : "A concept such as an idea or notion; a unit of thought.The class represents both 1) the main subject (category) of the dataset being described. It is required the use of the controlled vocabulary defined in http://publications.europa.eu/resource/authority/data-theme; and 2) the subTheme that will defined in the upcoming weeks by AgID and that will be based on the COFOG classification.",
+      "it" : "Un concetto come un'idea, una nozione un'unità di pensiero. Nel contesto del profilo italiano la classe è utilizzata per rappresentare sia il tema principale (categoria) del dataset (è richiesto l'uso del vocabolario controllato definito nell'ambito del profilo DCAT disponibile in http://publications.europa.eu/resource/authority/data-theme), sia il sotto tema che sarà definito da AgID nelle prossime settimane e che sarà basato sulla classificazione ufficiale COFOG."
+    },
+    "isDefinedBy" : "http://www.w3.org/2004/02/skos/core#",
+    "attributes" : [ "external" ],
+    "instances" : 0
+  }, {
+    "id" : "class2",
+    "label" : {
+      "IRI-based" : "Agent",
+      "en" : "Agent",
+      "it" : "Agente"
+    },
+    "iri" : "http://dati.gov.it/onto/dcatapit#Agent",
+    "comment" : {
+      "en" : "An Agent who plays a specific role on the data. In the Italian profile DCAT-AP IT, an agent is an organization (either public or private). The class is defined in the context (namespace) of the DCAT-AP IT as subClassOf foaf:Agent. This allows maintaining the alignment with the external ontology required by DCAT-AP but guaranteeing, at the same time, the possibility to add new properties and new restrictions on those properties according to the Italian application profile DCAT-AP IT.\nThe class is mandatory,\n\nAn example in turle can be the following (where datiAmministrazione can be <http://dati.gov.it/resource/Amministrazione>):\n\n<pre>\ndatiAmministrazione:agid\n  a                 dcatapit:Agent , foaf:Agent ;\n  foaf:name        \"Agenzia per l'Italia Digitale\"@it .\n</pre>",
+      "it" : "Soggetto che esercita uno specifico ruolo sui dati. La classe è associata con i Cataloghi e/o con i Dataset. Nel profilo italiano l’Agente è  un’organizzazione (o publica o privata). La classe è definita nell'ambito del profilo DCAT-AP IT come sottoclasse di foaf:Agent per mantenere l'allineamento con l'ontologia esterna assicurando la possibilità di aggiungere proprietà o restringere le cardinalità di tali proprietà in accordo con i requisiti del profilo italiano DCAT-AP IT.\n\nE' obbligatorio specificare la classe.\n\nUn esempio in turtle per la specifica di un agente è il seguente (dove datiAmministrazione potrebbe essere definito come <http://dati.gov.it/resource/Amministrazione/>):\n\n<pre>\ndatiAmministrazione:agid\n  a                 dcatapit:Agent , foaf:Agent ;\n  foaf:name        \"Agenzia per l'Italia Digitale\"@it .\n</pre>"
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/dcatapit",
+    "superClasses" : [ "class12" ],
+    "instances" : 0
+  }, {
+    "id" : "class5",
+    "label" : {
+      "IRI-based" : "Dataset",
+      "undefined" : "Dataset"
+    },
+    "iri" : "https://www.w3.org/ns/dcat#Dataset",
+    "comment" : {
+      "en" : "This class is defined in DCAT and it has been added in order to align it with the Dataset class of the DCAT-AP IT, the Italian application profile. In particular, the properties of DCAT Dataset and their cardinalities have been slightly modified in order to make DCAT-AP IT conformant with DCAT-AP, specified at the European level.",
+      "it" : "Questa classe è definita in DCAT ed è stata aggiunta al fine di allinerarla con la classe Dataset del profilo italiano DCAT-AP IT. In particolare, le proprietà della classe Dataset di DCAT e le loro cardinalità sono state leggermente modificate in DCAT-AP IT per essere conformi a DCAT-AP, definito in sede Europea."
+    },
+    "isDefinedBy" : "https://www.w3.org/ns/dcat",
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class11" ],
+    "instances" : 0
+  }, {
+    "id" : "class21",
+    "label" : {
+      "IRI-based" : "Email",
+      "en" : "Email",
+      "it" : "Email"
+    },
+    "iri" : "http://www.w3.org/2006/vcard/ns#Email",
+    "comment" : {
+      "en" : "To specify the primary electronic mail address for communications with the object the vCard represents.",
+      "it" : "La classe è utilizzata per specificare l'indirizzo email primario per le comunicazioni con l'oggetto che vCard rappresenta.",
+      "undefined" : "http://www.w3.org/2006/vcard/ns"
+    },
+    "attributes" : [ "external" ],
+    "instances" : 0
+  }, {
+    "id" : "class20",
+    "label" : {
+      "IRI-based" : "Standard",
+      "en" : "Standard",
+      "it" : "Standard"
+    },
+    "iri" : "http://dati.gov.it/onto/dcatapit#Standard",
+    "comment" : {
+      "en" : "A standard or other specification to Standard which a Dataset\nconforms. It can be used to represent also a technical rule, an ontology, a specific data schema.\n\nThe class is defined in the context of DCAT-AP IT as sub class of dct:Standard. This allows maintaining the full alignment to that external ontology; however, this allows guaranteeing, at the same time, the possibility to add additional properties and customized restrictions on the properties according to DCAT-AP requirements.\n\nAn example in turtle can be the following (where datiStandard can be <http://dati.gov.it/resource/Standard/>):\n\n<pre>\n<http://dati.gov.it/resource/Standard/standard-org>\n   a  dcatapit:Standard , dct:Standard ;\n   dct:title  \"W3C Org organization ontology\" ;\n   dct:description  \"The ontology of the organizations\" ;\n   dcatapit:referenceDocumentation \"https://www.w3.org/ns/org.rdf\"^^xsd:anyURI ;\n   dcatapit:referenceDocumentation \"https://www.w3.org/TR/vocab-org/\"^^xsd:anyURI .\n</pre>",
+      "it" : "Uno standard o altre specifiche a cui un dataset è conforme. La classe può essere utilizzata per rappresentare  regole tecniche, modelli di dati, ontologie, norme su cui sono basati i Dataset.\n\nLa classe è definita nel contesto del profilo DCAT-AP IT come sottoclasse della classe dct:Standard al fine di mantenere il pieno allineamento con quella ontologia esterna ma garantendo, al tempo stesso, la possibilità di aggiungere proprietà e restrizioni su proprietà in linea con i requisiti di DCAT-AP IT.\n\nUn esempio in turtle è il seguente (dove datiStandard potrebbe essere <http://dati.gov.it/resource/Standard>):\n\n<pre>\n<http://dati.gov.it/resource/Standard/standard-org>\n   a   dcatapit:Standard , dct:Standard ;\n   dct:title \"W3C Org organization ontology\" ;\n   dct:description  \"The ontology of the organizations\" ;\n   dcatapit:referenceDocumentation \"https://www.w3.org/ns/org.rdf\"^^xsd:anyURI ;\n   dcatapit:referenceDocumentation \"https://www.w3.org/TR/vocab-org/\"^^xsd:anyURI .\n</pre>"
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/dcatapit",
+    "superClasses" : [ "class3" ],
+    "instances" : 0
+  }, {
+    "id" : "class1",
+    "label" : {
+      "IRI-based" : "LinguisticSystem",
+      "en" : "Linguistic System",
+      "it" : "Sistema linguistico"
+    },
+    "iri" : "http://purl.org/dc/terms/LinguisticSystem",
+    "comment" : {
+      "en" : "A system of signs, symbols, sounds, gestures, or rules used in communication, e.g. a language. It is used to represent the linguistic system for the dataset and for the catalogue.",
+      "it" : "Un sistema di segni, simboli, suoni, gesti o regole usate nella comunicazione (es. una lingua). Utilizzata nel contesto DCAT-AP IT per rappresentare il sistema linguistico di riferimento per i dataset e i cataloghi"
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "instances" : 0
+  }, {
+    "id" : "class8",
+    "label" : {
+      "IRI-based" : "Catalog",
+      "undefined" : "Catalog"
+    },
+    "iri" : "https://www.w3.org/ns/dcat#Catalog",
+    "comment" : {
+      "en" : "This class is defined in DCAT and it has been added in order to align it with the class Catalog (Catalogo) defined in the DCAT Italian application profile, i.e., DCAT-AP IT. In particular, the properties of DCAT Catalog and their cardinalities have been slightly modified in order to make it conform with DCAT-AP, specified at European level.",
+      "it" : "La classe Catalog è definita in DCAT ed è stata aggiunta al fine di allinearla con la classe Catalog (Catalogo) del profilo italiano DCAT, i.e., DCAT-AP IT. In particolare, le proprietà di DCAT Catalog e le loro cardinalità sono state leggermente modificate per renderle conformi a DCAT-AP, definito in sede Europea."
+    },
+    "isDefinedBy" : "https://www.w3.org/ns/dcat",
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class26" ],
+    "instances" : 0
+  }, {
+    "id" : "class27",
+    "label" : {
+      "IRI-based" : "Distribution",
+      "en" : "Distribution",
+      "it" : "Distribuzione"
+    },
+    "iri" : "http://dati.gov.it/onto/dcatapit#Distribution",
+    "comment" : {
+      "en" : "This class represents a physical embodiment of the Dataset in a particular format. This class is mandatory if you need to describe the distribution of a open dataset. It can be optional in case you need to describe other types of data (e.g., data included in databases of public administration used for internal management purposes).\n\nThe class is defined in the context of DCAT-AP IT as sub class of dcat:Distribution. This allows maintaining the full alignment to that external ontology; however, this allows guaranteeing, at the same time, the possibility to add additional properties and customized restrictions on the properties according to DCAT-AP requirements.\n\nAn example in turtle is the following (where datiDistribuzione can be <http://dati.gov.it/resource/Distribuzione/>):\n\n<pre>\ndatiDistribuzione:LODIPA-Turtle\n   a   dcatapit:Distribution , dcat:Distribution ;\n   dct:title  \"Distribuzione Turtle di LOD IPA\" ;\n   dct:format  \"text/turtle\" ;\n   dct:license  <http://creativecommons.org/licenses/by/4.0/> ;\n   dcat:downloadURL  <http://spcdata.digitpa.gov.it/data/ipa.ttl> ;\n   dcat:accessURL  <http://http://spcdata.digitpa.gov.it:8899/sparql> .",
+      "it" : "Questa classe rappresenta la rappresentazione fisica del Dataset in un particolare formato. Obbligatoria nel caso in cui sia necessario descrivere la distribuzione di dati aperti. E' ozionale nel caso in cui sia necessario descrivere dati inclusi in banche dati delle pubbliche amministrazioni (e.g., per descrivere i database gestionali impiegati dalla pubblica amministrazione).\n\nLa classe è definita nel contesto del profilo DCAT-AP IT come sottoclasse della classe dcat:Distribution al fine di mantenere il pieno allineamento con quella ontologia esterna ma garantendo, al tempo stesso, la possibilità di aggiungere proprietà e restrizioni su proprietà in linea con i requisiti di DCAT-AP IT.\n\nUn esempio in turtle è il seguente (dove datiDistribuzione potrebbe essere <http://dati.gov.it/resource/Distribuzione/>):\n\n<pre>\ndatiDistribuzione:LODIPA-Turtle\n   a   dcatapit:Distribution , dcat:Distribution ;\n   dct:title  \"Distribuzione Turtle di LOD IPA\" ;\n   dct:format  <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ; \n   dct:license  <http://creativecommons.org/licenses/by/4.0/> ;\n   dcat:downloadURL  <http://spcdata.digitpa.gov.it/data/ipa.ttl> ;\n   dcat:accessURL  <http://http://spcdata.digitpa.gov.it:8899/sparql> ."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/dcatapit",
+    "superClasses" : [ "class25" ],
+    "instances" : 0
+  }, {
+    "id" : "class4",
+    "label" : {
+      "IRI-based" : "LicenseDocument",
+      "undefined" : "License Document"
+    },
+    "iri" : "http://purl.org/dc/terms/LicenseDocument",
+    "comment" : {
+      "en" : "This class is defined in Dublin Core and it has been added in order to guarantee the alignment with the Lincense Document (Licenza) class of the Italian DCAT application profile, DCAT-AP IT.",
+      "it" : "Questa classe è definita in Dublin Core ed è stata aggiunta al fine di garantire l'allineamento completo con la classe relativa (Licenza) nel profilo Italiano DCAt, DCAT-AP IT."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class16" ],
+    "instances" : 0
+  }, {
+    "id" : "class3",
+    "label" : {
+      "IRI-based" : "Standard",
+      "undefined" : "Standard"
+    },
+    "iri" : "http://purl.org/dc/terms/Standard",
+    "comment" : {
+      "en" : "This class is defined in Dublin Core and it has been added in order to align it with the Standard class defined in DCAT.AP IT.",
+      "it" : "Questa classe è definita in Dublin Core ed è stata aggiunta al fine di garantire il suo allineamento con la classe Standard definita nel contesto del profilo italiano DCAT-AP IT.",
+      "undefined" : "http://purl.org/dc/terms/"
+    },
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class20" ],
+    "instances" : 0
+  }, {
+    "id" : "class14",
+    "label" : {
+      "IRI-based" : "Geometry",
+      "en" : "Geometry",
+      "it" : "Geometria"
+    },
+    "iri" : "http://www.w3.org/ns/locn#Geometry",
+    "comment" : {
+      "en" : "The locn:Geometry class provides the means to identify a location as a point, line, polygon, etc. expressed using coordinates in some coordinate reference system. The conceptual model of the Geometry class itself shows a number of properties that are not defined in the OWL since in practice  geometry encodings all include already these properties. GeoDCAT-AP specifies that at least one of the following encodings must be used: GML or WKT.",
+      "it" : "La classe consente di identificare una posizione rappresentata come punto, linea, poligono, ecc espressi utilizzando le coordinate in un certo sistema di riferimento. Il modello concettuale della classe geometria, così come evidenziato nel diagramma UML, mostra un numero di proprietà che devono essere specificate. Tali proprietà non sono tuttavia definite nell'OWL dal momento che, in pratica, meccanismi di codifica di geometrie includono già tutte queste proprietà. La specifica GeoDCAT-AP prevede che deve essere utilizzata almeno una delle seguenti codifiche: GML o WKT."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/locn",
+    "attributes" : [ "external" ],
+    "instances" : 0
+  }, {
+    "id" : "class16",
+    "label" : {
+      "IRI-based" : "LicenseDocument",
+      "en" : "License Document",
+      "it" : "Licenza"
+    },
+    "iri" : "http://dati.gov.it/onto/dcatapit#LicenseDocument",
+    "comment" : {
+      "en" : "A legal document providing official permissions to do something with a resource. In this context it is used to define the rules for the reuse of the data.\n\nThe class is defined in the context of DCAT-AP IT as sub class of dct:LicenseDocument. This allows maintaining the full alignment to that external ontology; however, this allows guaranteeing, at the same time, the possibility to add additional properties and customized restrictions on the properties according to DCAT-AP requirements.",
+      "it" : "Un documento legale che fornisce un’autorizzazione ufficiale a fare qualcosa con una risorsa. Nel contesto del profilo nazionale dei metadati è utilizzata per definire le regole per il riutilizzo dei dati.\n\nLa classe è definita nel contesto del profilo DCAT-AP IT come sottoclasse della classe dct:LicenseDocument al fine di mantenere il pieno allineamento con quella ontologia esterna ma garantendo, al tempo stesso, la possibilità di aggiungere proprietà e restrizioni su proprietà in linea con i requisiti di DCAT-AP IT."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/dcatapit",
+    "superClasses" : [ "class4" ],
+    "instances" : 0
+  }, {
+    "id" : "class9",
+    "label" : {
+      "IRI-based" : "Kind",
+      "en" : "Contact Point",
+      "it" : "Punto di contatto"
+    },
+    "iri" : "http://www.w3.org/2006/vcard/ns#Kind",
+    "comment" : {
+      "en" : "A description following the vCard specification, e.g. to provide telephone number and  e-mail address, for instance, for a contact point.",
+      "it" : "E' la classe definita nelle specifiche vCard utilizzata per definire un punto di contatto che include per esempio un indirizzo email, un numero di telefono un URL di riferimento."
+    },
+    "isDefinedBy" : "http://www.w3.org/2006/vcard/ns#",
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class13" ],
+    "instances" : 0
+  }, {
+    "id" : "class15",
+    "label" : {
+      "IRI-based" : "Document",
+      "en" : "Document",
+      "it" : "Documento"
+    },
+    "iri" : "http://xmlns.com/foaf/0.1/Document",
+    "comment" : {
+      "en" : "A textual resource intended for human consumption that contains information, e.g. a web page about a Dataset.",
+      "it" : "Una risorsa testuale contenente informazioni. La risorsa può essere consultata da persone. Una pagina web su un dataset è un esempio di documento."
+    },
+    "isDefinedBy" : "http://xmlns.com/foaf/0.1/",
+    "attributes" : [ "external" ],
+    "instances" : 0
+  }, {
+    "id" : "class25",
+    "label" : {
+      "IRI-based" : "Distribution",
+      "undefined" : "Distribution"
+    },
+    "iri" : "https://www.w3.org/ns/dcat#Distribution",
+    "comment" : {
+      "en" : "This class is defined in DCAT and it has been used to align it with the Distribution class defined in the Italian DCAT Application Profile. In particular, the class defines certain properties and cardinalities that have been slightly modified in the Italian DCAT Application Profile in order to be conformant with DCAT-AP, specified at the European Level.",
+      "it" : "Questa classe è definita in DCAT ed è stata utilizzata per garantire il pieno allineamento con la classe Distribution (Distribuzione) definita nel profilo italiano DCAT (DCAT-AP IT). In particolare, la classe definisce  proprietà e cardinalità per la distribuzione di dataset che sono state  modificate nel profilo italiano al fine di rendere quest'ultimo conforme a DCAT-AP come specificato a livello Europeo."
+    },
+    "isDefinedBy" : "https://www.w3.org/ns/dcat",
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class27" ],
+    "instances" : 0
+  }, {
+    "id" : "class6",
+    "label" : {
+      "IRI-based" : "Identifier",
+      "en" : "Identifier",
+      "it" : "Identificatore"
+    },
+    "iri" : "http://www.w3.org/ns/adms#Identifier",
+    "comment" : {
+      "en" : "An identifier in a particular context, consisting of the string that is the identifier. For instance, other identifiers can be the ISBN or DOI, etc.",
+      "it" : "Un identificatore definito in un particolare contesto. Rappresenta un altro identificatore del dataset in un preciso contesto. Ad esempio può essere il codice ISBN, DOI, ecc."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/adms",
+    "attributes" : [ "external" ],
+    "instances" : 0
+  }, {
+    "id" : "class30",
+    "label" : {
+      "IRI-based" : "Frequency",
+      "en" : "Frequency",
+      "it" : "Frequenza"
+    },
+    "iri" : "http://purl.org/dc/terms/Frequency",
+    "comment" : {
+      "en" : "A rate at which something recurs. It is used to represent the frequency of update of datasets. It assumes a specific set of values as defined by the controlled vocabulary available at http://publications.europa.eu/mdr/authority/frequency/index.html. The class is defined by the Dublin Core standard",
+      "it" : "Numero delle volte che qualcosa si ripete. E' utlizzata per rappresentare la frequenza di aggiornamento dei dataset. Essa assume un insieme finito di valori come definiti dal vocabolario controllato disponibile in http://publications.europa.eu/mdr/authority/frequency/index.html. La classe è definita dallo standard dublin core"
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "instances" : 0
+  }, {
+    "id" : "class28",
+    "label" : {
+      "IRI-based" : "ConceptScheme",
+      "en" : "Category Schema",
+      "it" : "Schema Categoria"
+    },
+    "iri" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+    "comment" : {
+      "en" : "A concept collection (e.g. controlled vocabulary) in which the Category is defined. The class represents the main category of the catalogue.  It is required to specify the URI of the vocabulary itself (not the URI of the concepts included in the vocabulary) which is the following:  http://publications.europa.eu/resource/authority/data-theme",
+      "it" : "Una collezione di concetti (e.g., un vocabolario controllato) in cui la Categoria è definita. La classe rappresenta il tema principale del catalogo dei dati. E' richiesto l'uso dell'URI del vocabolario controllato (non degli URI dei concetti inclusi nel vocabolario). L'URI è il seguente: http://publications.europa.eu/resource/authority/data-theme"
+    },
+    "isDefinedBy" : "http://www.w3.org/2004/02/skos/core#",
+    "attributes" : [ "external" ],
+    "instances" : 0
+  }, {
+    "id" : "class18",
+    "label" : {
+      "IRI-based" : "Organization",
+      "en" : "Organization",
+      "it" : "Organizzazione"
+    },
+    "iri" : "http://dati.gov.it/onto/dcatapit#Organization",
+    "comment" : {
+      "en" : "An object representing an organization. An organization is a single entity, and might represent a business or government, a department or division within a business or government, a club, an association, or the like.",
+      "it" : "Una singola entità che potrebbe rappresentare un’impresa o un organismo governativo, un dipartimento, una divisione, una unità all'interno di un'azienda o di governo, un gruppo, un’associazione, o simili."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/dcatapit",
+    "superClasses" : [ "class13" ],
+    "instances" : 0
+  }, {
+    "id" : "class11",
+    "label" : {
+      "IRI-based" : "Dataset",
+      "en" : "Dataset",
+      "it" : "Dataset"
+    },
+    "iri" : "http://dati.gov.it/onto/dcatapit#Dataset",
+    "comment" : {
+      "en" : "A conceptual entity that represents the published information. The class is defined in the context of the DCAT-AP IT as sub class of dcat:Dataset. This allows maintaining the fully alignment with that external ontology but guaranteeing, at the same time, the possibility to add properties and restrictions on the properties according to the DCAT-AP IT requirements.\n\nThe class is mandatory.\n\nAn example in turtle is the following (where datiDataset could be http://dati.gov.it/resource/Dataset/>):\n\n<pre>\ndatiDataset:LinkedOpenIPA\n   a   dcatapit:Dataset , dcat:Dataset ;\n   dct:identifier  \"LOD IPA\" ;\n   dct:title  \"Linked Open IPA\"@it ;\n   dct:description   \"Il dataset LOD dell'Indice della Pubblica Amministrazione\"@it ;\n   dcat:theme  \t\t<http://publications.europa.eu/resource/authority/data-theme/GOVE> ;\n   dcatapit:subTheme \t<http://dati.gov.it/resource/subTheme/PUBSEC> ;\n   dct:issued   \"2012-01-15\"^^xsd:date ;\n   dct:modified  \"2015-05-25\"^^xsd:date ;\n   dcat:keyword  \"Pubblica Amministrazione\" ;\n   dcat:keyword  \"PEC\" ;\n   dcat:keyword  \"Unità Organizzativa\" ;\n   dcat:keyword   \"Area Organizzativa Omogenea\" ;\n   owl:versionOf  \"1.5\" ;\n   ct:rightsHolder \t<http://dati.gov.it/resource/Amministrazione/agid> ;\n   dct:publisher \t\t<http://dati.gov.it/resource/Amministrazione/agid> ;\n   dct:creator \t\t<http://dati.gov.it/resource/Amministrazione/agid> ;\n   dcat:distribution \t\t<http://dati.gov.it/resource/Distribuzione/LODIPA-Turtle> ;\n   dcat:distribution \t\t<http://dati.gov.it/resource/Distribuzione/LODIPA-RDFXML> ;\n   dct:accrualPeriodicity  <http://publications.europa.eu/resource/authority/frequency/QUARTERLY> ;\n   dct:conformsTo \t\t\t<http://dati.gov.it/resource/Standard/standard-org> ;\n   dct:isVersionOf\t\t\t<http://dati.gov.it/resource/Dataset/LinkedOpenIPA14> ;\n   dct:temporal\t\t\t<http://dati.gov.it/resource/PeriodoTemporale/periodTimeLinkedOpenIPA> ;\n   dcat:contactPoint \t\t<http://dati.gov.it/resource/PuntoContatto/contactPointLODIPA> .",
+      "it" : "Un’entità concettuale che rappresenta le informazioni pubblicate. In particolare, la classe rappresenta il concetto di dataset ovvero di una collezione di dati omogenea, generalmente riguardanti una stessa organizzazione.\n\nLa classe è definita nell'ambito del profilo DCAT-AP IT come sottoclasse di dcat:Dataset per mantenere l'allineamento con l'ontologia esterna, assicurando al tempo stesso, la possibilità di aggiungere proprietà o restringere le cardinalità di tali proprietà in accordo con i requisiti del profilo italiano DCAT-AP IT.\n\nE' obbligatorio specificare la classe.\n\nUn esempio in turtle è il seguente (dove datiDataset potrebbe essere <http://dati.gov.it/resource/Dataset/>):\n\n<pre>\ndatiDataset:LinkedOpenIPA\n   a   dcatapit:Dataset , dcat:Dataset ;\n   dct:identifier  \"LOD IPA\" ;\n   dct:title  \"Linked Open IPA\"@it ;\n   dct:description   \"Il dataset LOD dell'Indice della Pubblica Amministrazione\"@it ;\n   dcat:theme  \t\t<http://publications.europa.eu/resource/authority/data-theme/GOVE> ;\n   dcatapit:subTheme \t<http://dati.gov.it/resource/subTheme/PUBSEC> ;\n   dct:issued   \"2012-01-15\"^^xsd:date ;\n   dct:modified  \"2015-05-25\"^^xsd:date ;\n   dcat:keyword  \"Pubblica Amministrazione\" ;\n   dcat:keyword  \"PEC\" ;\n   dcat:keyword  \"Unità Organizzativa\" ;\n   dcat:keyword   \"Area Organizzativa Omogenea\" ;\n   owl:versionOf  \"1.5\" ;\n   ct:rightsHolder \t<http://dati.gov.it/resource/Amministrazione/agid> ;\n   dct:publisher \t\t<http://dati.gov.it/resource/Amministrazione/agid> ;\n   dct:creator \t\t<http://dati.gov.it/resource/Amministrazione/agid> ;\n   dcat:distribution \t\t<http://dati.gov.it/resource/Distribuzione/LODIPA-Turtle> ;\n   dcat:distribution \t\t<http://dati.gov.it/resource/Distribuzione/LODIPA-RDFXML> ;\n   dct:accrualPeriodicity  <http://publications.europa.eu/resource/authority/frequency/QUARTERLY> ;\n   dct:conformsTo \t\t\t<http://dati.gov.it/resource/Standard/standard-org> ;\n   dct:isVersionOf\t\t\t<http://dati.gov.it/resource/Dataset/LinkedOpenIPA14> ;\n   dct:temporal\t\t\t<http://dati.gov.it/resource/PeriodoTemporale/periodTimeLinkedOpenIPA> ;\n   dcat:contactPoint \t\t<http://dati.gov.it/resource/PuntoContatto/contactPointLODIPA> ."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/dcatapit",
+    "superClasses" : [ "class5" ],
+    "instances" : 0
+  }, {
+    "id" : "class10",
+    "label" : {
+      "IRI-based" : "TelephoneType",
+      "en" : "Phone",
+      "it" : "Telefono"
+    },
+    "iri" : "http://www.w3.org/2006/vcard/ns#TelephoneType",
+    "comment" : {
+      "en" : "This class is defined in http://www.w3.org/2006/vcard/ns and it is used to represent a type of phone number.",
+      "it" : "Questa classe è definita in http://www.w3.org/2006/vcard/ns per rappresentare un tipo di numero telefonico."
+    },
+    "isDefinedBy" : "http://www.w3.org/2006/vcard/ns",
+    "attributes" : [ "external" ],
+    "instances" : 0
+  }, {
+    "id" : "class24",
+    "label" : {
+      "IRI-based" : "PeriodOfTime",
+      "en" : "Period of Time",
+      "it" : "Periodo Temporale"
+    },
+    "iri" : "http://purl.org/dc/terms/PeriodOfTime",
+    "comment" : {
+      "en" : "An interval of time that is named or defined by its start and end dates.",
+      "it" : "Un intervallo temporale identificato o definito da proprie date di inizio e fine."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "instances" : 0
+  }, {
+    "id" : "class7",
+    "label" : {
+      "IRI-based" : "Resource",
+      "en" : "Resource",
+      "it" : "Risorsa"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Resource",
+    "comment" : {
+      "en" : "Anything described by RDF. In this context, it is used to indicate an access and download URL for the distribution of the dataset.",
+      "it" : "Qualsiasi “oggetto” descritto in RDF. Nel contesto DCAT-AP IT è utilizzata come codominio di alcune proprietà che rappresentano l'URL di accesso e di download della distribuzione del dataset."
+    },
+    "isDefinedBy" : "ttp://www.w3.org/2000/01/rdf-schema#",
+    "attributes" : [ "external" ],
+    "instances" : 0
+  }, {
+    "id" : "class31",
+    "label" : {
+      "IRI-based" : "Location",
+      "en" : "Location",
+      "it" : "Localizzazione geografica"
+    },
+    "iri" : "http://purl.org/dc/terms/Location",
+    "comment" : {
+      "en" : "A spatial region or named place. It can be represented using a controlled vocabulary or with geographic coordinates. In the latter case, the use of the Core Location Vocabulary is recommended, following the approach described in the GeoDCAT-AP specification. It is used to represent the location of the dataset.",
+      "it" : "Una regione spaziale o un luogo identificato da un nome. Può essere rappresentato utilizzando un vocabolario controllato o attraverso delle coordinate geografiche. Nel primo caso si raccomanda l'uso del vocabolario Core Location, seguendo l'approccio descritto nelle specifiche GeoDCAT-AP. Utilizzata per rappresentare la regione o il luogo di riferimento del dataset"
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "instances" : 0
+  }, {
+    "id" : "thing3",
+    "label" : {
+      "undefined" : "Thing"
+    },
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "instances" : 0
+  }, {
+    "id" : "thing2",
+    "label" : {
+      "undefined" : "Thing"
+    },
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "instances" : 0
+  }, {
+    "id" : "thing1",
+    "label" : {
+      "undefined" : "Thing"
+    },
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "instances" : 0
+  }, {
+    "id" : "class33",
+    "label" : {
+      "IRI-based" : "anonymous"
+    },
+    "instances" : 0,
+    "union" : [ "class26", "class11" ]
+  }, {
+    "id" : "class35",
+    "label" : {
+      "IRI-based" : "anonymous"
+    },
+    "instances" : 0,
+    "union" : [ "class17", "class22" ]
+  } ],
+  "datatype" : [ {
+    "id" : "literal2",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "literal1",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "literal6",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "literal14",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "literal9",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "literal15",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "literal8",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "literal12",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "literal13",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "literal18",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "literal19",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "datatype3",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "literal17",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "datatype5",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "datatype4",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "datatype10",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "datatype7",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "literal11",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "datatype16",
+    "type" : "rdfs:Datatype"
+  } ],
+  "datatypeAttribute" : [ {
+    "id" : "literal2",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "literal1",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "literal6",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "literal14",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "literal9",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "literal15",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "literal8",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "literal12",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "literal13",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "literal18",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "literal19",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "datatype3",
+    "label" : {
+      "IRI-based" : "string"
+    },
+    "iri" : "http://www.w3.org/2001/XMLSchema#string"
+  }, {
+    "id" : "literal17",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "datatype5",
+    "label" : {
+      "IRI-based" : "PlainLiteral"
+    },
+    "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+  }, {
+    "id" : "datatype4",
+    "label" : {
+      "IRI-based" : "decimal"
+    },
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal"
+  }, {
+    "id" : "datatype10",
+    "label" : {
+      "IRI-based" : "anyURI"
+    },
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  }, {
+    "id" : "datatype7",
+    "label" : {
+      "IRI-based" : "PlainLiteral"
+    },
+    "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+  }, {
+    "id" : "literal11",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "datatype16",
+    "label" : {
+      "IRI-based" : "PlainLiteral"
+    },
+    "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+  } ],
+  "property" : [ {
+    "id" : "property16",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property38",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property51",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property11",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property42",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property33",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property2",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property40",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property1",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property32",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property4",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property3",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property47",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property37",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property15",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property12",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property39",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property55",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property45",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property48",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property27",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property24",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property30",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property22",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property56",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property26",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property31",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property46",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property29",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property35",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property10",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property50",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property34",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property54",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property19",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property43",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property41",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property20",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property6",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property5",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property8",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property7",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property18",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property52",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property53",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property49",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property28",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property44",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "id" : "property16",
+    "label" : {
+      "IRI-based" : "downloadURL",
+      "en" : "download URL",
+      "it" : "URL di download"
+    },
+    "iri" : "http://www.w3.org/ns/dcat#downloadURL",
+    "comment" : {
+      "en" : "This property is used to represent a URL that is a direct link to a downloadable file in a given format.",
+      "it" : "Questa proprietà è utilizzata per rappresentare l'URL che fornisce un link diretto al file scaricabile in un determinato formato."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/dcat#",
+    "owlVersion" : "\"1.2\"@en",
+    "attributes" : [ "external" ],
+    "domain" : "class27",
+    "range" : "class7"
+  }, {
+    "id" : "property38",
+    "label" : {
+      "IRI-based" : "startDate",
+      "undefined" : "start date"
+    },
+    "iri" : "http://schema.org/startDate",
+    "comment" : {
+      "en" : "This property is defined in schema.org and it has been added in order to guarantee the algnment with the relative property startDate (data inizio) of the DCAT Italian application profile, DCAT-AP IT.",
+      "it" : "Questa proprietà è definita in schema.org ed è stata aggiunta al fine di garantire l'allineamento con la relativa proprietà start date (data inizio) definita nel profilo italiano DCAT, DCAT-AP IT."
+    },
+    "isDefinedBy" : "http://schema.org/",
+    "attributes" : [ "external" ],
+    "domain" : "thing3",
+    "range" : "literal1",
+    "subproperty" : [ "property36" ]
+  }, {
+    "id" : "property51",
+    "label" : {
+      "IRI-based" : "name",
+      "en" : "name",
+      "it" : "nome"
+    },
+    "iri" : "http://xmlns.com/foaf/0.1/name",
+    "comment" : {
+      "en" : "Property used to represent a name of a Thing.",
+      "it" : "Proprietà utilizzata per rappresentare il nome di una cosa."
+    },
+    "isDefinedBy" : "http://xmlns.com/foaf/0.1/",
+    "attributes" : [ "external" ],
+    "domain" : "thing3",
+    "range" : "literal14",
+    "cardinality" : 1
+  }, {
+    "id" : "property11",
+    "label" : {
+      "IRI-based" : "geometry",
+      "en" : "geometry",
+      "it" : "geometria"
+    },
+    "iri" : "https://www.w3.org/ns/locn#geometry",
+    "comment" : {
+      "en" : "Property used to associated any resource with a geometry.",
+      "it" : "Proprietà utilizzata per associare qualsiasi risorsa alla corrispondente geometria."
+    },
+    "isDefinedBy" : "https://www.w3.org/ns/locn",
+    "attributes" : [ "external" ],
+    "domain" : "class31",
+    "range" : "class14",
+    "maxCardinality" : 1
+  }, {
+    "id" : "property42",
+    "label" : {
+      "IRI-based" : "description",
+      "en" : "description",
+      "it" : "descrizione"
+    },
+    "iri" : "http://purl.org/dc/terms/description",
+    "comment" : {
+      "en" : "This propery refers to the description of the Catalogue or of the Dataset.",
+      "it" : "Questa proprietà è usata per indicare la descrizione del catalogo o del dataset. Questa proprietà può essere ripetuta per esprimere la descrizione in diverse lingue."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "domain" : "thing3",
+    "range" : "datatype5",
+    "maxCardinality" : 1
+  }, {
+    "id" : "property33",
+    "label" : {
+      "IRI-based" : "spatial",
+      "en" : "spatial coverage",
+      "it" : "copertura geografica"
+    },
+    "iri" : "http://purl.org/dc/terms/spatial",
+    "comment" : {
+      "en" : "This property refers to a geographical area covered by the Dataset",
+      "it" : "Questa proprietà è utilizzata per rappresentare una zona geografica (copertura spaziale) del dataset."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "domain" : "class11",
+    "range" : "class31"
+  }, {
+    "id" : "property2",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class2",
+    "range" : "class12"
+  }, {
+    "id" : "property40",
+    "label" : {
+      "IRI-based" : "fn",
+      "en" : "department name",
+      "it" : "nome dell'ufficio/organizzazione"
+    },
+    "iri" : "http://www.w3.org/2006/vcard/ns#fn",
+    "comment" : {
+      "en" : "Property defined in http://www.w3.org/2006/vcard/ns. It represents the full name of an object (as a single string). In DCAT-AP_IT it is used to represent the name of the department/office that is the stable contact point for the dataset. It is recommend not using the name of the organization as a whole. The name of the organization can be used only when the name of the department/office does not exist or cannot be clearly identified.",
+      "it" : "Proprietà definita in http://www.w3.org/2006/vcard/ns. Rappresenta il nome completo di un oggetto (inteso come singola stringa). In DCAT-AP_IT la proprietà è utilizzata per specificare il nome del dipartimento/ufficio identificato come il punto di contatto stabile per il Dataset. Si raccomanda di non utilizzare il nome dell'organizzazione nel suo complesso. Il nome dell'organizzazione può essere usato solo nell'eventualità il dipartimento/ufficio non esista o non si possa chiaramente identificare.",
+      "undefined" : "http://www.w3.org/2006/vcard/ns"
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class18",
+    "range" : "datatype3",
+    "cardinality" : 1
+  }, {
+    "id" : "property1",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class18",
+    "range" : "class13"
+  }, {
+    "id" : "property32",
+    "label" : {
+      "IRI-based" : "contactPoint",
+      "en" : "contact point",
+      "it" : "punto di contatto"
+    },
+    "iri" : "http://www.w3.org/ns/dcat#contactPoint",
+    "comment" : {
+      "en" : "This property is used to represent contact information that can be used for sending comments about the dataset.",
+      "it" : "Questa proprietà è utilizzata per rappresentare informazioni di contatto di un dataset. Tali informazioni possono essere usate per abilitare l'invio di commenti o richieste a coloro che gestiscono il dataset."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/dcat#",
+    "attributes" : [ "external" ],
+    "domain" : "class11",
+    "range" : "class9"
+  }, {
+    "id" : "property4",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class26",
+    "range" : "class8"
+  }, {
+    "id" : "property3",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class11",
+    "range" : "class5"
+  }, {
+    "id" : "property47",
+    "label" : {
+      "IRI-based" : "referenceDoc",
+      "en" : "reference documentation",
+      "it" : "documentazione di riferimento"
+    },
+    "iri" : "http://dati.gov.it/onto/dcatapit#referenceDoc",
+    "comment" : {
+      "en" : "This property is used to represent reference documentation. This can be used for the Standard class (the property is a URL where the documentation can be found).",
+      "it" : "Questa proprietà si riferisce agli URL attraverso i quali viene fornito l’accesso a documenti di dettaglio relativi allo Standard indicato."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/dcatapit",
+    "owlVersion" : "\"stabile\"@it",
+    "domain" : "thing3",
+    "range" : "datatype10"
+  }, {
+    "id" : "property37",
+    "label" : {
+      "IRI-based" : "subject",
+      "en" : "subtheme",
+      "it" : "sottotema"
+    },
+    "iri" : "http://purl.org/dc/terms/subject",
+    "comment" : {
+      "en" : "This property is defined in http://purl.org/dc/terms/ and it is used in DCAT-AP_IT to represent controlled keywords (a fine-grained classification of the theme) for a dataset. This property represents one of the Italian externsions of DCAT-AP. A dataset can have more than one subject. The values are the URI of the controlled vocabulary Eurovoc (http://eurovoc.europa.eu/drupal/?q=it/navigation&cl=en). The mapping between the dataset themes and Eurovoc is available through the european data poral. This property is strongly recommended.",
+      "it" : "Questa proprietà è definita in http://purl.org/dc/terms/ ed è utilizzata in DCAT-AP_IT per rappresentare delle parole chiave controllate per i dataset, ovvero una classificazione più dettagliata del tema di riferimento dei dati. Questa proprietà rappresenta una delle estensioni introdotte dal profilo italiano DCAT-AP IT. Un Dataset può essere associato a più sottotemi.\nI valori da utilizzare per questa proprietà sono gli URI dei concetti del vocabolario Eurovoc (http://eurovoc.europa.eu/drupal/?q=it/navigation&cl=it). Il mapping tra i temi del dataset e Eurovoc è disponibile presso il portale europeo dei dati. Questa proprietà è fortemente raccomandata."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "domain" : "thing2",
+    "range" : "class29"
+  }, {
+    "id" : "property15",
+    "label" : {
+      "IRI-based" : "dataset",
+      "en" : "dataset",
+      "it" : "dataset"
+    },
+    "iri" : "http://www.w3.org/ns/dcat#dataset",
+    "comment" : {
+      "en" : "Property used to link the catalogue with the dataset that is included in the Catalogue.",
+      "it" : "Proprietà utilizzata per collegare il catalogo ai dataset che sono inclusi nel catalogo stesso"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/dcat#",
+    "owlVersion" : "\"1.2\"@en",
+    "attributes" : [ "external" ],
+    "domain" : "class26",
+    "range" : "class11"
+  }, {
+    "id" : "property12",
+    "label" : {
+      "IRI-based" : "conformsTo",
+      "en" : "conforms to",
+      "it" : "conformità"
+    },
+    "iri" : "http://purl.org/dc/terms/conformsTo",
+    "comment" : {
+      "t" : "Questa proprietà si riferisce a una regola implementativa o altra specifica a cui il Dataset è conforme.",
+      "en" : "Property used to link a dataset to the standard to which the dataset conforms."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "domain" : "class11",
+    "range" : "class20"
+  }, {
+    "id" : "property39",
+    "label" : {
+      "IRI-based" : "value",
+      "en" : "value",
+      "it" : "valore"
+    },
+    "iri" : "http://www.w3.org/2006/vcard/ns#value",
+    "comment" : {
+      "en" : "This property is defined in http://www.w3.org/2006/vcard/ns and it has been added in DCAt-AP_IT in order to represent the phone number of the contact point.",
+      "it" : "Questa proprietà è definita in http://www.w3.org/2006/vcard/ns ed è stata aggiunta al fine di rappresentare il valore del numero di telefono del punto di contatto."
+    },
+    "isDefinedBy" : "http://www.w3.org/2006/vcard/ns",
+    "attributes" : [ "external" ],
+    "domain" : "thing3",
+    "range" : "literal2",
+    "cardinality" : 1
+  }, {
+    "id" : "property55",
+    "label" : {
+      "IRI-based" : "keyword",
+      "en" : "keyword",
+      "it" : "parola chiave"
+    },
+    "iri" : "http://www.w3.org/ns/dcat#keyword",
+    "comment" : {
+      "en" : "This property contains a keyword or a tag used to describe the Dataset. The property is optional; it can be use in order to define additional keywords as free text other than those already provided using the subTheme property.",
+      "it" : "Questa proprietà è usata per indicare parole chiave o tag per descrivere il dataset. Questa proprietà è opzionale e può essere utilizzata per specificare ulteriori parole chiave a testo libero oltre a quelle già individuate mediante la proprietà sotto tema."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/dcat#",
+    "attributes" : [ "external" ],
+    "domain" : "class11",
+    "range" : "literal18"
+  }, {
+    "id" : "property45",
+    "label" : {
+      "IRI-based" : "startDate",
+      "en" : "start date",
+      "it" : "data di inizio"
+    },
+    "iri" : "http://sdati.gov.it/onto/dcatapit#startDate",
+    "comment" : {
+      "en" : "Property used to represent the start date in a period of time.",
+      "it" : "Proprietà utilizzata per rappresentare una data di inizio di un periodo temporale.",
+      "undefined" : "http://dati.gov.it/onto/dcatapit"
+    },
+    "attributes" : [ "external" ],
+    "domain" : "thing3",
+    "range" : "literal8",
+    "superproperty" : [ "property38" ],
+    "cardinality" : 1
+  }, {
+    "id" : "property48",
+    "label" : {
+      "IRI-based" : "endDate",
+      "undefined" : "end date"
+    },
+    "iri" : "http://schema.org/endDate",
+    "comment" : {
+      "en" : "This property is defined in schema.org and it has been added in order to guarantee the full alignment with the relative endDate (data fine) defined in the DCAT Italian application profile, DCAT-AP IT.",
+      "it" : "Questa proprietà è definita in schema.org ed è stata aggiunta al fine di garantire il completo allineamento con la relativa proprietà end Date (data fine) definita nel profilo italiano DCAT, DCAT-AP IT.",
+      "undefined" : "http://schema.org/"
+    },
+    "attributes" : [ "external" ],
+    "domain" : "thing3",
+    "range" : "literal11",
+    "subproperty" : [ "property49" ]
+  }, {
+    "id" : "property17",
+    "label" : {
+      "IRI-based" : "accessURL",
+      "en" : "access URL",
+      "it" : "URL di accesso"
+    },
+    "iri" : "http://www.w3.org/ns/dcat#accessURL",
+    "comment" : {
+      "en" : "This property contains a URL that gives access to a Distribution of the Dataset. The resource at the access URL may contain information about how to get the Dataset.",
+      "it" : "Questa proprietà contiene un URL tramite cui si può accedere alla Distribuzione del Dataset.  La risorsa all'URL di accesso potrebbe contenere informazioni su come ottenere il dataset."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/dcat#",
+    "attributes" : [ "external" ],
+    "domain" : "class27",
+    "range" : "class7",
+    "cardinality" : 1
+  }, {
+    "id" : "property27",
+    "label" : {
+      "IRI-based" : "publisher",
+      "en" : "publisher",
+      "it" : "editore"
+    },
+    "iri" : "http://purl.org/dc/terms/publisher",
+    "comment" : {
+      "en" : "This property is used to represent an agent (typically an organization) which is responsible for making available (for publishing) the dataset or the catalogue. Avoid the use of names of single persons.",
+      "it" : "Questa proprietà è utilizzata per rappresentare un agente (tipicamente un'organizzazione) che è responsabile di rendere disponibile (pubblicare) il dataset o il catalogo. Evitare di specificare nomi di singole persone."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "domain" : "class33",
+    "range" : "class2",
+    "cardinality" : 1,
+    "maxCardinality" : 1
+  }, {
+    "id" : "property24",
+    "label" : {
+      "IRI-based" : "creator",
+      "en" : "creator",
+      "it" : "autore"
+    },
+    "iri" : "http://purl.org/dc/terms/creator",
+    "comment" : {
+      "en" : "Property used to represent the creator of the dataset; that is, the authority responsible for creating/making the dataset. Avoid the use of names of single persons.",
+      "it" : "Proprietà utilizzata per rappresentare una o più entità (organizzazione/i) che hanno materialmente prodotto il Dataset. Evitare di indicare nomi di singole persone."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "domain" : "class11",
+    "range" : "class2"
+  }, {
+    "id" : "property21",
+    "label" : {
+      "IRI-based" : "type",
+      "en" : "type",
+      "it" : "tipo"
+    },
+    "iri" : "http://purl.org/dc/terms/type",
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "annotations" : {
+      "description" : [ {
+        "identifier" : "description",
+        "language" : "en",
+        "value" : "This property is defined in http://purl.org/dc/terms/ and it is added in DCAT-AP_IT to model the type of \"things\". In particular, it is used to specify the type of license of a distribution of a dataset. The vocabulary to be used to specify the type of license is the following: http://purl.org/adms/licencetype/1.0",
+        "type" : "label"
+      }, {
+        "identifier" : "description",
+        "language" : "it",
+        "value" : "Questa proprietà è definita in http://purl.org/dc/terms/ ed è aggiunta a DCAT-AP_IT al fine di modellare i tipi delle \"cose\". In particolare, è utilizzata per rappresentare il tipo di licenza di una distribuzione di un dataset. Il vocabolario che deve essere utilizzato per specificare il tipo della licenza è il seguente: http://purl.org/adms/licencetype/1.0",
+        "type" : "label"
+      } ]
+    },
+    "domain" : "thing2",
+    "range" : "class29",
+    "maxCardinality" : 1
+  }, {
+    "id" : "property30",
+    "label" : {
+      "IRI-based" : "isVersionOf",
+      "en" : "is version of",
+      "it" : "è versione di"
+    },
+    "iri" : "http://purl.org/dc/terms/isVersionOf",
+    "comment" : {
+      "en" : "This property refers to a related Dataset of which the described Dataset is a version, edition, or adaptation.",
+      "it" : "Questa proprietà si riferisce a un Dataset correlato che è una versione, un’edizione o un adattamento del Dataset descritto."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "domain" : "class11",
+    "range" : "class11"
+  }, {
+    "id" : "property22",
+    "label" : {
+      "IRI-based" : "homepage",
+      "en" : "home page",
+      "it" : "home page"
+    },
+    "iri" : "http://xmlns.com/foaf/0.1/homepage",
+    "comment" : {
+      "en" : "This property refers to the home page. It is used to represent the main page for the Catalogue and the Contact Point of the dataset. In the case of the contact point, the home page can be either the home page of the organization/organization office acting as contact point or the home page  including contact information for the dataset.",
+      "it" : "Questa proprietà si riferisce alla pagina web. Essa è utilizzata per rappresentare la pagina principale per il Catalogo e per il punto di contatto del dataset. Nel caso del punto di contatto, la proprietà può essere sia l'home page dell'organizzazione/ufficio che agisce come punto di contatto, o una pagina web con le informazioni relative al punto di contatto."
+    },
+    "isDefinedBy" : "http://xmlns.com/foaf/0.1/",
+    "attributes" : [ "external" ],
+    "domain" : "class26",
+    "range" : "class15",
+    "maxCardinality" : 1
+  }, {
+    "id" : "property56",
+    "label" : {
+      "IRI-based" : "versionInfo",
+      "en" : "version",
+      "it" : "versione"
+    },
+    "iri" : "http://www.w3.org/2002/07/owl#versionInfo",
+    "comment" : {
+      "en" : "This property contains a version number or any other version designation of the Dataset.",
+      "it" : "Questa proprietà contiene il numero della versione o altre indicazioni della versione del dataset."
+    },
+    "isDefinedBy" : "http://www.w3.org/2002/07/owl#",
+    "attributes" : [ "external" ],
+    "domain" : "thing3",
+    "range" : "literal19",
+    "maxCardinality" : 1
+  }, {
+    "id" : "property26",
+    "label" : {
+      "IRI-based" : "hasTelephone",
+      "en" : "has telephone",
+      "it" : "ha telefono"
+    },
+    "iri" : "http://www.w3.org/2006/vcard/ns#hasTelephone",
+    "comment" : {
+      "en" : "This property is defined in http://www.w3.org/2006/vcard/ns and it is used to link the Organization representing the contact point to its phone number.",
+      "it" : "Questa proprietà è definita in http://www.w3.org/2006/vcard/ns ed è stata aggiunta al fine di poter legare l'Organizzazione, che rappresenta il punto di contatto, con il numero di telefono della stessa."
+    },
+    "isDefinedBy" : "http://www.w3.org/2006/vcard/ns",
+    "attributes" : [ "external" ],
+    "domain" : "class18",
+    "range" : "class10",
+    "maxCardinality" : 1
+  }, {
+    "id" : "property13",
+    "label" : {
+      "IRI-based" : "hasEmail",
+      "en" : "has email",
+      "it" : "ha email"
+    },
+    "iri" : "http://www.w3.org/2006/vcard/ns#hasEmail",
+    "comment" : {
+      "en" : "To specify the primary electronic mail address for communications with the contact point of the dataset.",
+      "it" : "Proprietà utilizzata per specificare l'indirizzo email primario da utilizzare nelle comunicazioni con l'oggetto (nel contesto DCAT_AP IT l'oggetto è il dipartimento/ufficio identificato come punto di contatto stabile per un dataset).  Si raccomanda di utilizzare e-mail istituzionali riferibili all’ufficio/servizio/UO e non alla singola persona."
+    },
+    "isDefinedBy" : "http://www.w3.org/2006/vcard/ns",
+    "attributes" : [ "external" ],
+    "domain" : "class18",
+    "range" : "class21",
+    "cardinality" : 1
+  }, {
+    "id" : "property31",
+    "label" : {
+      "IRI-based" : "themeTaxonomy",
+      "en" : "theme taxonomy",
+      "it" : "tema del catalogo"
+    },
+    "iri" : "http://www.w3.org/ns/dcat#themeTaxonomy",
+    "comment" : {
+      "en" : "This property refers to a knowledge organization system used to categorized the Catalogue's Datasets.",
+      "it" : "Questa proprietà è utilizzata per rappresentare un sistema di organizzazione della conoscenza utile per la classificazione dei dataset contenuti nel catalogo."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/dcat#",
+    "attributes" : [ "external" ],
+    "domain" : "class26",
+    "range" : "class28"
+  }, {
+    "id" : "property46",
+    "label" : {
+      "IRI-based" : "geographicalIdentifier",
+      "en" : "geographical identifier",
+      "it" : "identificativo geografico"
+    },
+    "iri" : "http://dati.gov.it/onto/dcatapit#geographicalIdentifier",
+    "comment" : {
+      "en" : "ISO 19115 core also allows specifying the geographic location using a geographic identifier. Following DCAT-AP, for this, it is recommended to use an HTTP URI from one of the following registers / gazetteers:\n1) The Named Authority Lists operated by the Metadata Registry of the EU Publications office concerning continents, countries, and places.\n2) If none of the above provides the relevant geographic identifiers, Geonames should be used.\n3) If an HTTP URI is not available, the geographical identifier must be expressed with skos:prefLabel.",
+      "it" : "Il nucleo di metadati definiti dallo standard ISO 19115 consente di specificare la locazione geografica utilizzando un identificativo geografico. A tal riguardo, seguendo quanto indicato in DCTAT-AP, è raccomandato l'uso di un URI HTTP da uno dei seguenti registri:\n\n1) La \"Named Authority List\" gestita dal registro dei metadati dell'ufficio EU pubblication, riguardante continenti, paesi e luoghi;\n\n2) Se nessuno dei precedenti fornisce identificatori geografici rilevanti, Geonames dovrebbe essere utilizzato;\n\n3) Se un URI HTTP non è disponibile, un identificatore geografico deve essere espresso con la proprietà skos:prefLabel."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/dcatapit",
+    "owlVersion" : "\"stabile\"@it",
+    "domain" : "class31",
+    "range" : "literal9",
+    "superproperty" : [ "property43" ],
+    "maxCardinality" : 1
+  }, {
+    "id" : "property29",
+    "label" : {
+      "IRI-based" : "rightsHolder",
+      "en" : "rights holder",
+      "it" : "titolare"
+    },
+    "iri" : "http://purl.org/dc/terms/rightsHolder",
+    "comment" : {
+      "en" : "This property is used to represent an agent (typically an organization) which is responsible for the overall management of the dataset in the light of its institutional objectives. This property represents one of the extensions introduced by the Italian profile of the DCaT-AP 1.1. Do not include names of single persons.",
+      "it" : "Sulla base anche di quanto indicato all’art.2 lettera i) del D. Lgs. n. 36/2006, il titolare del dataset è la pubblica amministrazione o l’organismo di diritto pubblico che ha originariamente formato per uso proprio o commissionato ad altro soggetto pubblico o privato il documento che rappresenta il dato, o che ne ha la disponibilità. Il titolare è pertanto responsabile della gestione complessiva del dataset in virtù dei propri compiti istituzionali.Si fa presente che, nell’ambito della presente ontologia, l’accezione di documento suddetta può essere intesa riferita al dataset. E' bene evitare di specificare nomi di singole persone."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms//",
+    "attributes" : [ "external" ],
+    "domain" : "class11",
+    "range" : "class2",
+    "cardinality" : 1
+  }, {
+    "id" : "property35",
+    "label" : {
+      "IRI-based" : "landingPage",
+      "en" : "landing page",
+      "it" : "pagina di accesso"
+    },
+    "iri" : "http://www.w3.org/ns/dcat#landingPage",
+    "comment" : {
+      "en" : "This property refers to a web page that provides access to the Dataset, its Distributions and/or additional information.",
+      "it" : "Questa proprietà si riferisce a una pagina web, riferibile al fornitore e non ad una terza parte, che fornisce l’accesso al Dataset, le sue Distribuzioni e/o informazioni aggiuntive."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/dcat#",
+    "attributes" : [ "external" ],
+    "domain" : "class11",
+    "range" : "class15"
+  }, {
+    "id" : "property10",
+    "label" : {
+      "IRI-based" : "hasURL",
+      "en" : "web site",
+      "it" : "sito"
+    },
+    "iri" : "http://www.w3.org/2006/vcard/ns#hasURL",
+    "isDefinedBy" : "http://www.w3.org/2006/vcard/ns",
+    "attributes" : [ "external" ],
+    "annotations" : {
+      "description" : [ {
+        "identifier" : "description",
+        "language" : "en",
+        "value" : "Property defined in http://www.w3.org/2006/vcard/ns and used to represent the primary URL of the contact point of the dataset. It is recommended to indicate the URL of the main contact page or the contact form. It is discouraged the use of the main URL of the institutional web site of the organization that provides the dataset. In case additional secondary URLs are to be added, it is recommended to extend DCAT-AP_IT with properties such as foaf:page.",
+        "type" : "label"
+      }, {
+        "identifier" : "description",
+        "language" : "it",
+        "value" : "Proprietà utilizzata per rappresentare l'URL primario del punto di contatto per il dataset. Si raccomanda di indicare l'URL di una pagina primaria di contatti o di un form per il contatto e non l'URL del sito web istituzionale dell'organizzazione che fornisce il dataset. Nel caso si vogliano specificare ulteriori URL secondari si può estendere il profilo DCAT-AP_IT con proprietà come per esempio foaf:page.",
+        "type" : "label"
+      } ]
+    },
+    "domain" : "class18",
+    "range" : "thing1",
+    "maxCardinality" : 1
+  }, {
+    "id" : "property50",
+    "label" : {
+      "IRI-based" : "modified",
+      "en" : "update date",
+      "it" : "data ultima modifica"
+    },
+    "iri" : "http://purl.org/dc/terms/modified",
+    "comment" : {
+      "en" : "This property contains the most recent date on which either the Catalogue or the Dataset or the Ditribution was modified.",
+      "it" : "Questa proprietà consente di rappresentare la data di ultima modifica o del Catalogo o del Dataset o della Distribuzione del Dataset."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "domain" : "thing3",
+    "range" : "literal13",
+    "cardinality" : 1,
+    "maxCardinality" : 1
+  }, {
+    "id" : "property34",
+    "label" : {
+      "IRI-based" : "temporal",
+      "en" : "temporal coverage",
+      "it" : "estensione temporale"
+    },
+    "iri" : "http://purl.org/dc/terms/temporal",
+    "comment" : {
+      "en" : "This property refers to a temporal period that the Dataset covers.",
+      "it" : "Questa proprietà è utilizzata per rappresentare un'estensione temporale che il dataset possiede."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "domain" : "class11",
+    "range" : "class24"
+  }, {
+    "id" : "property25",
+    "label" : {
+      "IRI-based" : "license",
+      "en" : "license",
+      "it" : "licenza"
+    },
+    "iri" : "http://purl.org/dc/terms/license",
+    "comment" : {
+      "en" : "This property refers to the licence under which the distribution of the dataset is made available.",
+      "it" : "Questa proprietà si riferisce a una licenza con la quale la Distribuzione è resa disponibile.",
+      "undefined" : "http://purl.org/dc/terms/"
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class27",
+    "range" : "class16",
+    "cardinality" : 1
+  }, {
+    "id" : "property54",
+    "label" : {
+      "IRI-based" : "notation",
+      "en" : "notation",
+      "it" : "notazione"
+    },
+    "iri" : "http://www.w3.org/2004/02/skos/core#notation",
+    "comment" : {
+      "en" : "A notation is a string of characters such as \"T58.5\" or \"303.4833\" used to uniquely identify a concept.",
+      "it" : "Questa proprietà contiene una stringa che è un identificatore nel contesto dello schema di identificazione a cui fa riferimento il suo tipo.",
+      "undefined" : "http://www.w3.org/2004/02/skos/core"
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class6",
+    "range" : "literal17"
+  }, {
+    "id" : "property19",
+    "label" : {
+      "IRI-based" : "accrualPeriodicity",
+      "en" : "accrual periodicity",
+      "it" : "frequenza di aggiornamento"
+    },
+    "iri" : "http://purl.org/dc/terms/accrualPeriodicity",
+    "comment" : {
+      "en" : "Property used to represent the frequancy of update of the dataset.",
+      "it" : "Proprietà utilizzata per rappresentare la frequenza dcon cui il Dataset viene aggiornato. I valori da utilizzare per questa proprietà sono gli URI dei concetti del vocabolario MDR Frequency Named Authority List (http://publications.europa.eu/mdr/authority/frequency)."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "domain" : "class11",
+    "range" : "class30",
+    "cardinality" : 1
+  }, {
+    "id" : "property43",
+    "label" : {
+      "IRI-based" : "identifier",
+      "en" : "identifier",
+      "it" : "identificativo"
+    },
+    "iri" : "http://purl.org/dc/terms/identifier",
+    "comment" : {
+      "en" : "The identifier might be used as part of the URI of the thing to which is associated, but still having it represented explicitly is useful.",
+      "it" : "Questa proprietà rappresenta l'identificativo associato a una cosa. Esso può essere utilizzato come parte dell'URI dell'oggetto ma può essere anche esplicitato.\n\nUn esempio dell'uso dell'identificatore in turtle è il seguente (dove datiAmministrazione potrebbe essere definita come http://dati.gov.it/resource/Amministrazione/)\n\n<pre>\n\ndatiAmministrazione:agid\n  a               dcatapit:Agent , foaf:Agent ;\n  dct:identifier  \"agid\" ;\n  foaf:name       \"AgID\"@it .\n\n</pre>"
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "domain" : "thing3",
+    "range" : "literal6",
+    "subproperty" : [ "property46" ],
+    "cardinality" : 1
+  }, {
+    "id" : "property41",
+    "label" : {
+      "IRI-based" : "byteSize",
+      "en" : "byte size",
+      "it" : "dimensione in byte"
+    },
+    "iri" : "http://www.w3.org/ns/dcat#byteSize",
+    "comment" : {
+      "en" : "This property contains the size of the Distribution of the dataset expressed in bytes",
+      "it" : "Questa proprietà è utilizzata per rappresentare la dimensione della distribuzione del dataset espressa in byte."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/dcat",
+    "attributes" : [ "external" ],
+    "domain" : "class27",
+    "range" : "datatype4",
+    "maxCardinality" : 1
+  }, {
+    "id" : "property20",
+    "label" : {
+      "IRI-based" : "language",
+      "en" : "language",
+      "it" : "lingua"
+    },
+    "iri" : "http://purl.org/dc/terms/language",
+    "comment" : {
+      "en" : "This property refers to a language of the Dataset or of the Catalogue. This property can be repeated if there are multiple languages in the Dataset or in the Catalogue.",
+      "it" : "Questa proprietà si riferisce a una lingua utilizzata nei metadati testuali che descrivono i titoli, le descrizioni, … dei Dataset o del Catalogo. Questa proprietà può essere ripetuta se i metadati sono forniti in più lingue.\nDeve essere utilizzato il vocabolario http://publications.europa.eu/mdr/authority/language/"
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "domain" : "class33",
+    "range" : "class1"
+  }, {
+    "id" : "property6",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class20",
+    "range" : "class3"
+  }, {
+    "id" : "property5",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class16",
+    "range" : "class4"
+  }, {
+    "id" : "property8",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class27",
+    "range" : "class25"
+  }, {
+    "id" : "property7",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class13",
+    "range" : "class9"
+  }, {
+    "id" : "property9",
+    "label" : {
+      "IRI-based" : "format",
+      "en" : "format",
+      "it" : "formato"
+    },
+    "iri" : "http://purl.org/dc/terms/format",
+    "comment" : {
+      "en" : "Property used to represent the format of the distribution of the dataset. In order to represent the format it is required the use of the controlled vocabulary available at http://publications.europa.eu/mdr/authority/file-type/.",
+      "it" : "Proprietà utilizzata per rappresentare il formato del file di distribuzione del dataset. Per i formati si richiede l'uso del vocabolario controllato disponibile in http://publications.europa.eu/mdr/authority/file-type/."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "domain" : "class27",
+    "range" : "class19",
+    "cardinality" : 1
+  }, {
+    "id" : "property18",
+    "label" : {
+      "IRI-based" : "distribution",
+      "en" : "distribution",
+      "it" : "distribuzione"
+    },
+    "iri" : "http://www.w3.org/ns/dcat#distribution",
+    "comment" : {
+      "en" : "Property used to link the dataset with its available distributions",
+      "it" : "Proprietà utilizzata per collegare il dataset con eventuali distribuzioni disponibili"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/dcat#",
+    "attributes" : [ "external" ],
+    "domain" : "class11",
+    "range" : "class27"
+  }, {
+    "id" : "property52",
+    "label" : {
+      "IRI-based" : "issued",
+      "en" : "release date",
+      "it" : "data di rilascio"
+    },
+    "iri" : "http://purl.org/dc/terms/issued",
+    "comment" : {
+      "en" : "This property contains the date of formal issuance (e.g., publication) of either the Catalogue or the Dataset,",
+      "it" : "Questa proprietà è utilizzata per rappresntare la data ufficiale di rilascio (es. pubblicazione) del Catalogo o del Dataset."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "domain" : "class33",
+    "range" : "literal15",
+    "maxCardinality" : 1
+  }, {
+    "id" : "property53",
+    "label" : {
+      "IRI-based" : "title",
+      "en" : "title",
+      "it" : "titolo"
+    },
+    "iri" : "http://purl.org/dc/terms/title",
+    "comment" : {
+      "en" : "This property represents the title or name of a Thing.",
+      "it" : "Questa proprietù rappresenta il titolo o il nome di una cosa. Può essere utilizzato per il titolo del Catalogo, del Dataset e della Distribuzione. Questa proprietà può essere ripetuta per esprimere il titolo in diverse lingue."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "domain" : "thing3",
+    "range" : "datatype16",
+    "cardinality" : 1
+  }, {
+    "id" : "property14",
+    "label" : {
+      "IRI-based" : "theme",
+      "en" : "theme",
+      "it" : "tema"
+    },
+    "iri" : "http://www.w3.org/ns/dcat#theme",
+    "comment" : {
+      "en" : "This property refers to a category of the Dataset. A Dataset may be associated with multiple themes.",
+      "it" : "Questa proprietà è utilizzata per rappresentare il tema che classifica il dataset. Un dataset può essere associato a temi multipli. I valori da utilizzare per questa proprietà sono gli URI dei concetti del vocabolario EU Data Theme (URI vocabolario: http://publications.europa.eu/resource/authority/data-theme) descritti alla pagina http://publications.europa.eu/mdr/authority/data-theme."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/dcat#",
+    "attributes" : [ "external" ],
+    "domain" : "class11",
+    "range" : "class29"
+  }, {
+    "id" : "property23",
+    "label" : {
+      "IRI-based" : "geographicName",
+      "en" : "geographical name",
+      "it" : "nome geografico"
+    },
+    "iri" : "http://www.w3.org/ns/locn#geographicName",
+    "comment" : {
+      "en" : "A geographic name is a proper noun applied to a spatial object. Examples include: \"Roma\" (n Italian), \"Rome\" (in English), etc.",
+      "it" : "Un nome geografico è un nome proprio dato a un oggetto spaziale. Esempi includono: \"Roma\" (in italiano), \"Rome\" (in inglese), ecc. Utilizzare questa proprietà solo se non è disponibile un URI relativo alla localizzazione geografica da indicare utilizzando la proprietà geographicalIdentifier",
+      "undefined" : "http://www.w3.org/ns/locn"
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class31",
+    "range" : "class29",
+    "maxCardinality" : 1
+  }, {
+    "id" : "property49",
+    "label" : {
+      "IRI-based" : "endDate",
+      "en" : "end date",
+      "it" : "data fine"
+    },
+    "iri" : "http://dati.gov.it/onto/dcatapit#endDate",
+    "comment" : {
+      "en" : "Property used to represent the end date in a period of time.",
+      "it" : "Proprietà utilizzata per rappresentare una data di fine di un periodo temporale."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/dcatapit",
+    "domain" : "class24",
+    "range" : "literal12",
+    "superproperty" : [ "property48" ],
+    "maxCardinality" : 1
+  }, {
+    "id" : "property28",
+    "label" : {
+      "IRI-based" : "identifier",
+      "en" : "other identifier",
+      "it" : "altro identificativo"
+    },
+    "iri" : "http://www.w3.org/ns/adms#identifier",
+    "comment" : {
+      "en" : "This property is used to represent a secondary identifier of the dataset such a DOI, ISBN, etc.",
+      "it" : "Questa proprietà si riferisce a un eventuale identificativo secondario del Dataset (un identificativo che il dataset assume in altri contesti come per esempio il DOI, l'ISBN, ecc.)."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/adms#",
+    "attributes" : [ "external" ],
+    "domain" : "class11",
+    "range" : "class6"
+  }, {
+    "id" : "property44",
+    "label" : {
+      "IRI-based" : "prefLabel",
+      "en" : "preferred label",
+      "it" : "etichetta principale"
+    },
+    "iri" : "http://www.w3.org/2004/02/skos/core#prefLabel",
+    "comment" : {
+      "en" : "The preferred lexical label for a resource, in a given language.",
+      "it" : "Proprietà utilizzata per identificare una stringa lessicale principale di una risorsa, espressa in uno più linguaggi naturali."
+    },
+    "isDefinedBy" : "http://www.w3.org/2004/02/skos/core",
+    "attributes" : [ "external" ],
+    "domain" : "thing3",
+    "range" : "datatype7"
+  } ]
+}

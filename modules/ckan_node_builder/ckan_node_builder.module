@@ -1,0 +1,918 @@
+<?php
+use Drupal\node\Entity\Node;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
+use \GuzzleHttp\Client;
+
+use Drupal\Core\Url;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+
+function labelFrequency($freq){
+$FREQUENCY_DATA = [
+        'ANNUAL'=>'annuale',
+'ANNUAL_2'=>'semestrale',
+'ANNUAL_3'=>'tre volte all\'anno',
+'BIDECENNIAL'=>'bidecennale',
+'BIENNIAL'=>'biennale',
+'BIHOURLY'=>'ogni due ore',
+'BIMONTHLY'=>'bimestrale',
+'BIWEEKLY'=>'quindicinale',
+'CONT'=>'continuo',
+'DAILY'=>'quotidiano',
+'DAILY_2'=>'due volte al giorno',
+'DECENNIAL'=>'decennale',
+'HOURLY'=>'ogni ora',
+'IRREG'=>'irregolare',
+'MONTHLY'=>'mensile',
+'MONTHLY_2'=>'bimensile',
+'MONTHLY_3'=>'tre volte al mese',
+'NEVER'=>'mai',
+'OP_DATPRO'=>'dati provvisori',
+'OTHER'=>'altro',
+'QUADRENNIAL'=>'ogni quattro anni',
+'QUARTERLY'=>'trimestrale',
+'QUINQUENNIAL'=>'ogni cinque anni',
+'TRIDECENNIAL'=>'tridecennale',
+'TRIENNIAL'=>'triennale',
+'TRIHOURLY'=>'ogni tre ore',
+'UNKNOWN'=>'sconosciuto',
+'UPDATE_CONT'=>'in continuo aggiornamento',
+'WEEKLY'=>'settimanale',
+'WEEKLY_2'=>'bisettimanale',
+'WEEKLY_3'=>'tre volte a settimana'
+  ];
+if(array_key_exists(strtoupper($freq), $FREQUENCY_DATA)){
+    return strtoupper($FREQUENCY_DATA[strtoupper($freq)]);
+}
+return $freq;
+}
+
+
+function ckan_node_builder_node_view(array & $build, Node $node, $display, $view_mode) {
+  $entity_type = 'node';
+  $dataset = 'ckan_dataset';
+  $base_dati = 'ckan_base_dati';
+  $resource = 'ckan_resource';
+  $iframe = 'resource_iframe';
+  $param = \Drupal::request()
+    ->query
+    ->all();
+
+  $id = isset($param['id']) ? $param['id'] : null;
+  $root = '';
+  $host = getenv('CKAN_HOST');
+  $port = getenv('CKAN_PORT');
+  $uri = getenv('CKAN_HOST') . ':' . getenv('CKAN_PORT') . "/api/3/action/package_show?id=$id";
+  $hostdkan = \Drupal::request()->getSchemeAndHttpHost();
+  $build['#cache']['max-age'] = 0;
+
+  if ($node->getType() == $resource) {
+    $build['#cache']['max-age'] = 0;
+  }
+
+  if ($node->getType() == $iframe && $view_mode == 'full') {
+    $id = $_GET['id'];
+    $uri = getenv('CKAN_HOST') . ':' . getenv('CKAN_PORT') . "/api/3/action/";
+    $host = getenv('CKAN_HOST');
+    $port = getenv('CKAN_PORT');
+    $uri1 = $uri . "resource_view_list?id=$id";
+    try {
+      $response1 = _ckan_node_builder_fetch_file($uri1);
+    }
+    catch(Exception $e) {
+      throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
+      return;
+    }
+
+    $resource_id = $response1->result[0]->id;
+    $package_id = $response1->result[0]->package_id;
+    $uri2 = $uri . "package_show?id=$package_id";
+
+    try {
+      $response2 = _ckan_node_builder_fetch_file($uri2);
+    }
+    catch(Exception $e) {
+      throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
+      return;
+    }
+    $name_dataset = $response2
+      ->result->name;
+    $hostEsterno = getenv('CKAN_ESTERNO');
+    $build['body'][0]['#text'] = '<iframe frameborder="0" height="600" scrolling="no" src="' . $hostEsterno . ':' . $port . '/dataset/' . $name_dataset . '/resource/' . $id . '/view/' . $resource_id . '" style=" border-width:0 " width="650"></iframe>';
+    $build['title'][0]["#context"]['value'] = $response2
+      ->result->title;
+  }
+}
+
+function ckan_node_builder_node_load($nodes) {
+  if (sizeof($nodes) != 1) return;
+  foreach ($nodes as $node) {
+    $entity_type = 'node';
+    $base_dati = 'ckan_base_dati';
+    $dataset = 'ckan_dataset';
+    $iframe = 'resource_iframe';
+    $param = \Drupal::request()
+      ->query
+      ->all();
+
+    if (isset($param) && isset($param['id'])) $id = $param['id'];
+
+    if (isset($id) && $node->getType() == $base_dati) {
+      $uri = getenv('CKAN_HOST_BASE_DATI') . ':' . getenv('CKAN_PORT_BASE_DATI') . "/api/3/action/package_show?id=$id";
+      $path_base = "/";
+
+      try {
+        $response = _ckan_node_builder_fetch_file($uri);
+      }
+      catch(Exception $e) {
+        throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
+        return;
+      }
+
+      $result = $response->result;
+      $entityManager = \Drupal::service('entity_field.manager');
+      $fields = $entityManager->getFieldDefinitions($entity_type, $base_dati);
+
+      foreach ($fields as $key => $field) {
+        if (substr($key, 0, 6) != "field_") continue;
+
+        $newkey = substr($key, 6);
+        $subkey = null;
+        $sep = ', ';
+
+        if (strpos($newkey, '___') !== false) {
+          $arr = explode('___', $newkey);
+          $newkey = $arr[0];
+          $subkey = $arr[1];
+        }
+
+        $islink = false;
+        $fieldToQuery = null;
+
+        if ($newkey == 'tags') {
+          $islink = true;
+          $fieldToQuery = 'name';
+        }
+
+        $host = \Drupal::request()->getSchemeAndHttpHost();
+        $extracted = _ckan_node_builder_extract_field($result, $newkey, $subkey, $sep, $islink, $fieldToQuery, $base_dati);
+
+        if (isset($extracted)) {
+
+          $node->set($key, $extracted);
+
+          if ($newkey == 'tags') {
+            $node
+              ->$key->format = 'full_html';
+          }
+        }
+      }
+
+      $extracted = _ckan_node_builder_extract_field($result, 'title');
+
+      if (isset($extracted)) {
+        $node->set('title', $extracted);
+      }
+
+      $extracted = NULL;
+      $extracted = _ckan_node_builder_extract_field($result, 'modified');
+
+      if (isset($extracted)) {
+        $data_ora = explode('T', $extracted);
+        $data = explode('-', $data_ora[0]);
+        $day = $data[2];
+        $month = $data[1];
+        $year = $data[0];
+        $ora = explode('.', $data_ora[1]);
+        $ora = explode(':', $ora[0]);
+        $H = $ora[0];
+        $M = $ora[1];
+        $S = $ora[2];
+        $data_string = $year . '-' . $month . '-' . $day;
+        $node->set('field_modified', $data_string);
+      }
+
+      $extracted = NULL;
+      $extracted = _ckan_node_builder_extract_field($result, 'issued');
+
+      if (isset($extracted) && !empty($extracted)) {
+        $data_ora = explode('T', $extracted);
+        $data = explode('-', $data_ora[0]);
+        $day = $data[2];
+        $month = $data[1];
+        $year = $data[0];
+        $ora = explode('.', $data_ora[1]);
+        $ora = explode(':', $ora[0]);
+        $H = $ora[0];
+        $M = $ora[1];
+        $S = $ora[2];
+        $data_string = $year . '-' . $month . '-' . $day;
+        $node->set('field_issued', $data_string);
+      }
+
+      if (isset($result->extras)) {
+        foreach ($result->extras as $extra) {
+if ($extra->key === 'contact_mail') {
+  $field= 'field_contact_email';
+  if($node->hasField($field)){
+    $node->set($field, $extra->value);
+  }
+} else {
+  $field= 'field_' .$extra->key;
+  if($node->hasField($field)){
+      $node->set($field, $extra->value);
+  }
+}        
+}
+      }
+
+      $entity = $node
+        ->field_resource->entity;
+      /** @var \Drupal\Core\Entity\Plugin\DataType\EntityAdapter $entityAdapter */
+ 
+      if (isset($node->field_conforms_to)) {
+        $obj = json_decode($node
+          ->field_conforms_to
+          ->value);
+        $valore = '';
+        $sep = '; ';
+		$labelTitolo = 'Titolo: ';
+		$labelUri = 'URI standard: ';
+        foreach ($obj as $term) {
+		  $valore .= $labelTitolo;
+          $valore .= $term->title->it;
+		  $valore .= ' - ';
+		  $valore .= $labelUri;	
+          $valore .= $term->uri;
+          $valore .= $sep;
+		  $valore .= PHP_EOL;
+         // $sep = ', ';
+        }
+        $node->set('field_conforms_to', $valore);
+      }
+
+      if (isset($node->field_conforms_to_uri)) {
+        $obj = json_decode($node
+          ->field_conforms_to
+          ->value);
+        $valore = '';
+        $sep = '; ';
+        foreach ($obj as $term) {
+          $valore .= $term->uri;
+          $valore .= $sep;
+          $sep = '; ';
+        }
+        $node->set('field_conforms_to_uri', $valore);
+      }
+
+      if (isset($node->field_source_catalog_publisher)) {
+        $obj = json_decode($node
+          ->field_source_catalog_publisher
+          ->value);
+        $valore = $obj->name;
+        $node->set('field_source_catalog_publisher', $valore);
+      }
+
+      if ($node->hasField('field_groups')) {
+        $y = [];
+        for ($i = 0;$i < count($result->groups);$i++) {
+          if (++$groups_counter == count($result->groups)) {
+            $groups_separator = '';
+          }
+
+          $x = $result->groups[$i]->display_name;
+          $p = $result->groups[$i]->name;
+          $y[] = ['title' => $x . $groups_separator, 'uri' => $host . $path_base . 'view-dataset?groups=' . $p];
+        }
+
+        $node->field_groups = $y;
+      }
+
+// if (isset($node->field_theme)) {
+//
+//        $obj = json_decode($node
+//          ->field_theme
+//          ->value);
+//        $valore = '';
+//        $sep = ' ';
+//        foreach ($obj as $term) {
+//          foreach ($term->subthemes as $el) {
+//            $valore .= $el;
+//            $valore .= $sep;
+//          }
+//        }
+//        $node->set('field_theme', $valore);
+//      }
+
+
+    if (isset($node->field_theme)) {
+        $a=array(
+          "AGRI"=>"Agricoltura, pesca, silvicoltura e prodotti alimentari",
+          "ECON"=>"Economia e finanze",
+          "EDUC"=>"Istruzione, cultura e sport",
+          "ENER"=>"Energia",
+          "ENVI"=>"Ambiente",
+          "GOVE"=>"Governo e settore pubblico",
+          "INTR"=>"Tematiche internazionali",
+          "JUST"=>"Giustizia, sistema giuridico e sicurezza pubblica",
+          "REGI"=>"Regioni e città",
+          "SOCI"=>"Popolazione e società",
+          "TECH"=>"Scienza e tecnologia",
+          "TRAN"=>"Trasporti",
+          "HEAL"=>"Salute",
+          "OP_DATPRO"=>"Dati provvisori"
+          );
+              $obj = json_decode($node
+                ->field_theme
+                ->value);
+              $valore = '';
+              $sep = "\n";
+	      $punto=';';
+              $arr = array();
+              foreach ($obj as $term) {
+                $nometema = $a[$term->theme];
+                if($term->subthemes !=null){ 
+                  $badgetema = '<h5 style ="margin-top:20px;"><span class="badge badge-pill badge-primary">'.$nometema.'</span></h5>';
+                  $valore .= $badgetema; 
+                }
+                foreach ($term->subthemes as $el) {
+                  $link =  '<a href= '.$el.'>'.$el.$punto.'</a></p>';
+                  $valore .= $sep. $link .$sep;
+                }
+               
+              }
+              $arr[$nometema] = $el;
+              $node->set('field_theme', $valore);
+              $node->field_theme->format = 'full_html';
+            }
+
+
+      if (isset($node->field_temporal_coverage)) {
+        $obj = json_decode($node
+          ->field_temporal_coverage
+          ->value);
+        $valore = '';
+        $sep = '; ';
+                $labelInizio = 'Data inizio: ';
+                $labelFine = 'Data fine: ';
+        foreach ($obj as $term) {
+                  $valore .= date("Y-m-d", strtotime($labelInizio));
+          $valore .= $term->temporal_start;
+                  $valore .= ', ';
+                  $valore .= $labelFine;
+          $valore .= date("Y-m-d", strtotime($term->temporal_end));
+          $valore .= $sep;
+          $valore .= PHP_EOL;
+         // $sep = ', ';
+        }
+        $node->set('field_temporal_coverage', $valore);
+      }
+
+
+
+
+      if (isset($node->field_creator)) {
+        $obj = json_decode($node
+          ->field_creator
+          ->value);
+        $valore = '';
+        $sep = '';
+        $valore2 = '';
+        foreach ($obj as $term) {
+          $valore .= $term
+            ->creator_name->it;
+          $valore2 .= $term->creator_identifier;
+          $valore2 .= $sep;
+          $valore .= $sep;
+          $sep = ', ';
+        }
+        $node->set('field_creator', $valore);
+        $node->set('field_creator_identifier', $valore2);
+      }
+
+
+     if ($node
+        ->field_source_catalog_modified->value == '' || $node
+        ->field_source_catalog_modified->value == NULL) $node
+        ->field_source_catalog_modified->value = ' ';
+      if ($node
+        ->field_source_catalog_description->value == '' || $node
+        ->field_source_catalog_description->value == NULL) $node
+        ->field_source_catalog_description->value = ' ';
+      if ($node
+        ->field_source_catalog_publisher->value == '' || $node
+        ->field_source_catalog_publisher->value == NULL) $node
+        ->field_source_catalog_publisher->value = ' ';
+      if ($node
+        ->field_source_catalog_title->value == '' || $node
+        ->field_source_catalog_title->value == NULL) $node
+        ->field_source_catalog_title->value = ' ';
+    }
+
+    if (isset($id) && $node->getType() == $dataset) {
+      $uri = getenv('CKAN_HOST') . ':' . getenv('CKAN_PORT') . "/api/3/action/package_show?id=$id";
+
+      $path_base = "/";
+      try {
+        $response = _ckan_node_builder_fetch_file($uri);
+      }
+      catch(Exception $e) {
+        throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
+        return;
+
+      }
+      $result = $response->result;
+      $entityManager = \Drupal::service('entity_field.manager');
+      $fields = $entityManager->getFieldDefinitions($entity_type, $dataset);
+      foreach ($fields as $key => $field) {
+        if (substr($key, 0, 6) != "field_") continue;
+        $newkey = substr($key, 6);
+        $subkey = null;
+        $sep = ', ';
+
+        if (strpos($newkey, '___') !== false) {
+          $arr = explode('___', $newkey);
+          $newkey = $arr[0];
+          $subkey = $arr[1];
+        }
+        $islink = false;
+        $fieldToQuery = null;
+
+        if ($newkey == 'tags' || $newkey == 'groups') {
+          $islink = true;
+          $fieldToQuery = 'name';
+        }
+
+        $host = \Drupal::request()->getSchemeAndHttpHost();
+        $extracted = _ckan_node_builder_extract_field($result, $newkey, $subkey, $sep, $islink, $fieldToQuery, $dataset);
+        if (isset($extracted)) {
+
+          $node->set($key, $extracted);
+
+          if ($newkey == 'tags' || $newkey == 'groups' || $newkey == 'notes') {
+            $node
+              ->$key->format = 'full_html';
+          }
+        }
+      }
+      $extracted = _ckan_node_builder_extract_field($result, 'title');
+      if (isset($extracted)) {
+        $node->set('title', $extracted);
+      }
+      $extracted = NULL;
+      $extracted = _ckan_node_builder_extract_field($result, 'modified');
+      if (isset($extracted)) {
+        $data_ora = explode('T', $extracted);
+        $data = explode('-', $data_ora[0]);
+        $day = $data[2];
+        $month = $data[1];
+        $year = $data[0];
+        $ora = explode('.', $data_ora[1]);
+        $ora = explode(':', $ora[0]);
+        $H = $ora[0];
+        $M = $ora[1];
+        $S = $ora[2];
+        $data_string = $year . '-' . $month . '-' . $day;
+        $node->set('field_modified', $data_string);
+      }
+
+      $extracted = NULL;
+      $extracted = _ckan_node_builder_extract_field($result, 'issued');
+      if (isset($extracted) && !empty($extracted)) {
+        $data_ora = explode('T', $extracted);
+        $data = explode('-', $data_ora[0]);
+        $day = $data[2];
+        $month = $data[1];
+        $year = $data[0];
+        $ora = explode('.', $data_ora[1]);
+        $ora = explode(':', $ora[0]);
+        $H = $ora[0];
+        $M = $ora[1];
+        $S = $ora[2];
+        $data_string = $year . '-' . $month . '-' . $day;
+        $node->set('field_issued', $data_string);
+      }
+
+      if (isset($result->extras)) {
+        foreach ($result->extras as $extra) {
+          if ($extra->key === 'contact_mail') {
+  $field= 'field_contact_email';
+  if($node->hasField($field)){
+    $node->set($field, $extra->value);
+  }
+} else {
+  $field= 'field_' .$extra->key;
+  if($node->hasField($field)){
+      $node->set($field, $extra->value);
+  }
+}
+
+        }
+      }
+
+      $node->field_groups = [];
+      $groups_separator = ', ';
+      $groups_counter = 0;
+      if ($node->hasField('field_groups')) {
+        $y = [];
+        for ($i = 0;$i < count($result->groups);$i++) {
+          if (++$groups_counter == count($result->groups)) {
+            $groups_separator = '';
+          }
+
+          $x = $result->groups[$i]->display_name;
+          $p = $result->groups[$i]->name;
+          $y[] = ['title' => $x . $groups_separator, 'uri' => $host . $path_base . 'view-dataset?groups=' . $p];
+        }
+
+        $node->field_groups = $y;
+      }
+
+      if ($node->hasField('field_parole_chiave')) {
+        $y = [];
+        for ($i = 0;$i < count($result->tags);$i++) {
+
+          $x = $result->tags[$i]->display_name;
+          $p = $result->tags[$i]->name;
+          $y[] = ['title' => $x . ',', 'uri' => $host . $path_base . 'view-dataset?tags=' . $p];
+        }
+        $node->field_parole_chiave = $y;
+      }
+
+      $entity = $node
+        ->field_resource->entity;
+      /** @var \Drupal\Core\Entity\Plugin\DataType\EntityAdapter $entityAdapter */
+      /** @var \Drupal\Core\Entity\EntityInterface $referencedEntity */
+      if (isset($node->field_source_catalog_publisher)) {
+        $obj = json_decode($node
+          ->field_source_catalog_publisher
+          ->value);
+        $node->set('field_source_catalog_publisher', $obj->name);
+      }
+      if ($node
+        ->field_alternate_identifier->value == '[]') {
+        $node->set('field_alternate_identifier', NULL);
+      }
+      if (isset($node->field_spatial)) {
+        $obj = json_decode($node
+          ->field_spatial
+          ->value);
+        $vett = $obj->coordinates[0];
+        $valore = '';
+        if ($vett != NULL || isset($vett)) {
+          for ($i = 0;$i < 4;$i++) {
+            $valore .= $vett[$i][0];
+            $valore .= ', ';
+            $valore .= $vett[$i][1];
+            $valore .= '; ';
+          }
+          $node->set('field_spatial', $valore);
+        }
+      }
+      if (isset($node->field_creator)) {
+        $obj = json_decode($node
+          ->field_creator
+          ->value);
+        $valore = '';
+        $sep = '';
+        $valore2 = '';
+        foreach ($obj as $term) {
+          $valore .= $term
+            ->creator_name->it;
+          $valore2 .= $term->creator_identifier;
+          $valore2 .= $sep;
+          $valore .= $sep;
+          $sep = ', ';
+        }
+        $node->set('field_creator', $valore);
+        $node->set('field_creator_identifier', $valore2);
+      }
+
+      // if (isset($node->field_theme)) {
+      //
+      //  $obj = json_decode($node
+      //    ->field_theme
+      //    ->value);
+      //  $valore = '';
+      //  $sep = ' ';
+      //  foreach ($obj as $term) {
+      //    foreach ($term->subthemes as $el) {
+      //      $valore .= $el;
+      //      $valore .= $sep;
+      //    }
+      //  }
+      //  $node->set('field_theme', $valore);
+      // }
+
+
+      if (isset($node->field_theme)) {
+        $a=array(
+          "AGRI"=>"Agricoltura, pesca, silvicoltura e prodotti alimentari",
+          "ECON"=>"Economia e finanze",
+          "EDUC"=>"Istruzione, cultura e sport",
+          "ENER"=>"Energia",
+          "ENVI"=>"Ambiente",
+          "GOVE"=>"Governo e settore pubblico",
+          "INTR"=>"Tematiche internazionali",
+          "JUST"=>"Giustizia, sistema giuridico e sicurezza pubblica",
+          "REGI"=>"Regioni e città",
+          "SOCI"=>"Popolazione e società",
+          "TECH"=>"Scienza e tecnologia",
+          "TRAN"=>"Trasporti",
+          "HEAL"=>"Salute",
+          "OP_DATPRO"=>"Dati provvisori"
+          );
+              $obj = json_decode($node
+                ->field_theme
+                ->value);
+              $valore = '';
+              $sep = "\n";
+              $arr = array();
+	      $punto=';';
+              foreach ($obj as $term) {
+                $nometema = $a[$term->theme];
+                if($term->subthemes !=null){ 
+                  $badgetema = '<h5 style ="margin-top:20px;"><span class="badge badge-pill badge-primary">'.$nometema.'</span></h5>';
+                  $valore .= $badgetema; 
+                }
+                foreach ($term->subthemes as $el) {
+                  $link =  '<a href= '.$el.'>'.$el.$punto.'</a></p>';
+                  $valore .= $sep. $link .$sep;
+                }
+               
+              }
+              $arr[$nometema] = $el;
+              $node->set('field_theme', $valore);
+              $node->field_theme->format = 'full_html';
+            }
+
+
+      if (isset($node->field_conforms_to_uri)) {
+        $obj = json_decode($node
+          ->field_conforms_to
+          ->value);
+        $valore = '';
+        $sep = '; ';
+        foreach ($obj as $term) {
+          $valore .= $term->uri;
+          $valore .= $sep;
+          $sep = '; ';
+        }
+        $node->set('field_conforms_to_uri', $valore);
+      }
+      if (isset($node->field_conforms_to_title)) {
+        $obj = json_decode($node
+          ->field_conforms_to
+          ->value);
+        $valore = '';
+        $sep = '; ';
+        foreach ($obj as $term) {
+          $valore .= $term
+            ->title->it;
+          $valore .= $sep;
+          $sep = '; ';
+        }
+        $node->set('field_conforms_to_title', $valore);
+      }
+
+      if (isset($node->field_conforms_to)) {
+        $obj = json_decode($node
+          ->field_conforms_to
+          ->value);
+        $valore = '';
+        $sep = '; ';
+		$labelTitolo = 'Titolo: ';
+		$labelUri = 'URI standard: ';
+        foreach ($obj as $term) {
+		  $valore .= $labelTitolo;
+          $valore .= $term->title->it;
+		  $valore .= ' - ';
+		  $valore .= $labelUri;	
+          $valore .= $term->uri;
+          $valore .= $sep;
+		  $valore .= PHP_EOL;
+         // $sep = ', ';
+        }
+        $node->set('field_conforms_to', $valore);
+      }
+
+
+
+
+      if (isset($node->field_temporal_coverage)) {
+        $obj = json_decode($node
+          ->field_temporal_coverage
+          ->value);
+        $valore = '';
+        $sep = '; ';
+		$labelInizio = 'Data inizio: ';
+		$labelFine = 'Data fine: ';
+        foreach ($obj as $term) {
+		  $valore .= $labelInizio;
+          $valore .= $term->temporal_start;
+		  $valore .= ', ';
+		  $valore .= $labelFine;	
+          $valore .= $term->temporal_end;
+          $valore .= $sep;
+          $valore .= PHP_EOL;
+         // $sep = ', ';
+        }
+        $node->set('field_temporal_coverage', $valore);
+      }    
+         if ($node
+        ->field_modified->value == '' || $node
+        ->field_modified->value == NULL) $node
+        ->field_modified->value = ' ';
+      if ($node
+        ->field_holder_name->value == '' || $node
+        ->field_holder_name->value == NULL) $node
+        ->field_holder_name->value = ' ';
+      if ($node
+        ->field_holder_identifier->value == '' || $node
+        ->field_holder_identifier->value == NULL) $node
+        ->field_holder_identifier->value = ' ';
+      if ($node
+        ->field_publisher_name->value == '' || $node
+        ->field_publisher_name->value == NULL || $node
+        ->field_publisher_name->value == 'Impresainungiorno') $node
+        ->field_publisher_name->value = ' ';
+      if ($node
+        ->field_notes->value == '' || $node
+        ->field_notes->value == NULL) $node
+        ->field_notes->value = ' ';
+      if ($node
+        ->field_license_title->value == '' || $node
+        ->field_license_title->value == NULL) $node
+        ->field_license_title->value = ' ';
+      if ($node
+        ->field_frequency->value == '' || $node
+        ->field_frequency->value == NULL) $node
+        ->field_frequency->value = ' ';
+      if ($node
+        ->field_identifier->value == '' || $node
+        ->field_identifier->value == NULL) $node
+        ->field_identifier->value = ' ';
+      if ($node
+        ->field_contact_name->value == '' || $node
+        ->field_contact_name->value == NULL) $node
+        ->field_contact_name->value = ' ';
+      if ($node
+        ->field_contact_email->value == '' || $node
+        ->field_contact_email->value == NULL) $node
+        ->field_contact_email->value = ' ';
+      if ($node
+        ->field_source_catalog_homepage->value == '' || $node
+        ->field_source_catalog_homepage->value == NULL) $node
+        ->field_source_catalog_homepage->value = ' ';
+      if ($node
+        ->field_source_catalog_publisher->value == '' || $node
+        ->field_source_catalog_publisher->value == NULL) $node
+        ->field_source_catalog_publisher->value = ' ';
+      if ($node
+        ->field_uri->value == '' || $node
+        ->field_uri->value == NULL) $node
+        ->field_uri->value = ' ';
+      if ($node
+        ->field_source_catalog_title->value == '' || $node
+        ->field_source_catalog_title->value == NULL) $node
+        ->field_source_catalog_title->value = ' ';
+      if ($node
+        ->field_source_catalog_description->value == '' || $node
+        ->field_source_catalog_description->value == NULL) $node
+        ->field_source_catalog_description->value = ' ';
+      if ($node
+        ->field_source_catalog_modified->value == '' || $node
+        ->field_source_catalog_modified->value == NULL) $node
+        ->field_source_catalog_modified->value = ' ';
+
+    }
+    $node->field_frequency->value=labelFrequency($node->field_frequency->value);
+    if ($node->getType() == $iframe) {
+      $id = $_GET['id'];
+      $uri = getenv('CKAN_HOST') . ':' . getenv('CKAN_PORT') . "/api/3/action/";
+      $host = getenv('CKAN_HOST');
+      $port = getenv('CKAN_PORT');
+      $uri1 = $uri . "resource_view_list?id=$id";
+      try {
+        $response1 = _ckan_node_builder_fetch_file($uri1);
+      }
+      catch(Exception $e) {
+        throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
+        return;
+      }
+      $resource_id = $response1->result[0]->id;
+      $package_id = $response1->result[0]->package_id;
+      $uri2 = $uri . "package_show?id=$package_id";
+      try {
+        $response2 = _ckan_node_builder_fetch_file($uri2);
+      }
+      catch(Exception $e) {
+        throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
+        return;
+      }
+      $name_dataset = $response2
+        ->result->name;
+      $node->set('title', $response2
+        ->result
+        ->title);
+    }
+  }
+  if (isset($ret)) {
+    $nodes = $ret;
+  }
+}
+
+function _ckan_node_builder_extract_field($result, $newkey, $subkey = null, $sep = ', ', $islink = false, $fieldToQuery = null, $nodeType = null) {
+  if (!isset($result) || !isset($newkey)) return NULL;
+
+  if (isset($result->{$newkey})) {
+    $nv = $result->{$newkey};
+    if (is_array($nv)) {
+      $ret = '';
+      $s = '';
+
+      foreach ($nv as $k => $v) {
+        if (isset($v->{$subkey})) {
+          if (!$islink) {
+            $ret .= $s . $v->{$subkey};
+          }
+          else {
+            if ($nodeType == 'ckan_base_dati') {
+              $r = "<a class='focus-element' style='color: #ffffff !important; text-decoration: none !important;' href='/base-dati?tags=" . $v->{$fieldToQuery} . "'><span class='badge badge-pill badge-primary'>" . $v->{$subkey} . "</span></a>";
+            } 
+            else if ($nodeType == 'ckan_dataset') {
+              $r = "<a class='focus-element' style='color: #ffffff !important; text-decoration: none !important;' href='/view-dataset?tags=" . $v->{$fieldToQuery} . "'><span class='badge badge-pill badge-primary'>" . $v->{$subkey} . "</span></a>";
+            }
+            $ret .= $s . $r;
+          }
+
+          $s = '&nbsp;';
+          
+        }
+      }
+
+      $nv = $ret;
+    }
+
+    return $nv;
+  }
+
+  return NULL;
+}
+
+/**
+ * Fetch file.
+ */
+function _ckan_node_builder_fetch_file($uri) {
+  $parsed = parse_url($uri);
+
+  // Check for local file.
+  if (empty($parsed['host'])) {
+    throw new Exception(t('Local file!!!'));
+  }
+
+  $headers = array();
+
+  // Rebuild the JSON file URL.
+  $request_options = array(
+    'headers' => $headers
+  );
+  $request_context_options = array();
+
+  if ($request_context_options) {
+    $request_options['context'] = stream_context_create($request_context_options);
+  }
+
+  $guzzle = new Client();
+  $response = $guzzle->get($uri, ['verify' => false]);
+
+  if ($response->getStatusCode() >= 400) {
+    $args = array(
+      '%error' => $response->getStatusCode() ,
+      '%uri' => $uri
+    );
+    $message = t('HTTP response: %error. URI: %uri', $args);
+    throw new \Exception($message);
+  }
+
+  $cache_file_uri = "$destination/$cache_file";
+  $res = $response->getBody();
+  $res = $res->getContents();
+
+  $res = json_decode($res);
+  return $res;
+}
+
+/**
+ * Implements TEMPLATE_preprocess_views_view_field().
+ */
+function ckan_node_builder_preprocess_views_view_field(&$vars) {
+  if (isset($vars['view'])) {
+    if (isset($vars['view']->field) && (count($vars['view']->field) > 0)) {
+
+      if ($vars['field']->field == 'value') {
+        // We leave it empty.
+        
+      }
+    }
+  }
+}

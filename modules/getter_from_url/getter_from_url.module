@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Contains getter_from_url.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function getter_from_url_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the getter_from_url module.
+    case 'help.page.getter_from_url':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module provide a getter function from URL.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+

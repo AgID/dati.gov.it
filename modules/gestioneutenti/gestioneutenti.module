@@ -1,0 +1,140 @@
+<?php
+
+function gestioneutenti_mail($key, &$message, $params){
+    if (isset($params['Cc'])) {
+       $message['headers']['Cc'] = $params['Cc'];
+    }
+    $message['subject'] = $params['subject'];
+    $message['body'][] = $params['message'];
+}
+
+
+function gestioneutenti_theme() {
+
+  $templates = array('contacts_show_page' => array('variables' => ['id' => NULL,'form' => NULL,'vettore' => NULL,'apickan'=>NULL,'urlckan' => NULL],'template' =>'contacts_show'),
+                     'elenco_dataset_page' => array('variables' => ['menu' => NULL,'elencoDataset' => NULL], 'template' => 'elenco_dataset'),
+                     'dettaglio_dataset_page' => array('variables' => ['dataset' => NULL], 'template' => 'dettaglio_dataset'));
+  return $templates;
+									
+}
+
+function gestioneutenti_preprocess_html(&$variables) {
+  $variables['page']['#attached']['library'][] = 'core/drupal.ajax';
+}
+
+function gestioneutenti_preprocess_node__page(array &$variables) : void {
+	$variables['#attached']['library'][] = 'gestioneutenti/gestioneutenti-js';
+}
+
+function gestioneutenti_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'gestioneutenti/gestioneutenti-js';
+}
+
+function gestioneutenti_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ( $form_id === "gestioneutenteForm_form") {
+			$form['actions']['submit']['#value'] = 'Salva';
+  }
+
+  if ( $form_id === "utenti_filter_form") {
+  		$form['actions']['submit']['#value'] = 'Cerca';
+  }
+  if ( $form_id === "dataset_form_new") {
+      $form['#attached']['library'][] = 'gestioneutenti/bootsrap-tagsinput';
+  }
+  if ( $form_id === "GestioneRisorsa_form") { //
+    $form['#attached']['library'][] = 'gestioneutenti/gestioneutenti-risorse';
+  }
+  if ( $form_id === "gestioneutenteForm_form") { //
+    $form['#attached']['library'][] = 'gestioneutenti/gestioneutenti-registrazione';
+  }
+  if ( $form_id === "ModificaUtenteForm_form") { //
+    $form['#attached']['library'][] = 'gestioneutenti/gestioneutenti-modifica';
+  }
+  if ( $form_id === "ModificaOperatoreForm_form") { //
+    $form['#attached']['library'][] = 'gestioneutenti/gestioneutenti-modifica-anagrafica';
+  }
+}
+
+
+function gestioneutenti_toolbar() {
+  /*  $items = [];
+
+    $items['Boutique'] = [
+        '#cache' => [
+            'contexts' => ['user.permissions'],
+        ],
+    ];
+*/
+/*
+    if (!\Drupal::currentUser()->hasPermission('gestioneutenti agid')) {
+        return $items;
+    }
+*/
+/*
+    $items['Boutique'] += [
+        '#type' => 'toolbar_item',
+        '#weight' => 1,
+        'tab' => [
+            '#type' => 'link',
+            '#title' => 'Boutique',
+            '#url' => \Drupal\Core\Url::fromUri("internal:/admin/boutique/commandes"),
+            '#attributes' => [
+                'title' => 'Boutique menu',
+                'class' => ['toolbar-icon', 'toolbar-icon-boutique'],
+            ],
+        ],
+        'tray' => [
+
+            'configuration' => [
+                '#type' => 'link',
+                '#title' => 'Commandes',
+                '#url' => \Drupal\Core\Url::fromUri("internal:/admin/boutique/commandes"),
+
+            ],[
+                '#type' => 'link',
+                '#title' => 'Livraison',
+                '#url' => \Drupal\Core\Url::fromUri("internal:/admin/boutique/livraison"),
+
+            ],
+            [
+                '#type' => 'link',
+                '#title' => 'Configuration',
+                '#url' => \Drupal\Core\Url::fromUri("internal:/admin/boutique/configuration"),
+
+            ],
+						[
+                '#type' => 'link',
+                '#title' => 'Pippo',
+                '#url' => \Drupal\Core\Url::fromUri("internal:/admin/boutique/configuration"),
+
+            ],
+
+
+        ],
+        '#attached' => array(
+            'library' => array(
+                //'boutique/admin',
+								'boutique/agid',
+            ),
+        ),
+
+    ];
+    return $items;*/
+}
+
+
+function gestioneutenti_menu_local_tasks_alter(&$data, $route_name, \Drupal\Core\Cache\RefinableCacheableDependencyInterface &$cacheability) {
+
+  //drupal_set_message("sto qua 1 ".$route_name);
+  unset($data['tabs'][0]['user.register']);
+  unset($data['tabs'][0]['user.pass']);
+
+  if ($route_name=="gestioneutenti.mostra_utenti" || $route_name=="gestioneutenti.utenti_form" || $route_name=="gestioneutenti.modifica_operatore_form"
+    || $route_name=="gestioneutenti.dataset" || $route_name=="gestioneutenti.inseriscidataset_form" || $route_name=="user.page"){
+    unset($data['tabs'][0]['gestioneutenti.utenti_form']);
+    unset($data['tabs'][0]['user.pass']);
+    unset($data['tabs'][0]['user.page']);
+
+  }
+
+}

@@ -1,0 +1,232 @@
+gestioneutenti.test_modal_form:
+ path: '/modal/test-form'
+ defaults:
+   _form: '\Drupal\gestioneutenti\Form\TestForm'
+ requirements:
+     _access: 'TRUE'
+
+gestioneutenti.ricercaavanzata_form:
+ path: '/modal/ricercaAvanzataForm'
+ defaults:
+   _form: '\Drupal\gestioneutenti\Form\RicercaAvanzataForm'
+ requirements:
+     _access: 'TRUE'
+
+gestioneutenti.utenti_form:  
+  path: '/admin/config/gestioneutenti/creaUtente'  
+  defaults:  
+    _form: '\Drupal\gestioneutenti\Form\GestioneUtenteForm'  
+    _title: 'Aggiungi utente'
+  requirements:
+    _user_is_logged_in: 'FALSE'
+
+gestioneutenti.login:  
+  path: '/admin/config/gestioneutenti/login'  
+  defaults:  
+    _controller: '\Drupal\gestioneutenti\Controller\GestioneutentiController::login' 
+    _title: 'Aggiungi utente'
+  requirements:
+    _user_is_logged_in: 'FALSE'
+
+
+gestioneutenti.mostra_utenti:  
+  path: '/admin/config/gestioneutenti/visualizzautenti' 
+  defaults: 
+    _controller: '\Drupal\gestioneutenti\Controller\GestioneutentiController::content' 
+    _title: 'Gestione utenti ckan'
+  requirements:
+    _permission: 'gestioneutenti agid'
+    _user_is_logged_in: 'TRUE'
+
+gestioneutenti.risorse_dataset:  
+  path: '/admin/config/gestioneutenti/visualizzarisorsa/{ckan}/{id}' 
+  defaults: 
+    _controller: '\Drupal\gestioneutenti\Controller\GestionedatasetController::elencoRisorse' 
+    _title: 'Gestione risorse dataset'
+  requirements:
+    _permission: 'gestioneutenti operatore'
+    _user_is_logged_in: 'TRUE'
+
+gestioneutenti.trovadataset_tag:  
+  path: '/admin/config/gestioneutenti/elencoDatasetTag/{tags}' 
+  defaults: 
+    _controller: '\Drupal\gestioneutenti\Controller\GestionedatasetController::trovaDatasetTag' 
+    _title: 'Elenco dataset'
+  requirements:
+    _permission: 'gestioneutenti operatore'
+    _user_is_logged_in: 'TRUE'
+
+gestioneutenti.trovadataset_temi:
+  path: '/admin/config/gestioneutenti/elencoDatasetTemi/{temi}'
+  defaults:
+    _controller: '\Drupal\gestioneutenti\Controller\GestionedatasetController::trovaDatasetTemi'
+    _title: 'Elenco dataset'
+  requirements:
+    _permission: 'gestioneutenti operatore'
+    _user_is_logged_in: 'TRUE'
+
+gestioneutenti.check_username:
+  path: '/admin/config/gestioneutenti/check-username/{username}'
+  defaults:
+    _controller: '\Drupal\gestioneutenti\Controller\GestioneutentiController::checkUsername'
+    _title: 'Elenco dataset'
+  requirements:
+    _user_is_logged_in: 'FALSE'
+
+gestioneutenti.trovadataset_formatodist:
+  path: '/admin/config/gestioneutenti/elencoDatasetFormatoDist/{formato}'
+  defaults:
+    _controller: '\Drupal\gestioneutenti\Controller\GestionedatasetController::trovaDatasetFormatoDist'
+    _title: 'Elenco dataset'
+  requirements:
+    _permission: 'gestioneutenti operatore'
+    _user_is_logged_in: 'TRUE'
+
+gestioneutenti.risorseform_dataset:  
+  path: '/admin/config/gestioneutenti/risorsa/{ckan}/{dataset}/{id}' 
+  defaults: 
+    _form: '\Drupal\gestioneutenti\Form\GestioneRisorsaForm' 
+    id: 'support-request'
+    _title: 'Gestione risorse dataset'
+  requirements:
+    _permission: 'gestioneutenti operatore'
+
+    _user_is_logged_in: 'TRUE'
+
+
+gestioneutenti.esci:  
+  path: '/admin/config/gestioneutenti/esci' 
+  defaults: 
+    _controller: '\Drupal\gestioneutenti\Controller\GestioneutentiController::esci' 
+    _title: 'Gestione utenti ckan'
+  requirements:
+    _user_is_logged_in: 'TRUE'
+
+gestioneutenti.dataset:  
+  path: '/admin/config/gestioneutenti/dataSet' 
+  defaults: 
+    _controller: '\Drupal\gestioneutenti\Controller\GestionedatasetController::dataSet' 
+    _title: 'Gestione dataset'
+  requirements:
+    _permission: 'gestioneutenti operatore'
+    _user_is_logged_in: 'TRUE'
+
+
+gestioneutenti.inseriscidataset_form:
+  path: '/admin/config/gestioneutenti/datasetForm/{ckan}/{id}'
+  defaults:
+    _form: '\Drupal\gestioneutenti\Form\DatasetForm'
+    id: 'support-request'
+    ckan: 'support-request'    
+    _title: 'Dati dataset'
+  requirements:
+    _permission: 'gestioneutenti operatore'
+    _user_is_logged_in: 'TRUE'
+
+gestioneutenti.inseriscidataset_form_new:
+  path: '/admin/config/gestioneutenti/datasetFormNew/{idCkan}/{idDataset}'
+  defaults:
+    _form: '\Drupal\gestioneutenti\Form\DatasetFormNew'
+    idDataset: 'new'
+    idCkan: 'new'
+    _title: 'Dati dataset'
+  requirements:
+    _permission: 'gestioneutenti operatore'
+    _user_is_logged_in: 'TRUE'
+
+gestioneutenti.inseriscidataset_form_sace:
+  path: '/admin/config/gestioneutenti/dataset/save'
+  defaults:
+    _controller: '\Drupal\gestioneutenti\Controller\GestioneutentiSaveDatasetController::saveDataset'
+  requirements:
+    _user_is_logged_in: 'TRUE'
+
+gestioneutenti.inseriscidataset_form_delete:
+  path: '/admin/config/gestioneutenti/dataset/delete'
+  defaults:
+    _controller: '\Drupal\gestioneutenti\Controller\GestioneutentiSaveDatasetController::delete'
+  requirements:
+    _user_is_logged_in: 'TRUE'
+
+gestioneutenti.inseriscidataset_form_temi:
+  path: '/admin/config/gestioneutenti/dataset/temi'
+  defaults:
+    _controller: '\Drupal\gestioneutenti\Controller\GestionedatasetController::temi'
+  requirements:
+    _user_is_logged_in: 'TRUE'
+
+gestioneutenti.inseriscidataset_form_sottotemi:
+  path: '/admin/config/gestioneutenti/dataset/sottotemi/{idTema}'
+  defaults:
+    _controller: '\Drupal\gestioneutenti\Controller\GestionedatasetController::sottotemi'
+  requirements:
+    _user_is_logged_in: 'TRUE'
+
+gestioneutenti.inseriscidatasetnuovo_form:
+  path: '/admin/config/gestioneutenti/datasetDettaglio/{ckan}/{iddataset}'
+  defaults:
+    _controller: '\Drupal\gestioneutenti\Controller\GestionedatasetController::dataSetNuovo'
+    _title: 'Dati dataset ok'
+  requirements:
+    _permission: 'gestioneutenti operatore'
+    _user_is_logged_in: 'TRUE'
+
+
+gestioneutenti.modifica_utente_form:
+  path: '/admin/config/gestioneutenti/modificautente/{idutente}'
+  defaults:
+    _form: '\Drupal\gestioneutenti\Form\ModificaUtenteForm'
+    _title: 'Modifica dati utenti'
+  requirements:
+    _permission: 'gestioneutenti agid'
+    _user_is_logged_in: 'TRUE'
+
+gestioneutenti.modifica_operatore_form:
+  path: '/admin/config/gestioneutenti/modificaOperatore'
+  defaults:
+    _form: '\Drupal\gestioneutenti\Form\ModificaOperatoreForm'
+    _title: 'Modifica dati utenti'
+  requirements:
+    _permission: 'gestioneutenti operatore'
+    _user_is_logged_in: 'TRUE'
+
+gestioneutenti.contact_edit:
+  path: '/contact/editprova'
+  defaults:
+    _controller: '\Drupal\gestioneutenti\Controller\GestionedatasetController::provametodo'
+    _title: 'Edit Contact1'
+  requirements:
+    _permission: 'access content'
+
+gestioneutenti.dataset_check_name:
+  path: '/admin/config/gestioneutenti/dataset/checkName/{nameDataset}/{idCkan}'
+  defaults:
+    _controller: '\Drupal\gestioneutenti\Controller\GestioneutentiSaveDatasetController::checkNameDataset'
+  requirements:
+    _user_is_logged_in: 'TRUE'
+
+gestioneutenti.settings:
+  path: '/admin/config/gestioneutenti/settings'
+  defaults:
+    _form: '\Drupal\gestioneutenti\Form\GestioneutentiConfigForm'
+    _title: 'Impostazione CKAN'
+  requirements:
+    _permission: 'administer site configuration'
+    _user_is_logged_in: 'TRUE'
+
+gestioneutenti.dataset_check_password:
+  path: '/admin/config/gestioneutenti/dataset/checkPass/{password}'
+  defaults:
+    _controller: '\Drupal\gestioneutenti\Controller\GestioneutentiController::checkPass'
+  requirements:
+    _user_is_logged_in: 'TRUE'
+
+#gestioneutenti.datasetvista_form:
+#  path: '/view-dataset/dataset/{id}'
+#  defaults:
+#    _controller: '\Drupal\gestioneutenti\Controller\GestionedatasetController::dataSetNuovoVista'
+#    _title: 'Dati dataset ok'
+#  requirements:
+#    _permission: 'gestioneutenti operatore'
+#    _user_is_logged_in: 'TRUE'
+

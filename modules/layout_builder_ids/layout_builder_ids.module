@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements template_preprocess_layout
+ */
+function layout_builder_ids_preprocess_layout(&$variables) {
+
+  // If there is a layout builder id, set it in the attributes.
+  if (isset($variables['content']['#settings']['layout_builder_id'])) {
+
+    // Set the id attribute.
+    $variables['attributes']['id'] = $variables['content']['#settings']['layout_builder_id'];
+  }
+}

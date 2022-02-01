@@ -1,0 +1,12 @@
+{
+  "require": {
+    "twbs/bootstrap": {
+      "version": "v4.2.1",
+      "url": "https://github.com/twbs/bootstrap/releases/download/v4.2.1/bootstrap-4.2.1-dist.zip"
+    },
+    "leafo/scssphp": {
+      "version": "v0.7.7",
+      "url": "https://github.com/leafo/scssphp/archive/v0.7.7.zip"
+    }
+  }
+}

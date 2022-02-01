@@ -1,0 +1,564 @@
+/*** FONT ICONS ***/
+
+@font-face {
+  font-family:'font_icon';
+  src: url('../fonts-icon/dkan-topics.eot');
+  src: url('../fonts-icon/dkan-topics.eot?#iefix') format('embedded-opentype'),
+  url('../fonts-icon/dkan-topics.woff') format('woff'),
+  url('../fonts-icon/dkan-topics.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-icon-select-1 {
+  font-family: 'font_icon';
+}
+
+.font-icon-select-1-20:before {
+  content: "\20"
+}
+
+.font-icon-select-1-e900:before {
+  content: "\e900"
+}
+
+.font-icon-select-1-e901:before {
+  content: "\e901"
+}
+
+.font-icon-select-1-e902:before {
+  content: "\e902"
+}
+
+.font-icon-select-1-e903:before {
+  content: "\e903"
+}
+
+.font-icon-select-1-e904:before {
+  content: "\e904"
+}
+
+.font-icon-select-1-e905:before {
+  content: "\e905"
+}
+
+.font-icon-select-1-e906:before {
+  content: "\e906"
+}
+
+.font-icon-select-1-e907:before {
+  content: "\e907"
+}
+
+.font-icon-select-1-e908:before {
+  content: "\e908"
+}
+
+.font-icon-select-1-e909:before {
+  content: "\e909"
+}
+
+.font-icon-select-1-e90a:before {
+  content: "\e90a"
+}
+
+.font-icon-select-1-e90b:before {
+  content: "\e90b"
+}
+
+.font-icon-select-1-e90c:before {
+  content: "\e90c"
+}
+
+.font-icon-select-1-e90d:before {
+  content: "\e90d"
+}
+
+.font-icon-select-1-e90e:before {
+  content: "\e90e"
+}
+
+.font-icon-select-1-e90f:before {
+  content: "\e90f"
+}
+
+.font-icon-select-1-e910:before {
+  content: "\e910"
+}
+
+.font-icon-select-1-e911:before {
+  content: "\e911"
+}
+
+.font-icon-select-1-e912:before {
+  content: "\e912"
+}
+
+.font-icon-select-1-e913:before {
+  content: "\e913"
+}
+
+.font-icon-select-1-e914:before {
+  content: "\e914"
+}
+
+.font-icon-select-1-e915:before {
+  content: "\e915"
+}
+
+.font-icon-select-1-e916:before {
+  content: "\e916"
+}
+
+.font-icon-select-1-e917:before {
+  content: "\e917"
+}
+
+.font-icon-select-1-e918:before {
+  content: "\e918"
+}
+
+.font-icon-select-1-e919:before {
+  content: "\e919"
+}
+
+.font-icon-select-1-e91a:before {
+  content: "\e91a"
+}
+
+.font-icon-select-1-e91b:before {
+  content: "\e91b"
+}
+
+.font-icon-select-1-e91c:before {
+  content: "\e91c"
+}
+
+.font-icon-select-1-e91d:before {
+  content: "\e91d"
+}
+
+.font-icon-select-1-e91e:before {
+  content: "\e91e"
+}
+
+.font-icon-select-1-e91f:before {
+  content: "\e91f"
+}
+
+.font-icon-select-1-e920:before {
+  content: "\e920"
+}
+
+.font-icon-select-1-e921:before {
+  content: "\e921"
+}
+
+.font-icon-select-1-e922:before {
+  content: "\e922"
+}
+
+.font-icon-select-1-e923:before {
+  content: "\e923"
+}
+
+.font-icon-select-1-e924:before {
+  content: "\e924"
+}
+
+.font-icon-select-1-e925:before,
+.icon-internazionali:before{
+  content: "\e925"
+}
+
+.font-icon-select-1-e926:before {
+  content: "\e926"
+}
+
+.font-icon-select-1-e927:before {
+  content: "\e927"
+}
+
+.font-icon-select-1-e928:before {
+  content: "\e928"
+}
+
+.font-icon-select-1-e929:before,
+.icon-regioni:before {
+  content: "\e929"
+}
+
+.font-icon-select-1-e92a:before,
+.icon-giustizia:before {
+  content: "\e92a"
+}
+
+.font-icon-select-1-e92b:before,
+.icon-governo:before{
+  content: "\e92b"
+}
+
+.font-icon-select-1-e92c:before {
+  content: "\e92c"
+}
+
+.font-icon-select-1-e92d:before {
+  content: "\e92d"
+}
+
+.font-icon-select-1-e92e:before {
+  content: "\e92e"
+}
+
+.font-icon-select-1-e92f:before,
+.icon-ambiente:before {
+  content: "\e92f"
+}
+
+.font-icon-select-1-e930:before,
+.icon-trasporti:before{
+  content: "\e930"
+}
+
+.font-icon-select-1-e931:before {
+  content: "\e931"
+}
+
+.font-icon-select-1-e932:before,
+.icon-cultura:before{
+  content: "\e932"
+}
+
+.font-icon-select-1-e933:before {
+  content: "\e933"
+}
+
+.font-icon-select-1-e934:before {
+  content: "\e934"
+}
+
+.font-icon-select-1-e935:before {
+  content: "\e935"
+}
+
+.font-icon-select-1-e936:before {
+  content: "\e936"
+}
+
+.font-icon-select-1-e937:before {
+  content: "\e937"
+}
+
+.font-icon-select-1-e938:before {
+  content: "\e938"
+}
+
+.font-icon-select-1-e939:before {
+  content: "\e939"
+}
+
+.font-icon-select-1-e93a:before {
+  content: "\e93a"
+}
+
+.font-icon-select-1-e93b:before {
+  content: "\e93b"
+}
+
+.font-icon-select-1-e93c:before {
+  content: "\e93c"
+}
+
+.font-icon-select-1-e93d:before {
+  content: "\e93d"
+}
+
+.font-icon-select-1-e93e:before {
+  content: "\e93e"
+}
+
+.font-icon-select-1-e93f:before {
+  content: "\e93f"
+}
+
+.font-icon-select-1-e940:before,
+.icon-energia:before{
+  content: "\e940"
+}
+
+.font-icon-select-1-e941:before {
+  content: "\e941"
+}
+
+.font-icon-select-1-e942:before {
+  content: "\e942"
+}
+
+.font-icon-select-1-e943:before {
+  content: "\e943"
+}
+
+.font-icon-select-1-e944:before {
+  content: "\e944"
+}
+
+.font-icon-select-1-e945:before {
+  content: "\e945"
+}
+
+.font-icon-select-1-e946:before {
+  content: "\e946"
+}
+
+.font-icon-select-1-e947:before {
+  content: "\e947"
+}
+
+.font-icon-select-1-e948:before {
+  content: "\e948"
+}
+
+.font-icon-select-1-e949:before {
+  content: "\e949"
+}
+
+.font-icon-select-1-e94a:before {
+  content: "\e94a"
+}
+
+.font-icon-select-1-e94b:before {
+  content: "\e94b"
+}
+
+.font-icon-select-1-e94c:before {
+  content: "\e94c"
+}
+
+.font-icon-select-1-e94d:before {
+  content: "\e94d"
+}
+
+.font-icon-select-1-e94e:before {
+  content: "\e94e"
+}
+
+.font-icon-select-1-e94f:before,
+.icon-salute:before {
+  content: "\e94f"
+}
+
+.font-icon-select-1-e950:before {
+  content: "\e950"
+}
+
+.font-icon-select-1-e951:before {
+  content: "\e951"
+}
+
+.font-icon-select-1-e952:before,
+.icon-scienza:before {
+  content: "\e952"
+}
+
+.font-icon-select-1-e953:before {
+  content: "\e953"
+}
+
+.font-icon-select-1-e954:before {
+  content: "\e954"
+}
+
+.font-icon-select-1-e955:before,
+.icon-agricoltura:before {
+  content: "\e955"
+}
+
+.font-icon-select-1-e956:before {
+  content: "\e956"
+}
+
+.font-icon-select-1-e957:before {
+  content: "\e957"
+}
+
+.font-icon-select-1-e958:before {
+  content: "\e958"
+}
+
+.font-icon-select-1-e959:before {
+  content: "\e959"
+}
+
+.font-icon-select-1-e95a:before {
+  content: "\e95a"
+}
+
+.font-icon-select-1-e95b:before {
+  content: "\e95b"
+}
+
+.font-icon-select-1-e95c:before {
+  content: "\e95c"
+}
+
+.font-icon-select-1-e95d:before {
+  content: "\e95d"
+}
+
+.font-icon-select-1-e95e:before {
+  content: "\e95e"
+}
+
+.font-icon-select-1-e95f:before {
+  content: "\e95f"
+}
+
+.font-icon-select-1-e960:before {
+  content: "\e960"
+}
+
+.font-icon-select-1-e961:before {
+  content: "\e961"
+}
+
+.font-icon-select-1-e962:before {
+  content: "\e962"
+}
+
+.font-icon-select-1-e963:before {
+  content: "\e963"
+}
+
+.font-icon-select-1-e964:before {
+  content: "\e964"
+}
+
+.font-icon-select-1-e965:before,
+.icon-societa:before {
+  content: "\e965"
+}
+
+.font-icon-select-1-e966:before {
+  content: "\e966"
+}
+
+.font-icon-select-1-e967:before {
+  content: "\e967"
+}
+
+.font-icon-select-1-e968:before {
+  content: "\e968"
+}
+
+.font-icon-select-1-e969:before {
+  content: "\e969"
+}
+
+.font-icon-select-1-e96a:before {
+  content: "\e96a"
+}
+
+.font-icon-select-1-e96b:before {
+  content: "\e96b"
+}
+
+.font-icon-select-1-e96c:before {
+  content: "\e96c"
+}
+
+.font-icon-select-1-e96d:before {
+  content: "\e96d"
+}
+
+.font-icon-select-1-e96e:before {
+  content: "\e96e"
+}
+
+.font-icon-select-1-e96f:before {
+  content: "\e96f"
+}
+
+.font-icon-select-1-e970:before {
+  content: "\e970"
+}
+
+.font-icon-select-1-e971:before {
+  content: "\e971"
+}
+
+.font-icon-select-1-e972:before {
+  content: "\e972"
+}
+
+.font-icon-select-1-e973:before {
+  content: "\e973"
+}
+
+.font-icon-select-1-e974:before {
+  content: "\e974"
+}
+
+.font-icon-select-1-e975:before {
+  content: "\e975"
+}
+
+.font-icon-select-1-e976:before {
+  content: "\e976"
+}
+
+.font-icon-select-1-e977:before {
+  content: "\e977"
+}
+
+.font-icon-select-1-e978:before {
+  content: "\e978"
+}
+
+.font-icon-select-1-e979:before {
+  content: "\e979"
+}
+
+.font-icon-select-1-e97a:before {
+  content: "\e97a"
+}
+
+.font-icon-select-1-e97b:before {
+  content: "\e97b"
+}
+
+.font-icon-select-1-e97c:before {
+  content: "\e97c"
+}
+
+.font-icon-select-1-e97d:before,
+.icon-economia:before {
+  content: "\e97d"
+}
+
+.font-icon-select-1-e97e:before {
+  content: "\e97e"
+}
+
+.font-icon-select-1-e97f:before {
+  content: "\e97f"
+}
+
+.font-icon-select-1-e980:before {
+  content: "\e980"
+}
+
+.font-icon-select-1-e981:before {
+  content: "\e981"
+}
+
+.font-icon-select-1-e982:before {
+  content: "\e982"
+}
+
+.font-icon-select-1-e983:before {
+  content: "\e983"
+}
+
+.font-icon-select-1-e984:before {
+  content: "\e984"
+}

@@ -1,0 +1,22 @@
+.navbar-brand {
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+a {
+  &.tabledrag-handle {
+    .handle {
+      display: table-cell;
+      padding-right: 1rem !important;
+    }
+  }
+}
+
+label {
+  display: inline-block;
+  margin: $spacer / 2 0 0 0;
+}
+
+

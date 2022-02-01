@@ -1,0 +1,223 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the GESTIONEUTENTI module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function gestioneutenti_schema() {
+  $schema = [];
+  $schema['utentickan'] = [
+    'description' => 'Memorizza utenti da inserire in ckan',
+    'fields' => [
+      'idutente' => [
+        'description' => 'session id utente',
+        'type' => 'serial',
+        'not null' => TRUE,
+      ],
+      'username' => [
+        'description' => 'username utente',
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => FALSE,
+      ],
+      'nomeCompleto' => [
+        'description' => "nome completo utente",
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => FALSE,
+      ],
+      'email' => [
+        'description' => "Email utente",
+        'type' => 'varchar',
+        'length' => 50,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'password' => [
+        'description' => 'Password utente',
+        'type' => 'varchar',
+        'length' => 50,
+        'not null' => FALSE,
+      ],
+			'dataCreazione' => [
+        'description' => 'A Unix timestamp indicante la generazione utente.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+    ],
+    'primary key' => ['idutente'],
+    'indexes' => [
+      'indici' => ['username', 'email'],
+    ],
+  ];
+/*****/
+
+	$schema['organizzazione'] = [
+    'description' => 'Memorizza organizzazioni di utenti',
+    'fields' => [
+      'idOrganizzazione' => [
+        'description' => 'Id organizzazione',
+        'type' => 'serial',
+        'not null' => TRUE,
+      ],
+      'nomeOrganizzazione' => [
+        'description' => 'nome organizzazione',
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => FALSE,
+      ],
+      'descrizioneOrganizzazione' => [
+        'description' => "Descrizione organizzazione",
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => FALSE,
+      ],
+			'idUtente' => [
+        'description' => 'Id utente',
+        'type' => 'int',
+        'not null' => TRUE,
+      ],     
+			'username' => [
+        'description' => 'username utente',
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => FALSE,
+      ],
+			'nomeCompleto' => [
+        'description' => 'Nome completo utente',
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => FALSE,
+      ],
+			'ckankeyDatigov' => [
+        'description' => 'Chiave ckan',
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => FALSE,
+      ],
+			'ckankeyBasigov' => [
+        'description' => 'Chiave ckan',
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => FALSE,
+      ],
+      'flagDatigov' => [
+        'description' => 'attivazione organizzazione su datigov',
+        'type' => 'int',
+        'length' => 1,
+        'not null' => FALSE,
+      ],
+		 'flagBasigov' => [
+        'description' => 'attivazione organizzazione su basigov',
+        'type' => 'int',
+        'length' => 1,
+        'not null' => FALSE,
+      ],
+      'fid' => [
+        'description' => 'Id file upload',
+        'type' => 'int',
+        'not null' => TRUE,
+      ],
+			'linkImmagine' => [
+        'description' => 'Link immagine logo organizzazione',
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => FALSE,
+      ],
+			'email' => [
+        'description' => 'Email organizzazione',
+        'type' => 'varchar',
+        'length' => 50,
+        'not null' => FALSE,
+      ],
+			'telefono' => [
+        'description' => 'Telefono organizzazione',
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => FALSE,
+      ],
+			'url' => [
+        'description' => 'Url organizzazione',
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => FALSE,
+      ],
+			'regione' => [
+        'description' => 'Regione organizzazione',
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => FALSE,
+      ],
+			'codiceIPAIVA' => [
+        'description' => 'Telefono organizzazione',
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => FALSE,
+      ],
+      'dataCreazione' => [
+        'description' => 'A Unix timestamp indicante la generazione utente.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+    ],
+    'primary key' => ['idOrganizzazione'],
+    'indexes' => [
+      'indici' => ['nomeOrganizzazione', 'email'],
+    ],
+  ];	
+
+
+
+/**************/
+
+$schema['t_configuration'] = [
+    'description' => 'Memorizza le istanze di ckan',
+    'fields' => [
+      'id' => [
+        'description' => 'idCkan',
+        'type' => 'serial',
+        'not null' => TRUE,
+      ],
+      'key' => [
+        'description' => 'chiave campo ',
+        'type' => 'varchar',
+        'length' => 25,
+        'not null' => FALSE,
+      ],
+      'value' => [
+        'description' => "valore completo",
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => FALSE,
+      ],
+      'organizzazione' => [
+        'description' => "organizzazione default",
+        'type' => 'varchar',
+        'length' => 200,
+        'not null' => FALSE,
+      ],
+			'dataCreazione' => [
+        'description' => 'A Unix timestamp indicante la generazione utente.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+
+    ],
+    'primary key' => ['id'],
+    'indexes' => [
+      'indici' => ['key'],
+    ],
+  ];
+
+
+  return $schema;
+}
+
+

@@ -1,0 +1,31 @@
+gestioneutenti.accedi:
+  title: 'Accedi'
+  weight: -11
+  route_name: gestioneutenti.login
+  menu_name: menu-operatore
+gestioneutenti.esci:
+  title: 'Esci'
+  weight: -10
+  route_name: gestioneutenti.esci
+  menu_name: menu-operatore
+gestioneutenti.utenti_form:
+  title: 'Registrati'
+  weight: -9
+  route_name: gestioneutenti.utenti_form
+  menu_name: menu-operatore
+gestioneutenti.modifica_operatore_form:
+  title: 'Modifica password'
+  weight: -12
+  route_name: gestioneutenti.modifica_operatore_form
+  menu_name: menu-operatore
+gestioneutenti.mostra_utenti:
+  title: 'Visualizza utenti'
+  weight: -7
+  route_name: gestioneutenti.mostra_utenti
+  menu_name: menu-operatore
+gestioneutenti.dataset:
+  title: 'I miei dataset'
+  weight: -11
+  route_name: gestioneutenti.dataset
+  menu_name: menu-operatore
+

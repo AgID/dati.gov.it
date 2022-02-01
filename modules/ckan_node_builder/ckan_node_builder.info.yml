@@ -1,0 +1,5 @@
+name: Ckan Node Builder 
+description: Modulo per popolare i nodi con i dati provenienti dal ckan.
+package: Ckan Custom
+type: module
+core: 8.x

@@ -1,0 +1,13 @@
+global:
+  css:
+    theme:
+      assets/css/main.css: {}
+      assets/agid/css/agid.css: {}
+      assets/agid/css/icons.css: {}
+      assets/agid/css/dataset-colors.css: {}
+  js:
+    assets/js/bundle.js: {}
+    assets/js/bootstrap-select.min.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

@@ -1,0 +1,14 @@
+gestioneutenti operatore:
+  title: 'Accesso operatore 1'
+  description: 'Modifica utente'
+  restrict access: true
+
+gestioneutenti agid:
+  title: 'Accesso operatore agid'
+  description: 'Modifica utenti agid'
+  restrict access: true
+
+gestioneutenti anonimo:
+  title: 'Accesso inserimento ckan anonimo'
+  description: 'Accesso inserimento ckan anonimo'
+  restrict access: true

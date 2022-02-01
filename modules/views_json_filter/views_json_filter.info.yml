@@ -1,0 +1,5 @@
+name: 'Views Json Filter'
+type: module
+description: 'This module provide the function to filter views.'
+core: 8.x
+package: 'Custom'

@@ -1,0 +1,17 @@
+services:
+  layout_builder_ids.render_block_component_subscriber:
+    class: 'Drupal\layout_builder_ids\EventSubscriber\LayoutBuilderIdsRenderSubscriber'
+    tags:
+      - { name: event_subscriber }
+  layout_builder_ids.configure_section_form:
+    class: '\Drupal\layout_builder_ids\EventSubscriber\LayoutBuilderIdsConfigureSection'
+    tags:
+      - { name: 'event_subscriber' }
+  layout_builder_ids.configure_block_form:
+    class: '\Drupal\layout_builder_ids\EventSubscriber\LayoutBuilderIdsConfigureBlock'
+    tags:
+      - { name: 'event_subscriber' }
+  layout_builder_ids.route_subscriber:
+    class: Drupal\layout_builder_ids\EventSubscriber\LayoutBuilderIdsRouteSubscriber
+    tags:
+      - { name: 'event_subscriber' }

@@ -1,0 +1,7 @@
+cleaner_cron: 0
+cleaner_last_cron: 0
+cleaner_clear_cache: 0
+cleaner_additional_tables: ''
+cleaner_empty_watchdog: 0
+cleaner_clean_sessions: 0
+cleaner_optimize_db: 0

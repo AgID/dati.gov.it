@@ -1,0 +1,120 @@
+{{ attach_library('agid_theme/fontawesome') }}
+{{ attach_library('agid_theme/bootstrap') }}
+
+{% include active_theme_path() ~ '/bootstrap-italia/svg/sprite.svg' %}
+{#{% include active_theme_path() ~ '/bootstrap-italia/css/bootstrap-italia.min.css' %}
+{% include active_theme_path() ~ '/bootstrap-italia/css/bootstrap-italia.min.css.map' %}
+{% include active_theme_path() ~ '/bootstrap-italia/js/bootstrap-italia.min.js.map' %}
+{% include active_theme_path() ~ '/bootstrap-italia/js/bootstrap-italia.bundle.min.js' %}
+{% include active_theme_path() ~ '/bootstrap-italia/js/bootstrap-italia.min.js' %}
+{% include active_theme_path() ~ '/bootstrap-italia/js/bootstrap-italia.bundle.min.js.map' %}
+
+#}
+{#
+   <a href="#">This is the Contacts show twig template</a> <i class="fa fa-angle-down" style="color:#ff0000"></i>
+<div>
+  <h2 style="color:#ff0000">Questa è una pagina di prova {{ id }}</h2>
+ </div>
+
+{{ form }} #}
+
+
+{#<p class="testoprova1">Ciao mondo</p>#}
+
+{#
+<div class="it-right-zone">
+                <div class="it-socials d-none d-md-flex">
+                  <span>Seguici su</span>
+                  <ul>
+                    <li>
+                      <a href="#" aria-label="Facebook" target="_blank">
+                        <svg class="icon">
+                          <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-facebook"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Github" target="_blank">
+                        <svg class="icon">
+                          <use xlink:href="{{ site.baseurl }}/dist/svg/sprite.svg#it-github"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" target="_blank" aria-label="Twitter">
+                        <svg class="icon">
+                          <use xlink:href="{{ active_theme_path() }}/dist/svg/sprite.svg#it-twitter"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+             </div>
+</div>
+
+#}
+{#
+{% if vettore|length > 0 %}
+ <p>Elementi trovati {{ vettore|length }}</p>
+{% endif %}
+
+{% if vettore|length == 0 %}
+ <p>Elementi non trovati</p>
+{% endif %}
+
+{% for item in vettore %}
+        <p style="color:#000">sto qua{{ item|e }}</p><br />
+    {% else %}
+        <p><em>no user found</em></p>
+    {% endfor %}
+
+#}
+
+{#
+<div class="row" style="width:100%">
+	<div class="col-lg-12 sfondoCarouselEsploraDati">
+ 		<p class="titoloGeocatalogo">Elaboro i dati aperti del geocatalogo </p>
+			<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols" id="myCarousel">
+			  <div class="it-header-block">
+			    <!--
+					<div class="it-header-block-title">
+			      <h2 class="no_toc">Titolo del Carousel 1</h2>
+			    </div>
+					-->
+					<!--div class="it-carousel-all owl-carousel it-card-bg"> -->
+					<div class="it-carousel-all owl-carousel it-card-bg">
+					<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+				  {% for item in vettore %}
+   					 <div class="it-single-slide-wrapper">
+      					<div class="card-wrapper card-space">
+        					<div class="card card-bg" style="width:235px;height:150px">
+          					<div class="card-body">
+           						 <h5 class="card-title"></h5>
+            					 <p class="card-text caratterecard1" style="font-size:15px;font-family:'Titillium Web';color:#0059B3">{{ item|e }}</p>
+          					</div>
+        					</div>
+      				</div>
+    				</div>
+						{% endfor %}
+			  	</div>
+			</div>
+	</div>
+</div>
+
+#}
+
+<p class="etichettaTestoProva">prova </p>
+
+<div class="input-group md-form form-sm form-2 pl-0">
+  <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search" aria-label="Search">
+  <div class="input-group-append">
+    <span class="input-group-text red lighten-3" id="basic-text1"><i class="fas fa-search text-grey"
+        aria-hidden="true"></i></span>
+  </div>
+</div>
+
+<p>Urlckan trovata {{ urlckan }}</p>
+<p>Api trovata {{ apickan }}</p>
+

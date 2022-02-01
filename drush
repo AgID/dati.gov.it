@@ -1,0 +1,3 @@
+
+Warning: readfile(http://files.drush.org/drush.phar): failed to open stream: HTTP request failed! HTTP/1.1 403 Forbidden
+ in Command line code on line 1

@@ -1,0 +1,5 @@
+services:
+  watchdog_delete_filter.route_subscriber:
+    class: Drupal\watchdog_delete_filter\Routing\WatchdogDeleteRouteSubscriber
+    tags:
+      - { name: event_subscriber }

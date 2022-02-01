@@ -1,0 +1,3555 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.2.0), http://vowl.visualdataweb.org",
+  "namespace" : [ ],
+  "header" : {
+    "languages" : [ "IRI-based", "en", "it", "undefined" ],
+    "title" : {
+      "en" : "Core Public Service Vocabulary - The Italian Application Profile (CPSV-AP_IT)",
+      "it" : "Core Public Service Vocabulary - Il profilo applicativo italiano (CPSV-AP_IT)"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit",
+    "version" : "Version 0.7 - 22 February 2016",
+    "author" : [ "Agency for Digital Italy - AgID", "Agenzia per l'Italia Digitale - AgID" ],
+    "description" : {
+      "en" : "This is the ontology of the Italian application profile for public services. With the term \"public service\" we mean any discretional or mandatory act carried out by a Public Administration (or on behalf of a Public Administration) for the advantage of citizens and enterprises.",
+      "it" : "Ontologia del profilo italiano per la descrizione dei servizi pubblici. Per servizio pubblico si intende qualsiasi atto obbligatorio o discrezionale espletato da una pubblica amministrazione (o per conto di una pubblica amministrazione) nei confronti di cittadini, imprese/professionisti."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://creativecommons.org/licenses/by/3.0/it/",
+        "type" : "iri"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://dati.gov.it/onto/cpsvapit",
+        "type" : "iri"
+      } ],
+      "rights" : [ {
+        "identifier" : "rights",
+        "language" : "en",
+        "value" : "Attribution (http://creativecommons.org/licenses/by/3.0/it)",
+        "type" : "label"
+      }, {
+        "identifier" : "rights",
+        "language" : "en",
+        "value" : "Attribuzione (http://creativecommons.org/licenses/by/3.0/it/)",
+        "type" : "label"
+      } ],
+      "comment" : [ {
+        "identifier" : "comment",
+        "language" : "it",
+        "value" : "Ontologia del profilo italiano per la descrizione dei servizi pubblici. Per servizio pubblico si intende qualsiasi atto obbligatorio o discrezionale espletato da una pubblica amministrazione (o per conto di una pubblica amministrazione) nei confronti di cittadini, imprese/professionisti.",
+        "type" : "label"
+      }, {
+        "identifier" : "comment",
+        "language" : "en",
+        "value" : "This is the ontology of the Italian application profile for public services. With the term \"public service\" we mean any discretional or mandatory act carried out by a Public Administration (or on behalf of a Public Administration) for the advantage of citizens and enterprises.",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2015-11-21",
+        "type" : "label"
+      } ]
+    }
+  },
+  "metrics" : {
+    "classCount" : 52,
+    "datatypeCount" : 18,
+    "objectPropertyCount" : 51,
+    "datatypePropertyCount" : 18,
+    "propertyCount" : 69,
+    "nodeCount" : 70,
+    "axiomCount" : 1126,
+    "individualCount" : 27
+  },
+  "class" : [ {
+    "id" : "class12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class26",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "class24",
+    "type" : "externalclass"
+  }, {
+    "id" : "class47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class33",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "class22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class18",
+    "type" : "externalclass"
+  }, {
+    "id" : "class41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class1",
+    "type" : "externalclass"
+  }, {
+    "id" : "class10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class14",
+    "type" : "externalclass"
+  }, {
+    "id" : "class43",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "class13",
+    "type" : "externalclass"
+  }, {
+    "id" : "class27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class17",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "class5",
+    "type" : "externalclass"
+  }, {
+    "id" : "class36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class34",
+    "type" : "externalclass"
+  }, {
+    "id" : "class21",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "class16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class32",
+    "type" : "externalclass"
+  }, {
+    "id" : "class37",
+    "type" : "externalclass"
+  }, {
+    "id" : "class35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class28",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "class4",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "class44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class30",
+    "type" : "externalclass"
+  }, {
+    "id" : "class3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class38",
+    "type" : "externalclass"
+  }, {
+    "id" : "class19",
+    "type" : "externalclass"
+  }, {
+    "id" : "class11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class46",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "class45",
+    "type" : "externalclass"
+  }, {
+    "id" : "class39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "thing7",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "thing6",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "thing3",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "thing2",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "thing5",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "thing4",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "thing1",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "class61",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "class62",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "class54",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "class57",
+    "type" : "owl:unionOf"
+  } ],
+  "classAttribute" : [ {
+    "id" : "class12",
+    "label" : {
+      "IRI-based" : "Requirement",
+      "en" : "Requirement",
+      "it" : "Requisito"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#Requirement",
+    "comment" : {
+      "en" : "The class is used to represent requirements for the use of the public service. The requirements, included into rules associated with the service, can be: license requirements, technical standard requirements, authentication requirements, etc.",
+      "it" : "La classe requisito è utilizzata per rappresentare i requisiti richiesti per l'utilizzo del servizio pubblico. Tali requisiti sono inclusi all'interno delle regole che il servizio pubblico deve seguire e possono essere: requisiti relativi alla licenza, requisiti relativi agli standard adottati, requisiti di autenticazione, ecc."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "subClasses" : [ "class16", "class4", "class36" ],
+    "instances" : 0
+  }, {
+    "id" : "class31",
+    "label" : {
+      "IRI-based" : "Output",
+      "en" : "Output",
+      "it" : "Output",
+      "undefined" : "http://dati.gov.it/onto/cpsvapit"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#Output",
+    "comment" : {
+      "en" : "This class represents an output of the public service. An output can be a any resource (e.g., document, certification, etc.) produced by a Public Service. An output  can also authorize/permit Agents to do something. In some cases output can be input for other public services. In order to represent the possible output types, CPSV-AP_IT requires the use of a controlled vocabulary defined in http://dati.gov.it/onto/controlledvocabulary/ServiceInputOutput. The class is recommended.",
+      "it" : "La classe rappresenta un output del servizio pubblico. L’output può essere qualsiasi risorsa (e.g., documenti, certificazioni, ecc.) prodotta da un servizio pubblico. Tali output possono anche permettere a soggetti di fare successive azioni. Inoltre, in alcuni casi essi possono rappresentare anche l’input per altri servizi pubblici. Nell'ambito di CPS-AP_IT i valori per i tipi di output sono dati dal seguente vocabolario controllato: http://dati.gov.it/onto/controlledvocabulary/ServiceInputOutput. La classe è raccomandata."
+    },
+    "instances" : 0
+  }, {
+    "id" : "class42",
+    "label" : {
+      "IRI-based" : "FormalFramework",
+      "en" : "Formal Framework",
+      "it" : "Framework Legale"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#FormalFramework",
+    "comment" : {
+      "en" : "This class represents the legislation, policy or policies that lie behind the rules that govern the service. The class is optional.",
+      "it" : "Questa classe rappresenta il riferimento normativo che sottende le regole che governano il servizio pubblico. La classe è opzionale."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "instances" : 0
+  }, {
+    "id" : "class26",
+    "label" : {
+      "IRI-based" : "Agent",
+      "en" : "Agent",
+      "it" : "Soggetto"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#Agent",
+    "comment" : {
+      "en" : "This class represents an Agent that plays a role on the public service. An agent can be a group, a single physical person, a legal entity (public or private organization). This class is subclass of  http://dati.gov.it/onto/dcatapit#Agent defined in DCAT-AP_IT in order to guarantee the alignment with the two ontologies.",
+      "it" : "Questa classe rappresenta un soggetto che ha un ruolo sul servizio pubblico. Un soggetto può essere un gruppo, una singola persona fisica, o un'entità legale (un'organizzazione pubblica o privata). La classe è sottoclasse di http://dati.gov.it/onto/dcatapit#Agent definita in  DCAT-AP_IT così da garantire l'allineamento tra le due ontologie."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "attributes" : [ "equivalent" ],
+    "subClasses" : [ "class40", "class9", "class41" ],
+    "instances" : 0,
+    "equivalent" : [ "class33" ]
+  }, {
+    "id" : "class24",
+    "label" : {
+      "IRI-based" : "SemanticAsset"
+    },
+    "iri" : "http://www.w3.org/ns/adms#SemanticAsset",
+    "attributes" : [ "external" ],
+    "instances" : 1,
+    "individuals" : [ {
+      "iri" : "http://dati.gov.it/onto/cpsvapit",
+      "labels" : {
+        "IRI-based" : "http://dati.gov.it/onto/cpsvapit"
+      },
+      "annotations" : { }
+    } ]
+  }, {
+    "id" : "class47",
+    "label" : {
+      "IRI-based" : "Phone",
+      "en" : "Phone",
+      "it" : "Telefono"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#Phone",
+    "comment" : {
+      "en" : "This class represent a channel of type telephone.",
+      "it" : "Questa classe rappresenta un canale di tipo telefono."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "superClasses" : [ "class22", "class5" ],
+    "instances" : 0
+  }, {
+    "id" : "class25",
+    "label" : {
+      "IRI-based" : "TimeInterval",
+      "en" : "Time Interval",
+      "it" : "Intervallo Temporale"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#TimeInterval",
+    "comment" : {
+      "en" : "This class is used to represent a time interval defined by a starting date/time and an ending date/time.",
+      "it" : "Questa classe è utilizzata per rappresentare un intervallo temporale definito da una data/tempo di inizio e una data/tempo di fine."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "superClasses" : [ "class45" ],
+    "instances" : 0
+  }, {
+    "id" : "class50",
+    "label" : {
+      "IRI-based" : "Concept",
+      "en" : "Concept",
+      "it" : "Concetto"
+    },
+    "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
+    "comment" : {
+      "en" : "The class Concept is defined in http://www.w3.org/2004/02/skos/core# and it has been added in order to manage the controlled vocabularies of the CPSV-AP_IT.",
+      "it" : "La classe Concept è definita in http://www.w3.org/2004/02/skos/core# ed è aggiunta a CPSV-AP_IT al fine di poter gestire tutti i vocabolari controllati del profilo dei metadati dei servizi."
+    },
+    "isDefinedBy" : "http://www.w3.org/2004/02/skos/core#",
+    "attributes" : [ "external" ],
+    "instances" : 0
+  }, {
+    "id" : "class33",
+    "label" : {
+      "IRI-based" : "Agent",
+      "en" : "Agent",
+      "it" : "Agente"
+    },
+    "iri" : "http://dati.gov.it/onto/dcatapit#Agent",
+    "comment" : {
+      "en" : "This class has been defined in the DCAT-AP_IT Italian profile for metadata that describe data of PAs.This alignment guarantees the linking between CPSV-AP_IT and DCAT-AP_IT.",
+      "it" : "Questa classe è definita in DCAT-AP_IT ovvero il profilo italiano DCAT-AP per i metadati che descrivono i dati delle PA. Questo allineamento garntisce un collegamento tra le due ontologie CPSV-AP_IT e DCAT-AP_IT.",
+      "undefined" : "http://dati.gov.it/onto/dcatapit"
+    },
+    "attributes" : [ "external", "equivalent" ],
+    "instances" : 0
+  }, {
+    "id" : "class22",
+    "label" : {
+      "IRI-based" : "Channel",
+      "en" : "Channel",
+      "it" : "Canale di erogazione"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#Channel",
+    "comment" : {
+      "en" : "This class represents a channel through which a service is provided to end-users. In the context of CPSV-AP_IT the following controlled vocabulary shall be used in order to define the type of channel: http://dati.gov.it/onto/controlledvocabulary/Channel. The class is recommended.",
+      "it" : "Questa classe rappresenta un canale attraverso cui il servizio pubbico è erogato agli utenti finali. In CPSV-AP_IT deve essere utilizzato il seguente vocabolario per la definizione del tipo di canale: http://dati.gov.it/onto/controlledvocabulary/Channel. La classe è raccomandata."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "subClasses" : [ "class15", "class46", "class29", "class47", "class6" ],
+    "instances" : 0
+  }, {
+    "id" : "class18",
+    "label" : {
+      "IRI-based" : "Email",
+      "en" : "Email"
+    },
+    "iri" : "http://www.w3.org/2006/vcard/ns#Email",
+    "comment" : {
+      "en" : "This class is defined in http://www.w3.org/2006/vcard/ns and it has been added in order to guarantee the full alignment between CPSV-AP_IT and vCard.",
+      "it" : "Questa classe è definita in http://www.w3.org/2006/vcard/ns ed è stata aggiunta al fine di garantire l'allineamento tra CPSV-AP_IT e vCard."
+    },
+    "isDefinedBy" : "http://www.w3.org/2006/vcard/ns",
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class15" ],
+    "instances" : 0
+  }, {
+    "id" : "class41",
+    "label" : {
+      "IRI-based" : "Person",
+      "en" : "Person",
+      "it" : "Persona"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#Person",
+    "comment" : {
+      "en" : "This class represents a Person who can have a specific role in the organization that plays a role in turn on the public service.",
+      "it" : "Questa classe rappresenta una singola persona fisica che può avere un ruolo nell'organizzazione di appartenenza che a sua volta esercita un ruolo sul servizio pubblico. Nel caso del suo utilizzo, la proprietà “nome” della classe deve assumere il cognome della persona stessa."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "superClasses" : [ "class26", "class37" ],
+    "instances" : 0
+  }, {
+    "id" : "class1",
+    "label" : {
+      "IRI-based" : "LinguisticSystem",
+      "en" : "Linguistic System",
+      "it" : "Sistema Linguistico"
+    },
+    "iri" : "http://purl.org/dc/terms/LinguisticSystem",
+    "comment" : {
+      "en" : "This class is defined in http://purl.org/dc/terms/ and it has been added in order to model the language of the public service.",
+      "it" : "Questa classe è definita in http://purl.org/dc/terms/ ed è stata aggiunta per poter rappresentare il linguaggio (lingua) di un servizio pubblico."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "instances" : 0
+  }, {
+    "id" : "class10",
+    "label" : {
+      "IRI-based" : "PublicService",
+      "en" : "Public Service",
+      "it" : "Servizio Pubblico"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#PublicService",
+    "comment" : {
+      "en" : "This class represents a Public Service. With the term \"public service\" we mean any act (discretional or mandatory) carried out by a Public Administration (or on behalf of a Public Administration) for the advantage of citizens, professionals, and enterprises. The class is mandatory.",
+      "it" : "Questa classe rappresenta un servizio pubblico. Per servizio pubblico si intende qualsiasi atto (obbligatorio o discrezionale) espletato da una Pubblica Amministrazione (o espletato per conto di una Pubblica Amministrazione) a vantaggio di cittadini, professionisti e imprese. La classe è obbligatoria."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "instances" : 0
+  }, {
+    "id" : "class51",
+    "label" : {
+      "IRI-based" : "BusinessEvent",
+      "en" : "Business Event",
+      "it" : "Evento di business"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#BusinessEvent",
+    "comment" : {
+      "en" : "This class represent a Business Event. A Business Event is a specific situation or event in the lifecycle of a business. A Business Event requires a set of public services to be delivered in order for the associated business need(s) or obligation(s) to be fulfilled.",
+      "it" : "La classe rappresenta un evento di business dove un evento di business è una situazione o evento che si verifica nel ciclo di vita di un business. Un evento di business richiede che un insieme di servizi pubblici siano erogati per far sì che le necessità e obbligazioni dell'evento di business siano effettivamente soddisfatte. Esempio di evento di business può essere l'avvio di una pratica con la pubblica amministrazione, la chiusura di un'azienda, ecc."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "superClasses" : [ "class28" ],
+    "instances" : 0
+  }, {
+    "id" : "class14",
+    "label" : {
+      "IRI-based" : "Geometry",
+      "en" : "Geometry",
+      "it" : "Geometria"
+    },
+    "iri" : "http://www.w3.org/ns/locn#Geometry",
+    "comment" : {
+      "en" : "The locn:Geometry class provides the means to identify a location as a point, line, polygon, etc. expressed using coordinates in some coordinate reference system. The conceptual model of the Geometry class itself shows a number of properties that are not defined in the OWL since in practice  geometry encodings all include already these properties. GeoDCAT-AP specifies that at least one of the following encodings must be used: GML or WKT.",
+      "it" : "La classe consente di identificare una posizione rappresentata come punto, linea, poligono, ecc espressi utilizzando le coordinate in un certo sistema di riferimento. Il modello concettuale della classe geometria, così come evidenziato nel diagramma UML, mostra un numero di proprietà che devono essere specificate. Tali proprietà non sono tuttavia definite nell'OWL dal momento che, in pratica, meccanismi di codifica di geometrie includono già tutte queste proprietà. La specifica GeoDCAT-AP prevede che deve essere utilizzata almeno una delle seguenti codifiche: GML o WKT. La classe è definita nell'ambito del Core Location vocabulary.",
+      "undefined" : "http://www.w3.org/ns/locn"
+    },
+    "attributes" : [ "external" ],
+    "instances" : 0
+  }, {
+    "id" : "class43",
+    "label" : {
+      "IRI-based" : "LicenseDocument",
+      "en" : "License Document",
+      "it" : "Licenza"
+    },
+    "iri" : "http://dati.gov.it/onto/dcatapit#LicenseDocument",
+    "comment" : {
+      "en" : "This class is defined in DCAT-AP_IT and it has been added in order to guarantee the alingment between CPSV-AP_IT and DCAT-AP_IT.",
+      "it" : "Questa classe è definita in DCAT-AP_IT ed è stata aggiunta al fine di allineare CPSV-AP_IT a DCAT-AP_IT."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/dcatapit",
+    "attributes" : [ "external", "equivalent" ],
+    "instances" : 0
+  }, {
+    "id" : "class13",
+    "label" : {
+      "IRI-based" : "Document",
+      "en" : "Document"
+    },
+    "iri" : "http://xmlns.com/foaf/0.1/Document",
+    "comment" : {
+      "en" : "This class is defined in http://xmlns.com/foaf/0.1/ and it has been added in order to guarantee the alignment between CPSV-AP_IT and FOAF in the representation of the web site type of channel of a public service.",
+      "it" : "Questa classe è definita in http://xmlns.com/foaf/0.1/  ed è stata aggiunta al fine di garantire l'allineamento tra CPSV-AP_IT e FOAF nella rappresentazione del sito web, tipo del canale del servizio pubblico."
+    },
+    "isDefinedBy" : "http://xmlns.com/foaf/0.1/",
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class6" ],
+    "instances" : 0
+  }, {
+    "id" : "class27",
+    "label" : {
+      "IRI-based" : "RoleInTime",
+      "en" : "Role in time",
+      "it" : "Ruolo nel tempo"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#RoleInTime",
+    "comment" : {
+      "en" : "The class \"RoleInTime\" represents a situation related to a role of an agent on the public service that can vary over time. The class has been introduced in order to reuse the design pattern \"time indexed situation\" available at http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl. The class is mandatory.",
+      "it" : "La classe rappresenta una situazione relativa a un ruolo esercitato da un soggetto sul servizio pubblico, riferibile a un certo intervallo temporale.  La classe è stata introdotta al fine di riutilizzare il design pattern time indexed situation disponibile in http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl. La classe è obbligatoria."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#TimeIndexedSituation",
+        "type" : "label"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/pro/RoleInTime",
+        "type" : "label"
+      } ]
+    },
+    "instances" : 0
+  }, {
+    "id" : "class23",
+    "label" : {
+      "IRI-based" : "QuantitativeValue",
+      "en" : "Quantitative Value",
+      "it" : "Valore Quantitativo"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#QuantitativeValue",
+    "comment" : {
+      "en" : "This class is used to represent a quantitative value referred to time metrics. For instance, it can be used to model the average time, a time expressed in terms of days, weeks, years, etc. In the contest of CPSV-AP_IT the class models the processing time for the life event."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "it",
+        "value" : "Questa classe è utilizzata per rappresentare un valore quantitativo riferito a metriche di tempo. Per esempio esso può essere utilizzato per rappresentare un tempo medio, un tempo espresso in gg, settimane, anni, ecc. Nel contesto del CPSV-AP_IT la classe è usata per modellare il tempo di processamento relativo all'evento della vita.",
+        "type" : "label"
+      } ]
+    },
+    "instances" : 0
+  }, {
+    "id" : "class29",
+    "label" : {
+      "IRI-based" : "OtherElectronicChannel",
+      "en" : "Other Electronic Channel",
+      "it" : "Altro Canale Telematico"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#OtherElectronicChannel",
+    "comment" : {
+      "en" : "This class represents an electronic channel different from web site and email.",
+      "it" : "Questa classe rappresenta un canale telematico diverso da sito web ed email."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "superClasses" : [ "class22" ],
+    "instances" : 0
+  }, {
+    "id" : "class17",
+    "label" : {
+      "IRI-based" : "Organization",
+      "en" : "Organization",
+      "it" : "Organizzazione"
+    },
+    "iri" : "http://dati.gov.it/onto/dcatapit#Organization",
+    "comment" : {
+      "en" : "A single entity that can be used to represent an enterprise or a government body, a department or a division, etc, that is the contact point for the public service. This class is equivalent to dcatapit:Organization defined in context of DCAT-AP_IT. The class is recommended.",
+      "it" : "Una singola entità, che potrebbe rappresentare un’impresa o un organismo governativo, un dipartimento, una divisione, una unità all'interno di un'azienda o di governo, un gruppo, un’associazione, o simili, che funge da punto di contatto per il servizio pubblico.. La classe è equivalented a dcatapit:Organization definita nel contesto DCAT-AP_IT. La classe è raccomandata."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/dcatapit",
+    "attributes" : [ "external", "equivalent" ],
+    "instances" : 0
+  }, {
+    "id" : "class5",
+    "label" : {
+      "IRI-based" : "TelephoneType",
+      "en" : "Phone"
+    },
+    "iri" : "http://www.w3.org/2006/vcard/ns#TelephoneType",
+    "comment" : {
+      "en" : "This class is defined in http://www.w3.org/2006/vcard/ns and it has been added in order to guarantee the alignment between CPSV-AP_IT and vCard.",
+      "it" : "Questa classe è definita in http://www.w3.org/2006/vcard/ns è ed stata aggiunta al fine di garantire l'allineamento tra CPSV-AP_IT e vCard."
+    },
+    "isDefinedBy" : "http://www.w3.org/2006/vcard/ns",
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class47" ],
+    "instances" : 0
+  }, {
+    "id" : "class36",
+    "label" : {
+      "IRI-based" : "StandardTech",
+      "en" : "Technical Standard",
+      "it" : "Standard Tecnico"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#StandardTech",
+    "comment" : {
+      "en" : "This class represents a standard, a recommendation or any other technical specification the public service is (or should be) compliant with.",
+      "it" : "La classe \"Standard Tecnico\" rappresenta uno standard tecnico, raccomandazione o altra specifica tecnica a cui il servizio pubblico è (o deve essere)  conforme."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "superClasses" : [ "class12", "class19" ],
+    "instances" : 0
+  }, {
+    "id" : "class34",
+    "label" : {
+      "IRI-based" : "Group",
+      "en" : "Group"
+    },
+    "iri" : "http://xmlns.com/foaf/0.1/Group",
+    "comment" : {
+      "en" : "This class is defined in foaf and it has been added in order to align the corresponding group class in CPSV-AP_IT with FOAF.",
+      "it" : "Questa classe è definita in FOAF ed è stata aggiunta per garantire l'allineamento con la corrispondete classe in CPSV-AP_IT"
+    },
+    "isDefinedBy" : "http://xmlns.com/foaf/0.1/",
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class40" ],
+    "instances" : 0
+  }, {
+    "id" : "class21",
+    "label" : {
+      "IRI-based" : "ServiceCP",
+      "en" : "Service Contact Point",
+      "it" : "Punto di Contatto del Servizio"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#ServiceCP",
+    "comment" : {
+      "en" : "The class \"Service Contact Point\" represents a contact point used to get information and support when using a public service. This class is equivalent to http://dati.gov.it/onto/dcatapit#Organization (which is in turn a vCard:Kind class) and therefore it inherits the same properties, and restrictions on those properties, as defined in DCAT-AP_IT.",
+      "it" : "La classe \"Punto di contatto del servizio\" rappresenta un punto di contatto per  eventuali informazioni e supporto nell'utilizzo del servizio pubblico. Tale classe è equivalente alla classe http://dati.gov.it/onto/dcatapit#Organization (che a sua volta è di tipo vCard:Kind) pertanto eredita le stesse proprietà, e restrizioni su tali proprietà, così come definite in DCAT-AP_IT.",
+      "undefined" : "http://dati.gov.it/onto/cpsvapit"
+    },
+    "attributes" : [ "equivalent" ],
+    "instances" : 0,
+    "equivalent" : [ "class17" ]
+  }, {
+    "id" : "class16",
+    "label" : {
+      "IRI-based" : "Authentication",
+      "en" : "Authenticaton",
+      "it" : "Autenticazione",
+      "undefined" : "http://dati.gov.it/onto/cpsvapit"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#Authentication",
+    "comment" : {
+      "en" : "The class \"Authentication\" is used to represent authentication requirements required by a service. In particular, this class, together with the associated properties allows us to model the type of authentication  the service needs (e.g., authentication through the national e-ID system, none, authentication using other smart card based systems, ecc) and the levelo of security for the identification that is required (e.g., credentials, one-time passowrd, biometric mechanisms). A controlled vocabulary must be used in order to specify the type of required authentication. The vocabulary is the following: http://dati.gov.it/onto/controlledvocabulary/Authentication.",
+      "it" : "La classe \"Autenticazione\" è utilizzata per rappresentare i requisiti di autenticazione richiesti da un servizio. In particolare, attraverso tale classe e le proprietà ad essa associate è possibile indicare che tipo di autenticazione un servizio richiede (e.g., autenticazione SPID, nessuna autenticazione, autenticazione via CNS o altro strumento, ecc), e il livello di sicurezza per l'autenticazione richiesto, applicabile nel caso di autenticazione SPID. Il seguente vocabolario controllato deve essere utilizzato per specificare il tipo di autenticazione richiesta: http://dati.gov.it/onto/controlledvocabulary/Authentication."
+    },
+    "superClasses" : [ "class12" ],
+    "instances" : 0
+  }, {
+    "id" : "class32",
+    "label" : {
+      "IRI-based" : "Location",
+      "en" : "Location"
+    },
+    "iri" : "http://purl.org/dc/terms/Location",
+    "comment" : {
+      "en" : "This class is defined in http://purl.org/dc/terms/ and it has been added in order to guarantee the alignment with CPSV-AP_IT and Dublic Core.",
+      "it" : "Questa classe è definita in http://purl.org/dc/terms/ ed è stata aggiunta al fine di assicurare il pieno allineamento tra CPSV-AP_IT e Dublin Core."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class20" ],
+    "instances" : 0
+  }, {
+    "id" : "class37",
+    "label" : {
+      "IRI-based" : "Person",
+      "en" : "Person"
+    },
+    "iri" : "http://xmlns.com/foaf/0.1/Person",
+    "comment" : {
+      "en" : "This class is defined in foaf and it has been added in order to align the corresponding group class in CPSV-AP_IT with FOAF.",
+      "it" : "Questa classe è definita in FOAF ed è stata aggiunta per garantire l'allineamento con la corrispondete classe in CPSV-AP_IT"
+    },
+    "isDefinedBy" : "http://xmlns.com/foaf/0.1/",
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class41" ],
+    "instances" : 0
+  }, {
+    "id" : "class35",
+    "label" : {
+      "IRI-based" : "Cost",
+      "en" : "Cost",
+      "it" : "Costo"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#Cost",
+    "comment" : {
+      "en" : "The Cost class represents any cost related to the execution of a Public Service which the Agent consuming it, needs to pay. The class is optional.",
+      "it" : "La classe Costo rappresenta qualsiasi costo che l'esecuzione di un servizio pubblico, fruito da un agente, richiede di pagare. La classe è opzionale."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "instances" : 0
+  }, {
+    "id" : "class20",
+    "label" : {
+      "IRI-based" : "Location",
+      "en" : "Location",
+      "it" : "Localizzazione"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#Location",
+    "comment" : {
+      "en" : "A spatial region or named place. It can be represented using a controlled vocabulary or with geographic coordinates. In the latter case, the use of the Core Location Vocabulary is recommended, following the approach described in the GeoDCAT-AP specification.",
+      "it" : "Una regione spaziale o un luogo identificato da un nome. Può essere rappresentata utilizzando un vocabolario controllato o attraverso delle coordinate geografiche. Nel primo caso si raccomanda l'uso del vocabolario Core Location, seguendo l'approccio descritto nelle specifiche GeoDCAT-AP."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "superClasses" : [ "class32" ],
+    "instances" : 0
+  }, {
+    "id" : "class6",
+    "label" : {
+      "IRI-based" : "WebSite",
+      "en" : "Web Site",
+      "it" : "Sito Web"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#WebSite",
+    "comment" : {
+      "en" : "This class represents a channel of type web site.",
+      "it" : "Questa classe rappresenta un canale di tipo sito web."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "superClasses" : [ "class22", "class13" ],
+    "instances" : 0
+  }, {
+    "id" : "class28",
+    "label" : {
+      "IRI-based" : "LifeEvent",
+      "en" : "Life Event",
+      "it" : "Evento della Vita"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#LifeEvent",
+    "comment" : {
+      "en" : "This class represents a specific situation or an event that happens in the lifecycle of either a business or a person or a group of persons. The class is recommended.",
+      "it" : "Questa classe rappresenta una specifica situazione o evento nel ciclo di vita di un cittadino, di un gruppo di cittadini o di un’attività economica. La classe è raccomandata."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "subClasses" : [ "class51", "class39" ],
+    "instances" : 0,
+    "union" : [ "class23", "class25" ]
+  }, {
+    "id" : "class4",
+    "label" : {
+      "IRI-based" : "License",
+      "en" : "License",
+      "it" : "Licenza"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#License",
+    "comment" : {
+      "en" : "This class is used to represent the license associated with a public service. This data can be useful in order to enable the reuse of the service in other public administration contexts. The class is optional.",
+      "it" : "Questa classe è utilizzata per rappresentare la licenza associata al servizio pubblico, se esistente. Tale specifica potrebbe essere utile nel caso di riuso del servizio in altri contesti di pubbliche amministrazioni. La classe è opzionale."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "attributes" : [ "equivalent" ],
+    "superClasses" : [ "class12" ],
+    "instances" : 0,
+    "equivalent" : [ "class43" ]
+  }, {
+    "id" : "class44",
+    "label" : {
+      "IRI-based" : "Status",
+      "en" : "Service Status",
+      "it" : "Stato del Servizio"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#Status",
+    "comment" : {
+      "en" : "Thi class represents the status of the service. It can assumed the following predefined values: Active, Non-Active, Under Development.",
+      "it" : "Questa classe rappresenta lo stato servizio e può assumere i seguenti valori predefiniti: Attivo, Non Attivo, In Fase di Sviluppo."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "instances" : 3,
+    "individuals" : [ {
+      "iri" : "http://dati.gov.it/onto/cpsvapit#Active",
+      "labels" : {
+        "IRI-based" : "Active"
+      },
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://dati.gov.it/onto/cpsvapit",
+          "type" : "iri"
+        } ],
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "en",
+          "value" : "Active",
+          "type" : "label"
+        }, {
+          "identifier" : "label",
+          "language" : "it",
+          "value" : "Attivo",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://dati.gov.it/onto/cpsvapit#UnderDev",
+      "labels" : {
+        "IRI-based" : "UnderDev"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "it",
+          "value" : "In Fase di Sviluppo",
+          "type" : "label"
+        }, {
+          "identifier" : "label",
+          "language" : "en",
+          "value" : "Under Development",
+          "type" : "label"
+        }, {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "http://dati.gov.it/onto/cpsvapit",
+          "type" : "iri"
+        } ]
+      }
+    }, {
+      "iri" : "http://dati.gov.it/onto/cpsvapit#NonActive",
+      "labels" : {
+        "IRI-based" : "NonActive"
+      },
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://dati.gov.it/onto/cpsvapit",
+          "type" : "iri"
+        } ],
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "en",
+          "value" : "Non-Active",
+          "type" : "label"
+        }, {
+          "identifier" : "label",
+          "language" : "it",
+          "value" : "Non Attivo",
+          "type" : "label"
+        } ]
+      }
+    } ]
+  }, {
+    "id" : "class48",
+    "label" : {
+      "IRI-based" : "Input",
+      "en" : "Input",
+      "it" : "Input"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#Input",
+    "comment" : {
+      "en" : "This class represents the input required by the public service. The input can be any resource (e.g., documents, forms, declarations, etc.) that is necessary to carry out the public service. In order to specify the input for a service it is required to use the following controlled vocabulary: http://dati.gov.it/onto/controlledvocabulary/ServiceinputOutput The class is mandatory.",
+      "it" : "Questa classe rappresenta un input richiesto dal servizio pubblico. L’input può essere qualsiasi risorsa (documenti, moduli, dichiarazioni, ecc…) necessaria affinché il servizio sia espletato. Per poter specificare l'input è necessario utilizzare il vocabolario controllato definito in http://dati.gov.it/onto/controlledvocabulary/ServiceinputOutput. La classe è obbligatoria."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "instances" : 0
+  }, {
+    "id" : "class49",
+    "label" : {
+      "IRI-based" : "MeasurementUnit",
+      "en" : "Measurement Unit",
+      "it" : "Unità di Misura"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#MeasurementUnit",
+    "comment" : {
+      "en" : "This class is used to model a measurement unit. For the time being, in the contest of CPSV-AP_IT it assumes the following predefined values: day, hour, month, week, year.",
+      "it" : "La classe rappresenta un'unità di misura. Al momento, la classe assume i seguenti valori predefiniti: giorno, mese, anno, settimana, ora."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "instances" : 5,
+    "individuals" : [ {
+      "iri" : "http://dati.gov.it/onto/cpsvapit#Month",
+      "labels" : {
+        "IRI-based" : "Month"
+      },
+      "annotations" : { }
+    }, {
+      "iri" : "http://dati.gov.it/onto/cpsvapit#Day",
+      "labels" : {
+        "IRI-based" : "Day"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "it",
+          "value" : "Giorno",
+          "type" : "label"
+        }, {
+          "identifier" : "label",
+          "language" : "en",
+          "value" : "Day",
+          "type" : "label"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://dati.gov.it/onto/cpsvapit",
+          "type" : "iri"
+        } ]
+      }
+    }, {
+      "iri" : "http://dati.gov.it/onto/cpsvapit#Year",
+      "labels" : {
+        "IRI-based" : "Year"
+      },
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://dati.gov.it/onto/cpsvapit",
+          "type" : "iri"
+        } ],
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "it",
+          "value" : "Anno",
+          "type" : "label"
+        }, {
+          "identifier" : "label",
+          "language" : "en",
+          "value" : "Year",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://dati.gov.it/onto/cpsvapit#Week",
+      "labels" : {
+        "IRI-based" : "Week"
+      },
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://dati.gov.it/onto/cpsvapit",
+          "type" : "iri"
+        } ],
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "it",
+          "value" : "Settimana",
+          "type" : "label"
+        }, {
+          "identifier" : "label",
+          "language" : "en",
+          "value" : "Week",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://dati.gov.it/onto/cpsvapit#Hour",
+      "labels" : {
+        "IRI-based" : "Hour"
+      },
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://dati.gov.it/onto/cpsvapit",
+          "type" : "iri"
+        } ],
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "it",
+          "value" : "Ora",
+          "type" : "label"
+        }, {
+          "identifier" : "label",
+          "language" : "en",
+          "value" : "Hour",
+          "type" : "label"
+        } ]
+      }
+    } ]
+  }, {
+    "id" : "class2",
+    "label" : {
+      "IRI-based" : "LifeEventType",
+      "en" : "Life Event Type",
+      "it" : "Tipo di Evento della Vita"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#LifeEventType",
+    "comment" : {
+      "en" : "This class represents the type of life event; it can assume the following predefined values: Starting, Starting Cross Border, Doing, Closing.",
+      "it" : "Questa classe rappresenta il tipo di evento della vita e assume i seguenti valori predefiniti: avvio, avvio transfrontaliero, in corso, chiusura."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "instances" : 4,
+    "individuals" : [ {
+      "iri" : "http://dati.gov.it/onto/cpsvapit#Starting",
+      "labels" : {
+        "IRI-based" : "Starting"
+      },
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://dati.gov.it/onto/cpsvapit",
+          "type" : "iri"
+        } ],
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "en",
+          "value" : "Starting",
+          "type" : "label"
+        }, {
+          "identifier" : "label",
+          "language" : "it",
+          "value" : "Avvio",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://dati.gov.it/onto/cpsvapit#StartingCrossBorder",
+      "labels" : {
+        "IRI-based" : "StartingCrossBorder"
+      },
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://dati.gov.it/onto/cpsvapit",
+          "type" : "iri"
+        } ],
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "en",
+          "value" : "Starting Cross Border",
+          "type" : "label"
+        }, {
+          "identifier" : "label",
+          "language" : "it",
+          "value" : "Avvio Transfrontaliero",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://dati.gov.it/onto/cpsvapit#Closing",
+      "labels" : {
+        "IRI-based" : "Closing"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "en",
+          "value" : "Closing",
+          "type" : "label"
+        }, {
+          "identifier" : "label",
+          "language" : "it",
+          "value" : "Chiusura",
+          "type" : "label"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://dati.gov.it/onto/cpsvapit",
+          "type" : "iri"
+        } ]
+      }
+    }, {
+      "iri" : "http://dati.gov.it/onto/cpsvapit#Doing",
+      "labels" : {
+        "IRI-based" : "Doing"
+      },
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://dati.gov.it/onto/cpsvapit",
+          "type" : "iri"
+        } ],
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "en",
+          "value" : "Doing",
+          "type" : "label"
+        }, {
+          "identifier" : "label",
+          "language" : "it",
+          "value" : "In Corso",
+          "type" : "label"
+        } ]
+      }
+    } ]
+  }, {
+    "id" : "class15",
+    "label" : {
+      "IRI-based" : "Email",
+      "en" : "Email"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#Email",
+    "comment" : {
+      "en" : "This class represents a Channel of type Email.",
+      "it" : "Questa classe rappresenta il tipo di canale email."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "superClasses" : [ "class22", "class18" ],
+    "instances" : 0
+  }, {
+    "id" : "class30",
+    "label" : {
+      "IRI-based" : "FormalOrganization",
+      "en" : "Formal Organization"
+    },
+    "iri" : "http://www.w3.org/ns/org#FormalOrganization",
+    "comment" : {
+      "en" : "This class is defined in Org W3C Reccomandation (https://www.w3.org/TR/vocab-org/) and it has been added in order to guarantee the alignment between CPSV-AP_iT and such an external ontology.",
+      "it" : "Questa classe è definita in Org, raccomandazione del W3C (https://www.w3.org/TR/vocab-org/) ed è stata aggiunta al fine di garantire l'allineamento tra CPSV-AP_IT e tale ontologia esterna.",
+      "undefined" : "http://www.w3.org/ns/org#"
+    },
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class9" ],
+    "instances" : 0
+  }, {
+    "id" : "class3",
+    "label" : {
+      "IRI-based" : "Address",
+      "en" : "Address",
+      "it" : "Indirizzo"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#Address",
+    "comment" : {
+      "en" : "This class represents an address. It is used to represent  the address through which an offline service can be provided to end-users (citizens and enterprises). The class has been defined as subclass of locn:Address, this latter specified in the Core Location vocabulary. This subClass relationship guarantees the alignment of  CPSV-AP_IT with the external Core Location ontology.",
+      "it" : "Questa classe rappresenta un indirizzo. E' l'indirizzo fisico presso cui un servizio può essere erogato. La classe è definita come sottoclasse di locn:Address, quest'ultima specificata nel vocabolario \"Core Location\". Tale relazione \"subClassOf\" garantisce l'allineamento tra CPSV-AP_iT e il vocabolario esterno Core Location."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "superClasses" : [ "class38" ],
+    "instances" : 0
+  }, {
+    "id" : "class38",
+    "label" : {
+      "IRI-based" : "Address",
+      "en" : "Address"
+    },
+    "iri" : "https://www.w3.org/ns/locn#Address",
+    "comment" : {
+      "en" : "This class is defined in the Core Location vocabulary http://www.w3.org/ns/locn and it has been added to the ontology with the aim to guarantee the full alignment between CPSV-AP_IT and such an external vocabulary.",
+      "it" : "Questa classe è definita nel core vocabulary \"Core Location\" http://www.w3.org/ns/locn ed è stata aggiunta all'ontologia al fine di garantire l'allineamento di CPSV-AP_IT con tale vocabolario esterno."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/locn",
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class3" ],
+    "instances" : 0
+  }, {
+    "id" : "class19",
+    "label" : {
+      "IRI-based" : "Standard",
+      "en" : "Standard",
+      "it" : "Standard"
+    },
+    "iri" : "http://dati.gov.it/onto/dcatapit#Standard",
+    "comment" : {
+      "en" : "This class is defined in DCAT-AP_IT and it has been added in order to guarantee the alignment between CPSV-AP_IT and DCAT-AP_IT.",
+      "it" : "Questa classe è definita in DCAT-AP_IT ed è stata aggiunta al fine di consentire l'allineamento tra DCAT-AP_IT e CPSV-AP_IT.",
+      "undefined" : "http://dati.gov.it/onto/dcatapit"
+    },
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class36" ],
+    "instances" : 0
+  }, {
+    "id" : "class11",
+    "label" : {
+      "IRI-based" : "Role",
+      "en" : "Role",
+      "it" : "Ruolo"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#Role",
+    "comment" : {
+      "en" : "The class role represents the role played by an Agent on the Public Service. A role can be played in a time interval. The roles must be defined using the predefined values that are: User, RightsHolder, Creator, Concessionaire, Maintainer, Provider. The class is mandatory in CPSV-AP_IT.",
+      "it" : "La classe \"Ruolo\" rappresenta il ruolo esercitato da un soggetto sul servizio pubblico. Il ruolo è riferibile anche a un certo lasso temporale. Il ruolo assume i seguenti valori predefinit: Utente, Fornitore, Creatore, Titolare, Concessionario, Manutentore. La classe è obbligatoria."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "instances" : 6,
+    "individuals" : [ {
+      "iri" : "http://dati.gov.it/onto/cpsvapit#Creator",
+      "labels" : {
+        "IRI-based" : "Creator"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "it",
+          "value" : "Creatore",
+          "type" : "label"
+        }, {
+          "identifier" : "label",
+          "language" : "en",
+          "value" : "Creator",
+          "type" : "label"
+        } ],
+        "comment" : [ {
+          "identifier" : "comment",
+          "language" : "it",
+          "value" : "E' il ruolo che un soggetto ha nel caso abbia sviluppato/implementato il servizio pubblico.",
+          "type" : "label"
+        }, {
+          "identifier" : "comment",
+          "language" : "en",
+          "value" : "It is the role that allows an agent to implement/develop a public service.",
+          "type" : "label"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://dati.gov.it/onto/cpsvapit",
+          "type" : "iri"
+        } ]
+      }
+    }, {
+      "iri" : "http://dati.gov.it/onto/cpsvapit#RightsHolder",
+      "labels" : {
+        "IRI-based" : "RightsHolder"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "en",
+          "value" : "Rights Holder",
+          "type" : "label"
+        }, {
+          "identifier" : "label",
+          "language" : "it",
+          "value" : "Titolare",
+          "type" : "label"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://dati.gov.it/onto/cpsvapit",
+          "type" : "iri"
+        } ],
+        "comment" : [ {
+          "identifier" : "comment",
+          "language" : "it",
+          "value" : "E' il ruolo che un soggetto assume qualora esso sia il responsabile del servizio reso disponibile.",
+          "type" : "label"
+        }, {
+          "identifier" : "comment",
+          "language" : "en",
+          "value" : "It is the role that an agent can play when it is responsible for the service that is made available to the end-users.",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://dati.gov.it/onto/cpsvapit#Concessionaire",
+      "labels" : {
+        "IRI-based" : "Concessionaire"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "en",
+          "value" : "Concessionaire",
+          "type" : "label"
+        }, {
+          "identifier" : "label",
+          "language" : "it",
+          "value" : "Concessionario",
+          "type" : "label"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://dati.gov.it/onto/cpsvapit",
+          "type" : "iri"
+        } ],
+        "comment" : [ {
+          "identifier" : "comment",
+          "language" : "en",
+          "value" : "It is a role that allows an agent to manage the service. For the granting time period, it is responsible for the service itself.",
+          "type" : "label"
+        }, {
+          "identifier" : "comment",
+          "language" : "it",
+          "value" : "E' un ruolo che consente al soggetto di gestire il servizio e, nel periodo della concessione, è responsabile del servizio stesso.",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://dati.gov.it/onto/cpsvapit#Maintainer",
+      "labels" : {
+        "IRI-based" : "Maintainer"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "en",
+          "value" : "Maintainer",
+          "type" : "label"
+        }, {
+          "identifier" : "label",
+          "language" : "it",
+          "value" : "Manutentore",
+          "type" : "label"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://dati.gov.it/onto/cpsvapit",
+          "type" : "iri"
+        } ],
+        "comment" : [ {
+          "identifier" : "comment",
+          "language" : "it",
+          "value" : "E' il ruolo che può assumere un soggetto nel caso in cui sia il manutentore del servizio.",
+          "type" : "label"
+        }, {
+          "identifier" : "comment",
+          "language" : "en",
+          "value" : "This is a role that an agent may assume if it is responsible for the maintainance of the service.",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://dati.gov.it/onto/cpsvapit#Provider",
+      "labels" : {
+        "IRI-based" : "Provider"
+      },
+      "annotations" : {
+        "comment" : [ {
+          "identifier" : "comment",
+          "language" : "it",
+          "value" : "Il ruolo che può assumere il soggetto che eroga il servizio.",
+          "type" : "label"
+        }, {
+          "identifier" : "comment",
+          "language" : "en",
+          "value" : "This is the role an agent can have if it provides the service.",
+          "type" : "label"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://dati.gov.it/onto/cpsvapit",
+          "type" : "iri"
+        } ],
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "it",
+          "value" : "Fornitore",
+          "type" : "label"
+        }, {
+          "identifier" : "label",
+          "language" : "en",
+          "value" : "Provider",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://dati.gov.it/onto/cpsvapit#User",
+      "labels" : {
+        "IRI-based" : "User"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "it",
+          "value" : "Utente",
+          "type" : "label"
+        }, {
+          "identifier" : "label",
+          "language" : "en",
+          "value" : "User",
+          "type" : "label"
+        } ],
+        "comment" : [ {
+          "identifier" : "comment",
+          "language" : "en",
+          "value" : "It is the role an agent can play when it uses the public service.",
+          "type" : "label"
+        }, {
+          "identifier" : "comment",
+          "language" : "it",
+          "value" : "E' il ruolo che un soggetto può assumere nel caso utilizzi un servizio pubblico.",
+          "type" : "label"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://dati.gov.it/onto/cpsvapit",
+          "type" : "iri"
+        } ]
+      }
+    } ]
+  }, {
+    "id" : "class40",
+    "label" : {
+      "IRI-based" : "Group",
+      "en" : "Group",
+      "it" : "Gruppo"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#Group",
+    "comment" : {
+      "en" : "This class represent a group of persons. It can be a set of target persons for a service.",
+      "it" : "Questa classe rappresenta un gruppo di persone. Essa è usata per rappresentare un insieme specifico di soggetti. Nel caso del suo utilizzo, la proprietà “nome” associata alla superclasse Agente deve assumere uno dei seguenti valori: cittadini, mprese, professionisti."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "superClasses" : [ "class26", "class34" ],
+    "instances" : 0
+  }, {
+    "id" : "class7",
+    "label" : {
+      "IRI-based" : "Rule",
+      "en" : "Rule",
+      "it" : "Regola"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#Rule",
+    "comment" : {
+      "en" : "The Rule class represents a document that sets out the specific rules, guidelines or procedures that the Public Service follows. It includes the terms of service or requirements that can be licence, standard, authentication requirements of the Public Service. The class is recommended.",
+      "it" : "La classe \"Regola\" rappresenta un documento che definisce le regole tecniche, le linee guida e qualsiasi altra procedura che il servizio pubblico deve seguire. La regola include i termini di utilizzo o requisiti del servizio pubblico. I requisiti possono essere requisiti di licenza, di standard adottati, di autenticazione, ecc. La classe è raccomandata."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "instances" : 0
+  }, {
+    "id" : "class9",
+    "label" : {
+      "IRI-based" : "LegalEntity",
+      "en" : "Legal Entity",
+      "it" : "Entità Legale"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#LegalEntity",
+    "comment" : {
+      "en" : "This class represents a legal entity. It can be a public administration (registered in a public registry of PAs) or a private organizations (registered at a specific registry such as the company registry). This class is mandatory and must be specified when modeling the agent that plays a role on the public service. The type of the Legal Entity must be chosen from the S13 classification used in the Italian Public Administration index (IPA).",
+      "it" : "Questa classe rappresenta un'entità legale. Essa può essere una pubblica amministrazione (registrata presso l'indice della pubblica amministrazione) o un'organizzazione privata (anch'essa registrata in un pubblico registro come il registro imprese). Questa classe è obbligatoria e deve essere specificata nella modellazione del soggetto che esercita il ruolo sul servizio pubblico. Il tipo di entità legale deve essere definito utilizzando la classificazione S13 fornita nell'Indice della Pubblica Amministrazione (IPA)."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "superClasses" : [ "class26", "class30" ],
+    "instances" : 0
+  }, {
+    "id" : "class46",
+    "label" : {
+      "IRI-based" : "OfflineChannel",
+      "en" : "Offline Channel",
+      "it" : "Canale offline"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#OfflineChannel",
+    "comment" : {
+      "en" : "This class represents Channels that are of type offline.",
+      "it" : "Questa classe rappresenta canali di tipo offline."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "superClasses" : [ "class22" ],
+    "instances" : 0
+  }, {
+    "id" : "class8",
+    "label" : {
+      "IRI-based" : "DayOfTheWeek",
+      "en" : "Day of the Week",
+      "it" : "Giorno della Settimana"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#DayOfTheWeek",
+    "comment" : {
+      "en" : "This class is used to represent a day of the week for the time interval.",
+      "it" : "Questa classe è utilizzata per rappresentare un giorno della settimana per l'intervallo temporale."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "instances" : 7,
+    "individuals" : [ {
+      "iri" : "http://dati.gov.it/onto/cpsvapit#Sun",
+      "labels" : {
+        "IRI-based" : "Sun"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "it",
+          "value" : "Domenica",
+          "type" : "label"
+        }, {
+          "identifier" : "label",
+          "language" : "en",
+          "value" : "Sunday",
+          "type" : "label"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://dati.gov.it/onto/cpsvapit",
+          "type" : "iri"
+        } ]
+      }
+    }, {
+      "iri" : "http://dati.gov.it/onto/cpsvapit#Wed",
+      "labels" : {
+        "IRI-based" : "Wed"
+      },
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://dati.gov.it/onto/cpsvapit",
+          "type" : "iri"
+        } ],
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "en",
+          "value" : "Wednesday",
+          "type" : "label"
+        }, {
+          "identifier" : "label",
+          "language" : "it",
+          "value" : "Mercoledì",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://dati.gov.it/onto/cpsvapit#Mon",
+      "labels" : {
+        "IRI-based" : "Mon"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "it",
+          "value" : "Lunedì",
+          "type" : "label"
+        }, {
+          "identifier" : "label",
+          "language" : "en",
+          "value" : "Monday",
+          "type" : "label"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://dati.gov.it/onto/cpsvapit",
+          "type" : "iri"
+        } ]
+      }
+    }, {
+      "iri" : "http://dati.gov.it/onto/cpsvapit#Sat",
+      "labels" : {
+        "IRI-based" : "Sat"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "it",
+          "value" : "Sabato",
+          "type" : "label"
+        }, {
+          "identifier" : "label",
+          "language" : "en",
+          "value" : "Saturday",
+          "type" : "label"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://dati.gov.it/onto/cpsvapit",
+          "type" : "iri"
+        } ]
+      }
+    }, {
+      "iri" : "http://dati.gov.it/onto/cpsvapit#Tue",
+      "labels" : {
+        "IRI-based" : "Tue"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "undefined",
+          "value" : "http://dati.gov.it/onto/cpsvapit",
+          "type" : "iri"
+        }, {
+          "identifier" : "label",
+          "language" : "en",
+          "value" : "Tuesday",
+          "type" : "label"
+        }, {
+          "identifier" : "label",
+          "language" : "it",
+          "value" : "Martedì",
+          "type" : "label"
+        } ]
+      }
+    }, {
+      "iri" : "http://dati.gov.it/onto/cpsvapit#Fri",
+      "labels" : {
+        "IRI-based" : "Fri"
+      },
+      "annotations" : {
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "en",
+          "value" : "Friday",
+          "type" : "label"
+        }, {
+          "identifier" : "label",
+          "language" : "it",
+          "value" : "Venerdì",
+          "type" : "label"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://dati.gov.it/onto/cpsvapit",
+          "type" : "iri"
+        } ]
+      }
+    }, {
+      "iri" : "http://dati.gov.it/onto/cpsvapit#Thu",
+      "labels" : {
+        "IRI-based" : "Thu"
+      },
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://dati.gov.it/onto/cpsvapit",
+          "type" : "iri"
+        } ],
+        "label" : [ {
+          "identifier" : "label",
+          "language" : "it",
+          "value" : "Giovedì",
+          "type" : "label"
+        }, {
+          "identifier" : "label",
+          "language" : "en",
+          "value" : "Thursday",
+          "type" : "label"
+        } ]
+      }
+    } ]
+  }, {
+    "id" : "class45",
+    "label" : {
+      "IRI-based" : "PeriodOfTime",
+      "en" : "Period of Time",
+      "it" : "Intervallo temporale"
+    },
+    "iri" : "http://purl.org/dc/terms/PeriodOfTime",
+    "comment" : {
+      "en" : "An interval of time that is named or defined by its start and end dates. This class is defined in http://purl.org/dc/terms and it has been added in order to guarantee the alignment between CPSV-AP_IT and Dublin Core.",
+      "it" : "Un intervallo temporale identificato o definito da proprie date di inizio e fine. Questa classe è definita in http://purl.org/dc/terms ed è stata aggiunta al fine di garantire un allineamento tra CPSV-AP_IT e Dublin Core."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "subClasses" : [ "class25" ],
+    "instances" : 0
+  }, {
+    "id" : "class39",
+    "label" : {
+      "IRI-based" : "CitizenEvent",
+      "en" : "Citizen Event",
+      "it" : "Evento del Cittadino"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#CitizenEvent",
+    "comment" : {
+      "en" : "The class represents a Person Event that is an event that happens in the life cycle of a citizen or for group of citizens (professionals).",
+      "it" : "Questa classe rappresenta un evento che può accadere nel ciclo di vita di un cittadino o di un gruppo di cittadini. Per esempio, avviare la pratica di cambio di residenza, aprire una partita iva per un professionista, pagare le tasse, ecc."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "superClasses" : [ "class28" ],
+    "instances" : 0
+  }, {
+    "id" : "thing7",
+    "label" : {
+      "undefined" : "Thing"
+    },
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "instances" : 0
+  }, {
+    "id" : "thing6",
+    "label" : {
+      "undefined" : "Thing"
+    },
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "instances" : 0
+  }, {
+    "id" : "thing3",
+    "label" : {
+      "undefined" : "Thing"
+    },
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "instances" : 0
+  }, {
+    "id" : "thing2",
+    "label" : {
+      "undefined" : "Thing"
+    },
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "instances" : 0
+  }, {
+    "id" : "thing5",
+    "label" : {
+      "undefined" : "Thing"
+    },
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "instances" : 0
+  }, {
+    "id" : "thing4",
+    "label" : {
+      "undefined" : "Thing"
+    },
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "instances" : 0
+  }, {
+    "id" : "thing1",
+    "label" : {
+      "undefined" : "Thing"
+    },
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "instances" : 0
+  }, {
+    "id" : "class61",
+    "label" : {
+      "IRI-based" : "anonymous"
+    },
+    "instances" : 0,
+    "union" : [ "class23", "class25" ]
+  }, {
+    "id" : "class62",
+    "label" : {
+      "IRI-based" : "anonymous"
+    },
+    "instances" : 0,
+    "union" : [ "class42", "class7" ]
+  }, {
+    "id" : "class54",
+    "label" : {
+      "IRI-based" : "anonymous"
+    },
+    "instances" : 0,
+    "union" : [ "class2", "class50" ]
+  }, {
+    "id" : "class57",
+    "label" : {
+      "IRI-based" : "anonymous"
+    },
+    "instances" : 0,
+    "union" : [ "class10", "class51" ]
+  } ],
+  "datatype" : [ {
+    "id" : "literal2",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "literal1",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "literal6",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "literal5",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "literal4",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "literal3",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "literal14",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "literal9",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "literal15",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "literal8",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "literal12",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "literal7",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "literal13",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "literal18",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "literal16",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "literal17",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "literal10",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "literal11",
+    "type" : "rdfs:Literal"
+  } ],
+  "datatypeAttribute" : [ {
+    "id" : "literal2",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "literal1",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "literal6",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "literal5",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "literal4",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "literal3",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "literal14",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "literal9",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "literal15",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "literal8",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "literal12",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "literal7",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "literal13",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "literal18",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "literal16",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "literal17",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "literal10",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  }, {
+    "id" : "literal11",
+    "label" : {
+      "IRI-based" : "Literal"
+    },
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ],
+  "property" : [ {
+    "id" : "property93",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property32",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property95",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property33",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property62",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property66",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property57",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property30",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property84",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property29",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property76",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property35",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property2",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property1",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property4",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property3",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property89",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property55",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property78",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property27",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property22",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property28",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property21",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property24",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "property86",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property23",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property79",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property20",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property73",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property43",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property77",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property81",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property56",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property72",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property65",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property37",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property92",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property36",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property58",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property64",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property47",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property50",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property40",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property63",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property41",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property68",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property60",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property61",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property67",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property88",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property52",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property70",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property75",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property82",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property91",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property59",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property83",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property39",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property54",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property87",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property9",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property38",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property6",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property5",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property8",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property7",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property71",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property90",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property19",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property53",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property18",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property51",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property74",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property15",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property45",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property46",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property48",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property80",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property14",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property85",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property17",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property16",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property11",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property10",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property34",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property94",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property13",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "property96",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "property12",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "property42",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property49",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property31",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property44",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "property69",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "id" : "property93",
+    "label" : {
+      "IRI-based" : "name",
+      "en" : "name",
+      "it" : "nome"
+    },
+    "iri" : "http://xmlns.com/foaf/0.1/name",
+    "comment" : {
+      "en" : "This property is defined in http://xmlns.com/foaf/0.1/ and it has been added in order to model the nome of the \"things\" specified in CPSV-AP_IT. There can be a name per language tag. When the name is associated with an agent of type Group, it assumes the following values \"citizens, professionals and enterprises\". When the name is associated with an agent of type Person, name is intended to include the surname of the Person.",
+      "it" : "Questa proprietà è definita in http://xmlns.com/foaf/0.1/ ed è stata aggiunta per poter gestire i nomi delle \"cose\" definite nell'ambito del CPSV-AP_IT. Ci può essere un nome per ogni lingua. In particolare, quando il nome è associato all'agente di tipo gruppo, il nome da specificare è uno delle seguenti possibilità: \"cittadini, imprese, professionisti\". Quando il nome è associato all'agente di tipo persona si intende il cognome della stessa."
+    },
+    "isDefinedBy" : "http://xmlns.com/foaf/0.1/",
+    "attributes" : [ "external" ],
+    "domain" : "thing4",
+    "range" : "literal15",
+    "subproperty" : [ "property85" ]
+  }, {
+    "id" : "property32",
+    "label" : {
+      "IRI-based" : "produces",
+      "en" : "produces",
+      "it" : "produce"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#produces",
+    "comment" : {
+      "en" : "This property is used to connect a public service with the output it produces.",
+      "it" : "Questa proprietà è utilizzata per collegare un servizio pubblico con l'output da esso prodotto."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class10",
+    "range" : "class31"
+  }, {
+    "id" : "property95",
+    "label" : {
+      "IRI-based" : "postCode",
+      "en" : "post code",
+      "it" : "CAP"
+    },
+    "iri" : "http://www.w3.org/ns/locn#postCode",
+    "comment" : {
+      "en" : "This property is defined in http://www.w3.org/ns/locn and it is used to represent the postal code or zip code or the address.",
+      "it" : "Questa proprietà è definita in http://www.w3.org/ns/locn ed è utilizzata per rappresentare il CAP dell'indirizzo."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/locn",
+    "attributes" : [ "external" ],
+    "domain" : "class3",
+    "range" : "literal17",
+    "cardinality" : 1
+  }, {
+    "id" : "property33",
+    "label" : {
+      "IRI-based" : "hasPhone",
+      "en" : "has telephone",
+      "it" : "ha telefono"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#hasPhone",
+    "comment" : {
+      "en" : "This property is a subproperty of \"has channel\" and it is used to link the public service with a specific channel type; i.e., telephone.",
+      "it" : "Questa proprietà è una sottoproprietà di \"ha canale\" ed è utilizzata per connettere un servizio pubblico a uno specifico tipo di canale; i.e., telefono."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class10",
+    "range" : "class47",
+    "superproperty" : [ "property30", "property68" ]
+  }, {
+    "id" : "property62",
+    "label" : {
+      "IRI-based" : "isStatusFor",
+      "en" : "is status for",
+      "it" : "è stato per"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#isStatusFor",
+    "comment" : {
+      "en" : "Inverse property of \"has status\" used to link the service status with the public service.",
+      "it" : "Proprietà inversa di \"ha stato\" utilizzata per connettere uno stato del servizio al servizio pubblico."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class44",
+    "range" : "class10",
+    "inverse" : "property53"
+  }, {
+    "id" : "property66",
+    "label" : {
+      "IRI-based" : "actsOnBehalfOf",
+      "en" : "acts on behalf of",
+      "it" : "agisce per conto di"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#actsOnBehalfOf",
+    "comment" : {
+      "en" : "This property represents an accountability relationship that exists between a person and a legal entity where the person works.",
+      "it" : "Questa proprietà rappresenta una relazione di responsabilità  che esiste tra una persona e un'entità legale (organizzazione privata o pubblica) presso la quale la persona lavora."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class26",
+    "range" : "class26",
+    "superproperty" : [ "property52" ]
+  }, {
+    "id" : "property57",
+    "label" : {
+      "IRI-based" : "geometry",
+      "en" : "geometry",
+      "it" : "geometria"
+    },
+    "iri" : "https://www.w3.org/ns/locn#geometry",
+    "comment" : {
+      "en" : "Property defined in http://www.w3.org/ns/locn and used to represent a geometry of a resource.",
+      "it" : "Proprietà definita in http://www.w3.org/ns/locn e utilizzata per rappresentare una geometria di una risorsa."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/locn",
+    "attributes" : [ "external" ],
+    "domain" : "thing6",
+    "range" : "class14",
+    "maxCardinality" : 1
+  }, {
+    "id" : "property30",
+    "label" : {
+      "IRI-based" : "hasChannel",
+      "en" : "has channel",
+      "it" : "ha canale"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#hasChannel",
+    "comment" : {
+      "en" : "This property is used to link the public service with the channel through which it is provided to the end users. It is recommended specifying the channel through the service is provided.",
+      "it" : "Questa classe collega il servizio pubblico al canale attraverso cui erogare il servizio pubblico agli utenti finali. E' raccomandato specificare qual è il canale di erogazione per un servizio pubblico."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class10",
+    "range" : "class22",
+    "inverse" : "property39",
+    "subproperty" : [ "property63", "property44", "property33", "property70", "property71" ]
+  }, {
+    "id" : "property84",
+    "label" : {
+      "IRI-based" : "description",
+      "en" : "description",
+      "it" : "descrizione"
+    },
+    "iri" : "http://purl.org/dc/terms/description",
+    "comment" : {
+      "en" : "This property is defined in http://purl.org/dc/terms/ and it has been added in order to model the description of \"things\" of CPSV-AP_IT. There can be one description per language tag.",
+      "it" : "Questa proprietà è definita in http://purl.org/dc/terms/ ed è stata aggiunta al fine di modellare la descrizione delle \"cose\" di CPSV-AP_IT. Ci può esere una descrizione per ogni lingua."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "domain" : "thing4",
+    "range" : "literal6"
+  }, {
+    "id" : "property29",
+    "label" : {
+      "IRI-based" : "isPartOf",
+      "en" : "is part of",
+      "it" : "è parte di"
+    },
+    "iri" : "http://purl.org/dc/terms/isPartOf",
+    "comment" : {
+      "en" : "This property is defined in http://purl.org/dc/terms/ and it is link a public services to a Life Event.",
+      "it" : "Questa proprietà è definita in http://purl.org/dc/terms/ ed è utilizzata per collegare un servizio pubblico a un evento della vita."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "domain" : "class10",
+    "range" : "class28",
+    "inverse" : "property45"
+  }, {
+    "id" : "property76",
+    "label" : {
+      "IRI-based" : "spatial",
+      "en" : "spatial coverage",
+      "it" : "copertura spaziale"
+    },
+    "iri" : "http://purl.org/dc/terms/spatial",
+    "comment" : {
+      "en" : "This property is defined in http://purl.org/dc/terms/ and it has been added in order to link a public service with its geographical coverage. The property has always a dct:Location as range.",
+      "it" : "Questa proprietà è definita in http://purl.org/dc/terms/ ed è stata aggiunta in CPSV-AP_IT per poter collegare un servizio pubblico alla sua copertura geografica. La proprietà ha sempre come range una classe di tipo dct:Location.",
+      "undefined" : "http://purl.org/dc/terms/"
+    },
+    "attributes" : [ "external" ],
+    "domain" : "class10",
+    "range" : "class20",
+    "maxCardinality" : 1
+  }, {
+    "id" : "property35",
+    "label" : {
+      "IRI-based" : "withRole",
+      "en" : "with role",
+      "it" : "con ruolo"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#withRole",
+    "comment" : {
+      "en" : "This property is used to link the situation that a role can change over time with the role itself. The role must be specified using the following controlled vocabulary: TBD",
+      "it" : "Questa proprietà è utilizzata per collegare la situazione del ruolo che varia nel tempo con il ruolo stesso. Il ruolo deve essere specificato utilizzando il seguente vocabolario controllato: TBD"
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "attributes" : [ "functional" ],
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#hasSetting",
+        "type" : "label"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/pro/withRole",
+        "type" : "label"
+      } ]
+    },
+    "domain" : "class27",
+    "range" : "class11",
+    "inverse" : "property47"
+  }, {
+    "id" : "property2",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class4",
+    "range" : "class12"
+  }, {
+    "id" : "property1",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class16",
+    "range" : "class12"
+  }, {
+    "id" : "property4",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class40",
+    "range" : "class26"
+  }, {
+    "id" : "property3",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class36",
+    "range" : "class12"
+  }, {
+    "id" : "property89",
+    "label" : {
+      "IRI-based" : "referenceDoc",
+      "en" : "reference documentation",
+      "it" : "documentazione di riferimento"
+    },
+    "iri" : "http://dati.gov.it/onto/dcatapit#referenceDoc",
+    "comment" : {
+      "en" : "This property is defined in http://dati.gov.it/onto/dcatapit and it is used in CPSV-AP_IT in order to model the URL of the reference documentation for Rule, FormalFramework, Input and TechnicalStandard.",
+      "it" : "Questa proprietà è definita in http://dati.gov.it/onto/dcatapit ed è utilizzata in CPSV-AP_IT per indicare gli URL della documentazione di riferimenti per alcuni oggetti quali Regola, Framework Legale, Input e Standard Tecnico."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/dcatapit",
+    "attributes" : [ "external" ],
+    "domain" : "thing4",
+    "range" : "literal11",
+    "maxCardinality" : 1
+  }, {
+    "id" : "property55",
+    "label" : {
+      "IRI-based" : "isContactPointOf",
+      "en" : "è punto di contatto per"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#isContactPointOf",
+    "comment" : {
+      "en" : "This is the inverse property of \"has contact point\".",
+      "it" : "Questa è la proprietà inversa di \"ha punto di contatto\"."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class17",
+    "range" : "thing5",
+    "inverse" : "property28"
+  }, {
+    "id" : "property78",
+    "label" : {
+      "IRI-based" : "playsARoleInTime",
+      "en" : "plays a role in time",
+      "it" : "esercita un ruolo nel tempo"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#playsARoleInTime",
+    "comment" : {
+      "en" : "This property is used to link an agent to the situation of the role of the agent that changes over time.",
+      "it" : "Questa proprietà è utilizzata per connettere un soggetto alla situazione del ruolo del soggetto che varia nel tempo."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/pro#holdsRoleInTime",
+        "type" : "label"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#hasTimeIndexedSetting",
+        "type" : "label"
+      } ]
+    },
+    "domain" : "class26",
+    "range" : "class27",
+    "inverse" : "property67"
+  }, {
+    "id" : "property27",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class25",
+    "range" : "class45"
+  }, {
+    "id" : "property22",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class3",
+    "range" : "class38"
+  }, {
+    "id" : "property28",
+    "label" : {
+      "IRI-based" : "hasContactPoint",
+      "en" : "has contact point",
+      "it" : "ha punto di contatto"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#hasContactPoint",
+    "comment" : {
+      "en" : "Questa proprietà è utilizzata per specificare un punto di contatto. Per esempio essa può collegare un servizio pubblico a uno o più punti di contatto.",
+      "it" : "This property is used to represent the point of contact. For instance it can be used to link the public service with its contant point. More than one contact point for a service can be specified."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "thing1",
+    "range" : "class21",
+    "inverse" : "property55"
+  }, {
+    "id" : "property21",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class9",
+    "range" : "class30"
+  }, {
+    "id" : "property24",
+    "label" : {
+      "IRI-based" : "Disjoint With"
+    },
+    "domain" : "class9",
+    "range" : "class40"
+  }, {
+    "id" : "property86",
+    "label" : {
+      "IRI-based" : "startInterval",
+      "en" : "start interval",
+      "it" : "inizio intervallo"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#startInterval",
+    "comment" : {
+      "en" : "This property represents the start of the time interval and it can assume values of type date, dateTime or time.",
+      "it" : "Questa proprietà rappresenta l'inizio dell'intervallo temporale. Esso può assumere valori di tipo date, dateTime o time."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class25",
+    "range" : "literal8",
+    "cardinality" : 1
+  }, {
+    "id" : "property23",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class36",
+    "range" : "class19"
+  }, {
+    "id" : "property79",
+    "label" : {
+      "IRI-based" : "legalIdentifier",
+      "en" : "legal identifier",
+      "it" : "identificativo legale"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#legalIdentifier",
+    "comment" : {
+      "en" : "This property is used to represent a legal identifier for the legal entity. In particular, if the legal entity is a private organization the legal identifier is the VAT number whereas if the legal entity is a public administration the legal identifier is represented by the tax code.",
+      "it" : "Questa proprietà consente di specificare un identificativo legale per l'entità legale. In particolare, se l'entità legale è un'organizzazione privata, l'identificativo legale è rappresentato dalla partita iva. Se l'entità legale è una pubblica amministrazione, l'identificativo legale è rappresentato dal codice fiscale."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "attributes" : [ "functional" ],
+    "domain" : "class9",
+    "range" : "literal1",
+    "superproperty" : [ "property87" ],
+    "cardinality" : 1
+  }, {
+    "id" : "property20",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class39",
+    "range" : "class28"
+  }, {
+    "id" : "property73",
+    "label" : {
+      "IRI-based" : "specifies",
+      "en" : "specifies",
+      "it" : "definisce"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#specifies",
+    "comment" : {
+      "en" : "This property is used to represent that rules can specify requirements for a public service.",
+      "it" : "Questa proprietà è utilizzata per indicare che le regole definiscono determinati requisiti per il servizio pubblico."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class7",
+    "range" : "class12"
+  }, {
+    "id" : "property43",
+    "label" : {
+      "IRI-based" : "isImplementedBy",
+      "en" : "is implemented by",
+      "it" : "è implementato da"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#isImplementedBy",
+    "comment" : {
+      "en" : "This property is the inverse of \"implements\" used to link the \"Formal Framework\" with the \"Rule\".",
+      "it" : "Questa è la proprietà inversa di \"implementa\" che connette il \"Framework Legale\" alla \"Regola\"."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class42",
+    "range" : "class7",
+    "inverse" : "property72"
+  }, {
+    "id" : "property77",
+    "label" : {
+      "IRI-based" : "follows",
+      "en" : "follows",
+      "it" : "è conforme a"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#follows",
+    "comment" : {
+      "en" : "This property links a public service to the set of rules the service has to follow in order to be carried out.",
+      "it" : "Questa proprietà è utilizzata per poter collegare il servizio pubblico all'insieme di regole che esso deve rispettare per il suo espletamento."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class10",
+    "range" : "class7",
+    "inverse" : "property56"
+  }, {
+    "id" : "property81",
+    "label" : {
+      "IRI-based" : "value",
+      "en" : "value",
+      "it" : "valore"
+    },
+    "iri" : "http://www.w3.org/2006/vcard/ns#value",
+    "comment" : {
+      "en" : "This property is defined in http://www.w3.org/2006/vcard/ns and it has been added in order to specify the literal value of a data property.",
+      "it" : "Questa proprietà è definita in http://www.w3.org/2006/vcard/ns ed è stata aggiunta per poter modellare il valore primitivo di una data property."
+    },
+    "isDefinedBy" : "http://www.w3.org/2006/vcard/ns",
+    "attributes" : [ "external" ],
+    "domain" : "thing4",
+    "range" : "literal3",
+    "cardinality" : 1
+  }, {
+    "id" : "property56",
+    "label" : {
+      "IRI-based" : "isFollowedBy",
+      "en" : "is followed by",
+      "it" : "è rispettata da"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#isFollowedBy",
+    "comment" : {
+      "en" : "This property is the inverse of \"follows\" and links the \"Rule\" with the \"Public Service\".",
+      "it" : "Questa è la proprietà inversa di \"rispetta\" che connette una regola al servizio pubblico."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class7",
+    "range" : "class10",
+    "inverse" : "property77"
+  }, {
+    "id" : "property72",
+    "label" : {
+      "IRI-based" : "implements",
+      "en" : "implements",
+      "it" : "implementa"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#implements",
+    "comment" : {
+      "en" : "This property is used to represent rules that implement specific legislation or policy documents.",
+      "it" : "Questa proprietà è utilizzata per indicare regole che implementano spcifici riferimenti normativi."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class7",
+    "range" : "class42",
+    "inverse" : "property43"
+  }, {
+    "id" : "property65",
+    "label" : {
+      "IRI-based" : "address",
+      "en" : "address",
+      "it" : "indirizzo"
+    },
+    "iri" : "https://www.w3.org/ns/locn#address",
+    "comment" : {
+      "en" : "Property defined in http://www.w3.org/ns/locn and used to represent an address of a resource.",
+      "it" : "Proprietà definita in http://www.w3.org/ns/locn e usata per rappreentare un indirizzo di una certa risorsa."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/locn",
+    "attributes" : [ "external" ],
+    "domain" : "thing7",
+    "range" : "class3",
+    "maxCardinality" : 1
+  }, {
+    "id" : "property37",
+    "label" : {
+      "IRI-based" : "interactivityLevel",
+      "en" : "interactivity level",
+      "it" : "livello interattivo"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#interactivityLevel",
+    "comment" : {
+      "en" : "this property is used to represent the interactivity level of the service. The interactivity level must be chosen through the use of the following controlled vocabulary:  http://dati.gov.it/onto/controlledvocabulary/InteractivityLevel",
+      "it" : "Questa proprietà consente di rappresentare il livello di interattività del servizio. Il livello di interattività deve essere specificato mediante l'uso del vocabolario controllato:  http://dati.gov.it/onto/controlledvocabulary/InteractivityLevel"
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class10",
+    "range" : "class50",
+    "cardinality" : 1
+  }, {
+    "id" : "property92",
+    "label" : {
+      "IRI-based" : "adminLevel2",
+      "en" : "administrative level 2",
+      "it" : "livello amministrativo 2"
+    },
+    "iri" : "http://www.w3.org/ns/locn#adminLevel2",
+    "comment" : {
+      "en" : "This property is defined in http://www.w3.org/ns/locn and it is used to represent the region of the address, usually a county, state or other such area that typically encompasses several localities.",
+      "it" : "Questa proprietà è definita in http://www.w3.org/ns/locn ed è utilizzata per rappresentare una regione o un’area che ricomprende diverse località. Nel presente profilo tale proprietà si può utilizzare per indicare la provincia attraverso la relativa sigla."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/locn",
+    "attributes" : [ "external" ],
+    "domain" : "class3",
+    "range" : "literal14",
+    "cardinality" : 1
+  }, {
+    "id" : "property36",
+    "label" : {
+      "IRI-based" : "relation",
+      "en" : "relation",
+      "it" : "relativo a"
+    },
+    "iri" : "http://purl.org/dc/terms/relation",
+    "comment" : {
+      "en" : "This property is defined in http://purl.org/dc/terms/ and it is used to represent all those cases in which a service relates to another public services.",
+      "it" : "Questa proprietà è definita in http://purl.org/dc/terms/ ed è utilizzata per rappresentare tutti quei casi in cui un servizio pubblico è in relazione con altri servizi pubblici."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "domain" : "class10",
+    "range" : "class10"
+  }, {
+    "id" : "property58",
+    "label" : {
+      "IRI-based" : "hasMeasurementUnit",
+      "en" : "has measurement unit",
+      "it" : "ha unità di misura"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#hasMeasurementUnit",
+    "comment" : {
+      "en" : "This property models the measurement unit to be assigned to a quantitative value. It connects the class Quantitative Value with the class Mearurement Unit.",
+      "it" : "Questa proprietà consente di specificare un'unità di misura per un valore quantitativo. Essa connette la classe Quantitative Value alla classe Measurement Unit."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class23",
+    "range" : "class49",
+    "cardinality" : 1
+  }, {
+    "id" : "property64",
+    "label" : {
+      "IRI-based" : "isRelatedToRiT",
+      "en" : "is related to role in time",
+      "it" : "è relativo al ruolo nel tempo"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#isRelatedToRiT",
+    "comment" : {
+      "en" : "Inverse property of \"role for\".",
+      "it" : "Proprietà inversa di \"ruolo per\"."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class10",
+    "range" : "class27",
+    "inverse" : "property34"
+  }, {
+    "id" : "property47",
+    "label" : {
+      "IRI-based" : "isRoleIn",
+      "en" : "is role in",
+      "it" : "è ruolo in"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#isRoleIn",
+    "comment" : {
+      "en" : "Inverse property of \"withRole\",",
+      "it" : "Proprietà inversa di \"con ruolo\".",
+      "undefined" : "http://dati.gov.it/onto/cpsvapit"
+    },
+    "domain" : "class11",
+    "range" : "class27",
+    "inverse" : "property35"
+  }, {
+    "id" : "property50",
+    "label" : {
+      "IRI-based" : "theme",
+      "en" : "service theme",
+      "it" : "tema del servizio"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#theme",
+    "comment" : {
+      "en" : "This property is used to model the service theme. The service theme must be specified using the following controlled vocabulary: http://publications.europa.eu/resource/authority/data-theme",
+      "it" : "Questa proprietà consente di specificare il tema del servizio. Il tema del servizio deve essere specificato utilizzando il seguente vocabolario controllato: http://publications.europa.eu/resource/authority/data-theme"
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class10",
+    "range" : "class50"
+  }, {
+    "id" : "property40",
+    "label" : {
+      "IRI-based" : "type",
+      "en" : "type",
+      "it" : "tipo"
+    },
+    "iri" : "http://purl.org/dc/terms/type",
+    "comment" : {
+      "en" : "This property is defined in http://purl.org/dc/terms/ and it has been added in order to model the type of \"things\" defined in CPSV-AP_IT. The use of type is associated with the use of controlled vocabularies or single individuals of some classes.",
+      "it" : "Questa proprietà è definita in http://purl.org/dc/terms/type ed è stata aggiunta per poter modellare i tipi di \"cose\" definite nell'ambito CPSV-AP_IT. L'uso di type è associato all'uso di vocabolari controllari o all'uso di valori predefiniti di alcune classi."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "domain" : "thing3",
+    "range" : "class54",
+    "cardinality" : 1,
+    "maxCardinality" : 1
+  }, {
+    "id" : "property63",
+    "label" : {
+      "IRI-based" : "hasEmail",
+      "en" : "has email",
+      "it" : "ha email"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#hasEmail",
+    "comment" : {
+      "en" : "This property is a sub property of has channel and it is used to connect a public service with a specific type of channel; i.e., email.",
+      "it" : "Questa proprietà è una sotto proprietà di \"ha canale\" ed è utilizzata al fine di legare un servizio pubblico a uno specifico tipo di canale; i.e., email."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class10",
+    "range" : "class15",
+    "superproperty" : [ "property30", "property60" ]
+  }, {
+    "id" : "property41",
+    "label" : {
+      "IRI-based" : "homepage",
+      "en" : "home page"
+    },
+    "iri" : "http://xmlns.com/foaf/0.1/homepage",
+    "comment" : {
+      "en" : "This property is defined in http://xmlns.com/foaf/0.1/ and it has been added in order to guarantee the full alignment between CPSV-AP_IT and FOAF, following the CPSV specifications.",
+      "it" : "Questa proprietà è definita in http://xmlns.com/foaf/0.1/ ed è stata aggiunta al fine di garantire il pieno allineamento tra CPSV-AP_IT e FOAF, in accordo con le specifiche CPSV."
+    },
+    "isDefinedBy" : "http://xmlns.com/foaf/0.1/",
+    "attributes" : [ "external" ],
+    "domain" : "thing4",
+    "range" : "thing4",
+    "subproperty" : [ "property70" ]
+  }, {
+    "id" : "property68",
+    "label" : {
+      "IRI-based" : "hasTelephone",
+      "en" : "has telephone"
+    },
+    "iri" : "http://www.w3.org/2006/vcard/ns#hasTelephone",
+    "comment" : {
+      "en" : "This property is defined in http://www.w3.org/2006/vcard/ns and it has been added in order to guarantee the full alignment between CPSV-AP_IT and vCard.",
+      "it" : "Questa proprietà è definita in http://www.w3.org/2006/vcard/ns ed è stata aggiunta al fine di garantire il pieno allineamento tra CPSV-AP_IT e vCard."
+    },
+    "isDefinedBy" : "http://www.w3.org/2006/vcard/ns",
+    "attributes" : [ "external" ],
+    "domain" : "thing4",
+    "range" : "thing4",
+    "subproperty" : [ "property33" ]
+  }, {
+    "id" : "property60",
+    "label" : {
+      "IRI-based" : "hasEmail",
+      "en" : "has email"
+    },
+    "iri" : "http://www.w3.org/2006/vcard/ns#hasEmail",
+    "comment" : {
+      "en" : "This property is defined in http://www.w3.org/2006/vcard/ns and it has been added in order to guarantee the full alignment etween CPSV-AP_IT and vCard.",
+      "it" : "Questa proprietà è definita in http://www.w3.org/2006/vcard/ns ed è stata aggiunta al fine di garantire il pieno allineamento tra CPSV-AP_IT e vCard.",
+      "undefined" : "http://www.w3.org/2006/vcard/ns"
+    },
+    "attributes" : [ "external" ],
+    "domain" : "thing4",
+    "range" : "thing4",
+    "subproperty" : [ "property63" ]
+  }, {
+    "id" : "property61",
+    "label" : {
+      "IRI-based" : "otherCode",
+      "en" : "other code",
+      "it" : "altro codice"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#otherCode",
+    "comment" : {
+      "en" : "This property is used to represent another code (for the integration with other data bases) associated with a public service.",
+      "it" : "Questa proprietà è utilizzata per rappresentare un altro codice associato al servizio pubblico. Per esempio, nel caso di servizi di pagamento, tale proprietà potrebbe essere utilizzata per indicare il relativo codice gestionale SIOPE (Sistema informativo delle operazioni degli enti pubblici)."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class10",
+    "range" : "class50"
+  }, {
+    "id" : "property67",
+    "label" : {
+      "IRI-based" : "isPlayedBy",
+      "en" : "is played by",
+      "it" : "è esercitato da"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#isPlayedBy",
+    "comment" : {
+      "en" : "Inverse property of \"plays a role in time\" used to link the situation \"role in time\" to the Agent.",
+      "it" : "Proprietà inversa di \"esercita un ruolo nel tempo\" utilizzata per collegare la situazione ruolo nel tempo con il Soggetto.",
+      "undefined" : "http://dati.gov.it/onto/cpsvapit"
+    },
+    "domain" : "class27",
+    "range" : "class26",
+    "inverse" : "property78",
+    "cardinality" : 1
+  }, {
+    "id" : "property88",
+    "label" : {
+      "IRI-based" : "geographicalIdentifier",
+      "en" : "geographical identifier",
+      "it" : "identificativo geografico"
+    },
+    "iri" : "http://dati.gov.it/onto/dcatapit#geographicalIdentifier",
+    "comment" : {
+      "en" : "This property is defined in http://dati.gov.it/onto/dcatapit and it is used to model a geographical identifier. This propery contains an URI that identifies the location of a public service. It is recommended the use of the following controlled vocabularies: MDR Places Named Authority List (http://publications.europa.eu/mdr/authority/place/) and Geonames (http://sws.geonames.org/ ). The URIs of Geonames must be used only if the location is not present in the above mentioned vocabulary.",
+      "it" : "Questa proprietà è definita in http://dati.gov.it/onto/dcatapit ed è utilizzata per rappresentare un identificativo geografico. Questa proprietà contiene un URI che identifica la localizzazione del servizio pubblico. Si raccomanda l’utilizzo dei seguenti vocabolari controllati: MDR Places Named Authority List (http://publications.europa.eu/mdr/authority/place/) e Geonames (http://sws.geonames.org/ ). Gli URI di Geonames devono essere utilizzati solo nel caso in cui una località non è presente nell’altro vocabolario indicato."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/dcatapit",
+    "attributes" : [ "external", "functional" ],
+    "domain" : "class32",
+    "range" : "literal10",
+    "superproperty" : [ "property87" ],
+    "maxCardinality" : 1
+  }, {
+    "id" : "property52",
+    "label" : {
+      "IRI-based" : "reportsTo",
+      "en" : "reports to"
+    },
+    "iri" : "http://www.w3.org/ns/org#reportsTo",
+    "comment" : {
+      "en" : "This property is defined in http://www.w3.org/ns/org and it is added in order to guarantee the alignment of the CPSV-AP_IT to the Org W3C recommendation.",
+      "it" : "Questa proprietà è definita in http://www.w3.org/ns/org ed è stata aggiunta al fine di garantire l'allineamento di CPSV-AP_IT con la raccomandazione W3C Org."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/org",
+    "attributes" : [ "external" ],
+    "domain" : "thing4",
+    "range" : "thing4",
+    "subproperty" : [ "property66" ]
+  }, {
+    "id" : "property70",
+    "label" : {
+      "IRI-based" : "hasWebSite",
+      "en" : "has web site",
+      "it" : "ha sito web"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#hasWebSite",
+    "comment" : {
+      "en" : "This property is a subproperty of \"has channel\" and it is used to link the public service with a specific type of channel; i.e., web site.",
+      "it" : "Questa proprietà è sottoproprietà di \"ha canale\" ed è utilizzata per collegare un servizio pubblico a uno specifico tipo di canale; i.e., sito web."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class10",
+    "range" : "class6",
+    "superproperty" : [ "property30", "property41" ]
+  }, {
+    "id" : "property75",
+    "label" : {
+      "IRI-based" : "processingTime",
+      "en" : "processing time",
+      "it" : "tempo di processamento"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#processingTime",
+    "comment" : {
+      "en" : "This property represents the processing time for a life event. It can be expressed in a quantitative time metric or in a punctual time interval. It connects life event with quantitative value or time interval.",
+      "it" : "Questa proprietà rappresenta il tempo di processamento che può essere espresso sia in termini quantitativi, sia in termini puntuali riferibili a un intervallo temporale. La proprietà connette la classe LifeEvent a sia Quantitative Value che Time Interval."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class28",
+    "range" : "class61",
+    "maxCardinality" : 1
+  }, {
+    "id" : "property82",
+    "label" : {
+      "IRI-based" : "accessReference",
+      "en" : "access reference",
+      "it" : "riferimento di accesso"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#accessReference",
+    "comment" : {
+      "en" : "This property is used to represent the access reference for an electronic channel different from web site and email. For instance, it can be the bank account number for a bank transfer channel, etc.",
+      "it" : "Questa proprietà consente di rappresentare un riferimento per l'accesso a un canale non elettronico diverso da sito web e email. Esempi: l'IBAN per un bonifico bancario, canale per la TV on demand, ecc."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class29",
+    "range" : "literal4",
+    "cardinality" : 1
+  }, {
+    "id" : "property91",
+    "label" : {
+      "IRI-based" : "modified",
+      "en" : "release date",
+      "it" : "data di ultimo aggiornamento"
+    },
+    "iri" : "http://purl.org/dc/terms/modified",
+    "comment" : {
+      "en" : "This property is defined in http://purl.org/dc/terms/ and it is used to represent the release date of the public service.",
+      "it" : "Questa proprietà è definita http://purl.org/dc/terms/ ed è utilizzare per rappresentare la data di ultima modifica del servizio."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "domain" : "class10",
+    "range" : "literal13",
+    "maxCardinality" : 1
+  }, {
+    "id" : "property59",
+    "label" : {
+      "IRI-based" : "hasInput",
+      "en" : "has input",
+      "it" : "ha input"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#hasInput",
+    "comment" : {
+      "en" : "This property is used to link a public service with an input required to carry out the service. A service can have more than one input. It is mandatory to specify an input for a public service.",
+      "it" : "Questa proprietà è utilizzata per collegare un servizio pubblico all'input richiesto per poter espletare il servizio stesso. Il servizio può avere più di un input. E' obbligatorio specificare un input per il servizio."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class10",
+    "range" : "class48"
+  }, {
+    "id" : "property83",
+    "label" : {
+      "IRI-based" : "keyword",
+      "en" : "keyword",
+      "it" : "parola chiave"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#keyword",
+    "comment" : {
+      "en" : "This property is used to model the keyword or label that describes a public service.",
+      "it" : "Questa proprietà contiene una parola chiave o un’etichetta che descrive il servizio pubblico."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class10",
+    "range" : "literal5"
+  }, {
+    "id" : "property39",
+    "label" : {
+      "IRI-based" : "isChannelOf",
+      "en" : "is channel of",
+      "it" : "è canale di"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#isChannelOf",
+    "comment" : {
+      "en" : "Inverse property of \"has channel\" used to link a channel with the public service.",
+      "it" : "Proprietà inversa di \"ha canale\" utilizzata per collegare un canale con un servizio pubblico."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class22",
+    "range" : "class10",
+    "inverse" : "property30"
+  }, {
+    "id" : "property54",
+    "label" : {
+      "IRI-based" : "temporal",
+      "en" : "temporal coverage",
+      "it" : "copertura temporale"
+    },
+    "iri" : "http://purl.org/dc/terms/temporal",
+    "comment" : {
+      "en" : "This property is defined in http://purl.org/dc/terms/ and it is used to represent the temporal characteristics of a resourrce.  In the context of CPSV-AP_IT is used to represent the temporal interval in which the public service is available.",
+      "it" : "Questa proprietà è definita in http://purl.org/dc/terms/ e consente di rappresentare le caratteristiche temporali di una risorsa. Nel contesto CPSV-AP_IT è utilizzata per rappresentare la copertura temporale di disponibilità di un servizio pubblico."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "domain" : "class10",
+    "range" : "class25"
+  }, {
+    "id" : "property87",
+    "label" : {
+      "IRI-based" : "identifier",
+      "en" : "identifier",
+      "it" : "identificativo"
+    },
+    "iri" : "http://purl.org/dc/terms/identifier",
+    "comment" : {
+      "en" : "This property is defined in http://purl.org/dc/terms/ and it has been added in order to assign identifiers to \"things\" specified in CPSV-AP_IT.",
+      "it" : "Questa proprietà è definita in http://purl.org/dc/terms/ ed è stata aggiunta al fine di modellare gli identificativi delle \"cose\" specificate in CPSV-AP_IT."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external", "functional" ],
+    "domain" : "thing4",
+    "range" : "literal9",
+    "subproperty" : [ "property79", "property88" ],
+    "cardinality" : 1
+  }, {
+    "id" : "property9",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class29",
+    "range" : "class22"
+  }, {
+    "id" : "property38",
+    "label" : {
+      "IRI-based" : "language",
+      "en" : "language",
+      "it" : "lingua"
+    },
+    "iri" : "http://purl.org/dc/terms/language",
+    "comment" : {
+      "en" : "This property is defined in http://purl.org/dc/terms/  and it has been added in order to model the language through which the public service is provided. There can be multiple occurence of this property according to the number of languages through which a service is provided.",
+      "it" : "Questa proprietà è definita in http://purl.org/dc/terms/ ed è stata aggiunta per connettere il servizio pubblico alla lingua con cui il servizio è erogato. Tale proprietà può essere ripetuta nel caso il servizio sia disponibile in più lingue."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/%20",
+    "attributes" : [ "external" ],
+    "domain" : "thing2",
+    "range" : "class1"
+  }, {
+    "id" : "property6",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class41",
+    "range" : "class26"
+  }, {
+    "id" : "property5",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class9",
+    "range" : "class26"
+  }, {
+    "id" : "property8",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class46",
+    "range" : "class22"
+  }, {
+    "id" : "property7",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class15",
+    "range" : "class22"
+  }, {
+    "id" : "property71",
+    "label" : {
+      "IRI-based" : "isPhysicallyAvailableAt",
+      "en" : "is physically available at",
+      "it" : "è fisicamente disponibile presso"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#isPhysicallyAvailableAt",
+    "comment" : {
+      "en" : "This property links the public service to its physical location in the case the service is provided offline at some public administration's desk/totem.",
+      "it" : "Questa proprietà collega un servizio pubblico alla locazione fisica che lo eroga nel caso il servizio sia offerto agli utenti finali via sportelli fisici/totem.",
+      "undefined" : "http://dati.gov.it/onto/cpsvapit"
+    },
+    "domain" : "class10",
+    "range" : "class20",
+    "inverse" : "property74",
+    "superproperty" : [ "property30" ]
+  }, {
+    "id" : "property90",
+    "label" : {
+      "IRI-based" : "endInterval",
+      "en" : "end interval",
+      "it" : "fine intervallo"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#endInterval",
+    "comment" : {
+      "en" : "This property represents the end of a time interval and it can assume a value of type date, dateTime, time.",
+      "it" : "Questa proprietà rappresenta la fine di un intervallo temporale e può assumere un valore di tipo date, dateTime o time."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class25",
+    "range" : "literal12",
+    "maxCardinality" : 1
+  }, {
+    "id" : "property19",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class51",
+    "range" : "class28"
+  }, {
+    "id" : "property53",
+    "label" : {
+      "IRI-based" : "hasStatus",
+      "en" : "has status",
+      "it" : "ha stato"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#hasStatus",
+    "comment" : {
+      "en" : "Property used to link a public service with a status.",
+      "it" : "Proprietà utilizzata per collegare un servizio pubblico a uno stato.",
+      "undefined" : "http://dati.gov.it/onto/cpsvapit"
+    },
+    "domain" : "class10",
+    "range" : "class44",
+    "inverse" : "property62",
+    "maxCardinality" : 1
+  }, {
+    "id" : "property18",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class41",
+    "range" : "class37"
+  }, {
+    "id" : "property51",
+    "label" : {
+      "IRI-based" : "roleAtTime",
+      "en" : "role at time",
+      "it" : "ruolo nell'intervallo di tempo"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#roleAtTime",
+    "comment" : {
+      "en" : "This property is used to link the situation of the role that changes over time with the time interval itself.",
+      "it" : "Questa proprietà è utilizzata per collegare la situazione del ruolo che varia nel tempo all'intervallo temporale stesso."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#atTime",
+        "type" : "label"
+      } ]
+    },
+    "domain" : "class27",
+    "range" : "class25"
+  }, {
+    "id" : "property74",
+    "label" : {
+      "IRI-based" : "isPhysicalLocationOf",
+      "en" : "is the physical location of",
+      "it" : "è la localizzazione fisica di"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#isPhysicalLocationOf",
+    "comment" : {
+      "en" : "Inverse property of \"is physically available at\" that links a physical location to the public service.",
+      "it" : "Proprietà inversa di \"è disponibile fisicamente presso\" che lega una localizzazione fisica a il servizio pubblico."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class20",
+    "range" : "class10",
+    "inverse" : "property71"
+  }, {
+    "id" : "property15",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class47",
+    "range" : "class5"
+  }, {
+    "id" : "property45",
+    "label" : {
+      "IRI-based" : "hasPart",
+      "en" : "has part",
+      "it" : "ha componente"
+    },
+    "iri" : "http://purl.org/dc/terms/hasPart",
+    "comment" : {
+      "en" : "This property is defined in http://purl.org/dc/terms/ and it is used to link a Business event with the public services that compose it.",
+      "it" : "Questa proprietà è definita in http://purl.org/dc/terms/ ed è utilizzata per collegare un business event a tutti i servizi che lo compongono."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "domain" : "class28",
+    "range" : "class10",
+    "inverse" : "property29"
+  }, {
+    "id" : "property46",
+    "label" : {
+      "IRI-based" : "subTheme",
+      "en" : "service subtheme",
+      "it" : "sottotema del servizio"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#subTheme",
+    "comment" : {
+      "en" : "This property is used to model the service subtheme. The service subtheme must be choosen using a controlled vocabulary currently under definition.",
+      "it" : "Questa proprietà è utilizzata per specificare il sotto tema del servizio. Il sotto tema del servizio deve essere scelto sulla base di un vocabolario in corso di definizione."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class10",
+    "range" : "class50"
+  }, {
+    "id" : "property48",
+    "label" : {
+      "IRI-based" : "hasCost",
+      "en" : "has cost",
+      "it" : "ha costo"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#hasCost",
+    "comment" : {
+      "en" : "This property links a public service to the costs associated with it.",
+      "it" : "Questa proprietà consente di collegare un servizio pubblico ai costi associati a esso."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class57",
+    "range" : "class35"
+  }, {
+    "id" : "property80",
+    "label" : {
+      "IRI-based" : "addressID",
+      "en" : "address ID",
+      "it" : "identificativo indirizzo"
+    },
+    "iri" : "http://www.w3.org/ns/locn#addressID",
+    "comment" : {
+      "en" : "This property is defined in http://www.w3.org/ns/locn and it is used to model a globally unique identifier for each instance of an address, crucial part of the INSPIRE data specifications.",
+      "it" : "Questa proprietà è definita in http://www.w3.org/ns/locn ed è utilizzata per rappresentare un identificativo univoco globale per ogni istanza di un indirizzo, come indicato nelle specifiche INSPIRE."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/locn",
+    "attributes" : [ "external", "functional" ],
+    "domain" : "class3",
+    "range" : "literal2",
+    "maxCardinality" : 1
+  }, {
+    "id" : "property14",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class6",
+    "range" : "class13"
+  }, {
+    "id" : "property85",
+    "label" : {
+      "IRI-based" : "alternativeName",
+      "en" : "alternative name",
+      "it" : "nome alternativo"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#alternativeName",
+    "comment" : {
+      "en" : "This property is used to represent an alternative name for a legal entity.",
+      "it" : "Questa proprietà è utilizzata per rappresentare un nome alternativo per una entità legale."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class9",
+    "range" : "literal7",
+    "superproperty" : [ "property93" ]
+  }, {
+    "id" : "property17",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class20",
+    "range" : "class32"
+  }, {
+    "id" : "property16",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class40",
+    "range" : "class34"
+  }, {
+    "id" : "property11",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class6",
+    "range" : "class22"
+  }, {
+    "id" : "property10",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class47",
+    "range" : "class22"
+  }, {
+    "id" : "property34",
+    "label" : {
+      "IRI-based" : "roleFor",
+      "en" : "role for",
+      "it" : "ruolo per"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#roleFor",
+    "comment" : {
+      "en" : "This property is used to link the situation of a role that changes over time to a specific entity. In CPSV-AP_IT the entity is the public service.",
+      "it" : "Questa proprietà consente di collegare la situazione di un ruolo che varia nel tempo su uno specifico oggetto. In CPSV-AP_IT l'oggetto è il servizio pubblico."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/pro/relatesToEntity",
+        "type" : "label"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#forEntity",
+        "type" : "label"
+      } ]
+    },
+    "domain" : "class27",
+    "range" : "class10",
+    "inverse" : "property64"
+  }, {
+    "id" : "property94",
+    "label" : {
+      "IRI-based" : "title",
+      "en" : "title",
+      "it" : "titolo"
+    },
+    "iri" : "http://purl.org/dc/terms/title",
+    "comment" : {
+      "en" : "This property is defined in http://purl.org/dc/terms/ and it is used in order to model the title for Rule and FormalFramework. There can be a title per language tag.",
+      "it" : "Questa proprietà è definita in http://purl.org/dc/terms/ ed è utilizzata per modellare il titolo per le regole e il framework legale. Ci può essere un titolo per lingua."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "domain" : "class62",
+    "range" : "literal16"
+  }, {
+    "id" : "property13",
+    "label" : {
+      "IRI-based" : "Disjoint With"
+    },
+    "domain" : "class9",
+    "range" : "class41"
+  }, {
+    "id" : "property96",
+    "label" : {
+      "IRI-based" : "fullAddress",
+      "en" : "full address",
+      "it" : "indirizzo complessivo"
+    },
+    "iri" : "http://www.w3.org/ns/locn#fullAddress",
+    "comment" : {
+      "en" : "This property is defined http://www.w3.org/ns/locn and it is used to represent the complete address as a string, with or without formatting.",
+      "it" : "Questa proprietà è definita in http://www.w3.org/ns/locn ed è utilizzata per rappresentare un indirizzo completo come una stringa."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/locn",
+    "attributes" : [ "external" ],
+    "domain" : "class3",
+    "range" : "literal18",
+    "cardinality" : 1
+  }, {
+    "id" : "property12",
+    "label" : {
+      "IRI-based" : "Subclass Of"
+    },
+    "domain" : "class15",
+    "range" : "class18"
+  }, {
+    "id" : "property42",
+    "label" : {
+      "IRI-based" : "geographicName",
+      "en" : "geographical name",
+      "it" : "nome geografico"
+    },
+    "iri" : "http://www.w3.org/ns/locn#geographicName",
+    "comment" : {
+      "en" : "This property is defined in http://www.w3.org/ns/locn and it is used to model a name associated with a spatial object. Examples include: \"Roma\" (n Italian), \"Rome\" (in English), etc.",
+      "it" : "Questa proprietà è definita in http://www.w3.org/ns/locn ed è utilizzata per modellare il nome geografico associato a un oggetto spaziale. Exempi includono \"Roma\" (in Italiano), \"Rome\" (in inglese), ecc."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/locn",
+    "attributes" : [ "external" ],
+    "domain" : "class32",
+    "range" : "class50",
+    "maxCardinality" : 1
+  }, {
+    "id" : "property49",
+    "label" : {
+      "IRI-based" : "currency",
+      "en" : "currency",
+      "it" : "valuta"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#currency",
+    "comment" : {
+      "en" : "This property is used to model the currency associated with the cost of the service. The currency must be chosen using the following controlled vocabulary: http://publications.europa.eu/resource/authority/currency",
+      "it" : "Questa proprietà è utilizzata per specificare la valuta da associare al costo del servizio. La valuta deve essere scelta in base al seguente vocabolario controllato: http://publications.europa.eu/resource/authority/currency"
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class35",
+    "range" : "class50",
+    "cardinality" : 1
+  }, {
+    "id" : "property31",
+    "label" : {
+      "IRI-based" : "requires",
+      "en" : "requires",
+      "it" : "richiede"
+    },
+    "iri" : "http://purl.org/dc/terms/requires",
+    "comment" : {
+      "en" : "This property defined in http://purl.org/dc/terms/ and it is used to represent all those cases in which a public service requires another public service in order to be carried out.",
+      "it" : "Questa proprietà è definita in http://purl.org/dc/terms/ ed è utilizzata per rappresentare tutti quei casi in cui un servizio richiede un altro servizio per poter essere espletato."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "attributes" : [ "external" ],
+    "domain" : "class10",
+    "range" : "class10"
+  }, {
+    "id" : "property44",
+    "label" : {
+      "IRI-based" : "hasOtherElectronicCh",
+      "en" : "has other electronic channel",
+      "it" : "ha altro canale elettronico"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#hasOtherElectronicCh",
+    "comment" : {
+      "en" : "This property is subproperty of \"has channel\" and it is used to link a public service with another electronic channel.",
+      "it" : "Questa proprietà è sotto proprietà di \"ha canale\" ed è utilizzata per collegare un servizio pubblico a un canale di tipo non elettronico."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class10",
+    "range" : "class29",
+    "superproperty" : [ "property30" ]
+  }, {
+    "id" : "property69",
+    "label" : {
+      "IRI-based" : "hasDayOfTheWeek",
+      "en" : "has day of the week",
+      "it" : "ha giorno della settimana"
+    },
+    "iri" : "http://dati.gov.it/onto/cpsvapit#hasDayOfTheWeek",
+    "comment" : {
+      "en" : "Property used to link a time interval with a day of the week.",
+      "it" : "Proprietà che collega un intervallo temporale al giorno della settimana."
+    },
+    "isDefinedBy" : "http://dati.gov.it/onto/cpsvapit",
+    "domain" : "class25",
+    "range" : "class8"
+  } ]
+}

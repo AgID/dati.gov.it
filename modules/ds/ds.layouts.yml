@@ -1,0 +1,322 @@
+ds_1col:
+  label: One column layout
+  category: Display Suite
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/ds-1col
+  icon: images/ds-1col.png
+  regions:
+    ds_content:
+      label: Content
+ds_1col_wrapper:
+  label: One column layout + wrapper
+  category: Display Suite
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/ds-1col-wrapper
+  icon: images/ds-1col-wrapper.png
+  regions:
+    ds_content:
+      label: Content
+ds_2col:
+  label: Two column layout
+  category: Display Suite
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/ds-2col
+  library: ds/ds_2col
+  icon: images/ds-2col.png
+  regions:
+    left:
+      label: Left
+    right:
+      label: Right
+ds_2col_fluid:
+  label: Fluid two column layout
+  category: Display Suite
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/ds-2col-fluid
+  library: ds/ds_2col_fluid
+  icon: images/ds-2col-fluid.png
+  regions:
+    left:
+      label: Left
+    right:
+      label: Right
+ds_2col_stacked:
+  label: Two column stacked layout
+  category: Display Suite
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/ds-2col-stacked
+  library: ds/ds_2col_stacked
+  icon: images/ds-2col-stacked.png
+  regions:
+    header:
+      label: Header
+    left:
+      label: Left
+    right:
+      label: Right
+    footer:
+      label: Footer
+ds_2col_stacked_fluid:
+  label: Fluid two column stacked layout
+  category: Display Suite
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/ds-2col-stacked-fluid
+  library: ds/ds_2col_stacked_fluid
+  icon: images/ds-2col-stacked-fluid.png
+  regions:
+    header:
+      label: Header
+    left:
+      label: Left
+    right:
+      label: Right
+    footer:
+      label: Footer
+ds_3col:
+  label: Three column - 25/50/25
+  category: Display Suite
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/ds-3col
+  library: ds/ds_3col
+  icon: images/ds-3col.png
+  regions:
+    left:
+      label: Left
+    middle:
+      label: Middle
+    right:
+      label: Right
+ds_3col_equal_width:
+  label: Three column - equal width
+  category: Display Suite
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/ds-3col-equal-width
+  library: ds/ds_3col_equal_width
+  icon: images/ds-3col-equal-width.png
+  regions:
+    left:
+      label: Left
+    middle:
+      label: Middle
+    right:
+      label: Right
+ds_3col_stacked:
+  label: Three column stacked - 25/50/25
+  category: Display Suite
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/ds-3col-stacked
+  library: ds/ds_3col_stacked
+  icon: images/ds-3col-stacked.png
+  regions:
+    header:
+      label: Header
+    left:
+      label: Left
+    middle:
+      label: Middle
+    right:
+      label: Right
+    footer:
+      label: Footer
+ds_3col_stacked_fluid:
+  label: Fluid three column stacked - 25/50/25
+  category: Display Suite
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/ds-3col-stacked-fluid
+  library: ds/ds_3col_stacked_fluid
+  icon: images/ds-3col-stacked-fluid.png
+  regions:
+    header:
+      label: Header
+    left:
+      label: Left
+    middle:
+      label: Middle
+    right:
+      label: Right
+    footer:
+      label: Footer
+ds_3col_stacked_equal_width:
+  label: Three column stacked - equal width
+  category: Display Suite
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/ds-3col-stacked-equal-width
+  library: ds/ds_3col_stacked_equal_width
+  icon: images/ds-3col-stacked-equal-width.png
+  regions:
+    header:
+      label: Header
+    left:
+      label: Left
+    middle:
+      label: Middle
+    right:
+      label: Right
+    footer:
+      label: Footer
+ds_4col:
+  label: Four column - equal width
+  category: Display Suite
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/ds-4col
+  library: ds/ds_4col
+  icon: images/ds-4col.png
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
+    fourth:
+      label: Fourth
+ds_reset:
+  label: Reset layout
+  category: Display Suite
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/ds-reset
+  icon: images/ds-reset.png
+  regions:
+    ds_content:
+      label: Content
+ds_bi_content:
+  label: Bootstrap italia content
+  category: Display Suite
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/ds-bi-content
+  icon: images/ds-1col.png
+  regions:
+    ds_content:
+      label: Content
+ds_bi_bg_a1:
+  label: ONE col lightgrey-bg-a1
+  category: Display Suite
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/ds-bi-1col-lightgrey-bg-a1
+  icon: images/ds-1col.png
+  regions:
+    ds_content:
+      label: Content
+ds_content:
+  label: Bootstrap italia content
+  category: Display Suite
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/ds-bi-content
+  icon: images/ds-1col.png
+  regions:
+    ds_content:
+      label: Content
+ds_bi_bg_a1_notizie:
+  label: ONE col lightgrey-bg-a1 notizie
+  category: Display Suite
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/ds-bi-1col-lightgrey-bg-a1-notizie
+  icon: images/ds-1col.png
+  regions:
+    ds_content:
+      label: Content
+ds_bi_bg_a1_geocatalogo:
+  label: ONE col bg-primary geocatalogo
+  category: Display Suite
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/ds-bi-1col-bg-primary-geocatalogo
+  icon: images/ds-1col.png
+  regions:
+    ds_content:
+      label: Content
+ds_content_2col:
+  label: Bootstrap italia content 2 col
+  category: Display Suite
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/ds-bi-2col-content
+  icon: images/ds-2col.png
+  regions:
+    left:
+      label: Left
+    right:
+      label: Right
+ds_bi_bg_a1_notizie_dettaglio:
+  label: ONE col lightgrey-bg-a1 notizie dettaglio
+  category: Display Suite
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/ds-bi-1col-lightgrey-bg-a1-notizie-dettaglio
+  icon: images/ds-1col.png
+  regions:
+    ds_content:
+      label: Content
+ds_bi_2col_lightgrey_bg_a1_dati_dettaglio:
+  label: TWO col lightgrey-bg-a1 dati dettaglio
+  category: Display Suite
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/ds-bi-2col-lightgrey-bg-a1-dati-dettaglio
+  icon: images/ds-2col.png
+  regions:
+    left:
+      label: Left
+    right:
+      label: Right
+    title: 
+      label: Title
+    bottom_left: 
+      label: Bottom Left
+    bottom_right: 
+      label: Bottom Right
+ds_bi_2col_lightgrey_bg_a1_base_dati_dettaglio:
+  label: TWO col lightgrey-bg-a1 base dati dettaglio
+  category: Display Suite
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/ds-bi-2col-lightgrey-bg-a1-base-dati-dettaglio
+  icon: images/ds-2col.png
+  regions:
+    left:
+      label: Left
+    right:
+      label: Right
+    title: 
+      label: Title
+ds_bi_1col_lightgrey_bread_bg_a1:
+  label: ONE col breadcrumb lightgrey background
+  category: Display Suite
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/ds-bi-1col-lightgrey-bread-bg-a1
+  icon: images/ds-1col.png
+  regions:
+    ds_content:
+      label: Content
+ds_bi_2col_lightgrey_bg_a1_evidence_bg_a1_base_dati_dettaglio:
+  label: TWO col lightgrey-bg-a1 base dati dettaglio evidenziato
+  category: Display Suite
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/ds-bi-2col-lightgrey-bg-a1-evidence-bg-a1-base-dati-dettaglio
+  icon: images/ds-2col.png
+  regions:
+    left:
+      label: Left
+    right:
+      label: Right
+    title:
+      label: Title

@@ -1,0 +1,27 @@
+.first {
+  float:left;
+  width:45%;
+}
+.last {
+  float:right;
+  width:45%;
+}
+
+.container-inline .form-item
+{
+    display:inline;
+}
+
+
+.rimuoviStandard{
+
+}
+
+.scaricalink{
+}
+
+.rimuoviorg{
+}
+
+.modificaorg{
+}

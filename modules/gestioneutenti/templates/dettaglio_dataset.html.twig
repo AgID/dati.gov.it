@@ -1,0 +1,307 @@
+{{ attach_library('agid_theme/fontawesome') }}
+{{ attach_library('agid_theme/bootstrap') }}
+{## per andare a capo usare attributo word-break: break-all; in css#}
+<!--<div class="container">-->
+<div class="row align-items-center">
+    <div class="col-12">
+
+        <!--<div class="row"><div class="col-xs-12 col-sm-12 col-md-12"><br /></div></div>-->
+        <div class="row">
+            <div class="col-xs-1 col-sm-1 col-md-1">
+                <a href="{{ path('gestioneutenti.dataset') }}"> <svg class="icon icon-xl icon-white" style="font-weight:bold;color:#0066cc" ><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left" ></use></svg></a>
+            </div>
+            <div class="col-xs-10 col-sm-10 col-md-10" style="border:1px solid #E8F2FC;background-color:#fff">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <br />
+                        <p class="etichetta">{{ dataset.name }}</p><!--Riga titolo-->
+                        <div class="row">
+                            <div class="col-xs-8 col-sm-8 col-md-8">
+                                <div class="row"><!--Riga descrizione-->
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <p class="titoloEtichetta">DESCRIZIONE</p>
+                                    </div>
+                                </div>
+                                <div class="row"><!--Riga descrizione-->
+                                    <div class="col-xs-12 col-sm-6 col-md-8">
+                                        <p class="valoreEtichetta">{{ dataset.notes }}</p>
+                                    </div>
+                                </div>
+                                <div class="row"><!--Riga descrizione-->
+                                    <div class="col-xs-12 col-sm-6 col-md-8">
+                                        <p class="titoloEtichetta">RISORSE</p>
+                                    </div>
+                                </div>
+                                {% for risorsa in dataset.resources	%}
+                                    <div class="row"><!--Riga descrizione-->
+                                        <div class="col-xs-2 col-sm-2 col-md-2">
+                                            {% if risorsa.format == "CSV" %}
+
+                                                <p class="csv">
+                                                    <a href="/admin/config/gestioneutenti/elencoDatasetFormatoDist/economia1" class="valoreEtichettaElencoDataset" style="text-decoration:none">{{ risorsa.distribution_format }}</a>
+                                                </p>
+                                            {% elseif risorsa.format == "RDF"  %}
+                                                <p class="rdf">
+                                                    <a href="/admin/config/gestioneutenti/elencoDatasetFormatoDist/economia1" class="valoreEtichettaElencoDataset" style="text-decoration:none">{{risorsa.distribution_format	}}</a>
+                                                </p>
+                                            {% elseif risorsa.format == "HTML"  %}
+                                                <p class="html">
+                                                    <a href="/admin/config/gestioneutenti/elencoDatasetFormatoDist/economia1" class="valoreEtichettaElencoDataset" style="text-decoration:none"> {{	risorsa.distribution_format	}}</a>
+                                                </p>
+                                            {% elseif risorsa.distribution_format == "KMZ"  %}
+                                                <p class="kmz">
+                                                    <a href="/admin/config/gestioneutenti/elencoDatasetFormatoDist/economia1" class="valoreEtichettaElencoDataset" style="text-decoration:none">{{	risorsa.distribution_format	}}</a>
+                                                </p>
+                                            {% elseif risorsa.format == "GEOJSON"  %}
+                                                <p class="geojson">
+                                                    <a href="/admin/config/gestioneutenti/elencoDatasetFormatoDist/economia1" class="valoreEtichettaElencoDataset" style="text-decoration:none"> {{	risorsa.distribution_format	}}</a>
+                                                </p>
+                                            {% endif %}
+
+                                        </div>
+                                        <div class="col-xs-8 col-sm-8 col-md-8">
+                                            <a href="{{	risorsa.url	}}" class="valoreUrl">
+                                                {{ risorsa.url|slice(0,35) ~ "..." }}
+                                            </a>
+                                        </div>
+                                        <div class="col-xs-2 col-sm-2 col-md-2">
+                                            <svg class="icon icon-sm" onclick="copyToClipboard('{{risorsa.url}}')"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-copy" ></use></svg>
+                                            <svg class="icon icon-sm" onclick="scaricaFile('{{risorsa.url}}')"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg>
+
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                                <div class="row"><div class="col-xs-12 col-sm-12 col-md-12"><br /><br /></div></div>
+                            </div>
+                            <div class="col-4">
+                                <div class="row"><!--Riga temi dataset-->
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <p class="titoloEtichetta">TEMI DEL DATASET</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <p style="color:#000C5A;font-family:'Titillium Web';vertical-align: text-top;font-weight:bold;word-break: break-all; ">
+                                            {{ dataset.theme }}
+                                            {% for tema in dataset.theme %}
+                                                {% if tema.theme == "ECON" %}
+                                                    <p class="valoreTema"> <a href="/admin/config/gestioneutenti/elencoDatasetTemi/economia1" class="valoreEtichetta">Economia e finanze</a></p>
+                                                {% elseif tema.theme == "AGRI"  %}
+                                                    <p class="valoreTema">  <a href="/admin/config/gestioneutenti/elencoDatasetTemi/economia1" class="valoreEtichetta">  Agricoltura, pesca, silvicoltura e prodotti alimentari</a></p>
+                                                {% elseif tema.theme == "EDUC"  %}
+                                                    <p class="valoreTema"> <a href="/admin/config/gestioneutenti/elencoDatasetTemi/economia1" class="valoreEtichetta">Istruzione, cultura e sport</a></p>
+                                                {% elseif tema.theme == "ENER"  %}
+                                                    <p class="valoreTema"><a href="/admin/config/gestioneutenti/elencoDatasetTemi/economia1" class="valoreEtichetta">Energia</a></p>
+                                                {% elseif tema.theme == "ENVI"  %}
+                                                    <p class="valoreTema"><a href="/admin/config/gestioneutenti/elencoDatasetTemi/economia1" class="valoreEtichetta">Ambiente</a</p>
+                                                {% elseif tema.theme == "GOVE"  %}
+                                                    <p class="valoreTema"><a href="/admin/config/gestioneutenti/elencoDatasetTemi/economia1" class="valoreEtichetta">Governo e settore pubblico</a></p>
+                                                {% elseif tema.theme == "HEAL"  %}
+                                                    <p class="valoreTema"><a href="/admin/config/gestioneutenti/elencoDatasetTemi/economia1" class="valoreEtichetta">Salute</a></p>
+                                                {% elseif tema.theme == "INTR"  %}
+                                                    <p class="valoreTema"><a href="/admin/config/gestioneutenti/elencoDatasetTemi/economia1" class="valoreEtichetta">Tematiche internazional</a></p>
+                                                {% elseif tema.theme == "JUST"  %}
+                                                    <p class="valoreTema"><a href="/admin/config/gestioneutenti/elencoDatasetTemi/economia1" class="valoreEtichetta">Giustizia, sistema giuridico e sicurezza pubblica</a></p>
+                                                {% elseif tema.theme == "OP_DATPRO"  %}
+                                                    <p class="valoreTema"><a href="/admin/config/gestioneutenti/elencoDatasetTemi/economia1" class="valoreEtichetta">Dati provvisori</a></p>
+                                                {% elseif tema.theme == "REGI"  %}
+                                                    <p class="valoreTema"><a href="/admin/config/gestioneutenti/elencoDatasetTemi/economia1" class="valoreEtichetta">Regioni e città</a></p>
+                                                {% elseif tema.theme == "SOCI"  %}
+                                                    <p class="valoreTema"><a href="/admin/config/gestioneutenti/elencoDatasetTemi/economia1" class="valoreEtichetta">Popolazione e società</a></p>
+                                                {% elseif tema.theme == "TECH"  %}
+                                                    <p class="valoreTema"><a href="/admin/config/gestioneutenti/elencoDatasetTemi/economia1" class="valoreEtichetta">Scienza e tecnologia</a></p>
+                                                {% elseif tema.theme == "TRAN"  %}
+                                                    <p class="valoreTema"><a href="/admin/config/gestioneutenti/elencoDatasetTemi/economia1" class="valoreEtichetta">Transport</a></p>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row"><!--Riga temi dataset-->
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <p class="titoloEtichetta">PAROLE CHIAVI</p>
+                                    </div>
+                                </div>
+                                <div class="row"><!--Riga tag dataset-->
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <a class="valoreEtichettaElencoDataset" href="/admin/config/gestioneutenti/datasetDettaglio/dati-gov/{{ item.title}}">{{ item.title}}</a>
+
+                                        {% set valoretags = "" %}
+                                        {#{% for tag in dataset.tags	%}
+                                            {{ valoretags ~ tag.name ~ ' '|lower }}
+                                        {% endfor %}
+                                        {% set valoretags = "" %}#}
+                                        {% for tag in dataset.tags	%}
+                                            {#{{ valoretags ~ tag.name ~ ' '|lower }} #}
+                                            {% set query = tag.name|lower %}
+                                            <p></p><a href="/admin/config/gestioneutenti/elencoDatasetTag/{{ query }}" class="valoreEtichetta">{{ valoretags ~ tag.name ~ ' '|lower }}</a></p>
+                                        {% endfor %}
+
+                                        <p class="valoreEtichetta">{{ valoretags }}  </p>
+                                    </div>
+                                </div>
+                                <div class="row"><!--Riga temi dataset-->
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <p class="titoloEtichetta">LICENZA:</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <p class="valoreLicenza">{{ dataset.license_title }}</p>
+                                    </div>
+                                </div>
+                                <div class="row"><!--Riga temi dataset-->
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <p class="titoloEtichetta">DATA DI RILASCIO:</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <p class="valoreEtichetta">{{ dataset.issued }}</p>
+                                    </div>
+                                </div>
+                                <div class="row"><!--Riga temi dataset-->
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <p class="titoloEtichetta">CONTATTI:</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <p class="valoreEtichetta"></p>
+                                    </div>
+                                </div>
+                            </div><!--fine div colonna dati del dataset-->
+                        </div>
+                    </div>
+                    <div class="col-xs-1 col-sm-1 col-md-1"></div>
+                </div>
+                {% set homepage = "" %}
+                {% for extras in dataset.extras	%}
+                    {% if extras.key == "source_catalog_homepage" %}
+
+                        {% set homepage = extras.value %}
+                    {% endif %}
+                {% endfor %}
+                <div class="row"><!--Riga descrizione-->
+                    <div class="col-xs-1 col-sm-1 col-md-1"></div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <p class="titoloEtichetta">CATALOGO</p>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <p class="valoreEtichetta">Email referente: </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <p class="valoreEtichetta">Home page: {{ homepage }}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <p class="valoreEtichetta">URL API: https://geodati.gov.it</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="col-xs-1 col-sm-1 col-md-1"></div>-->
+                    <div class="col-xs-5 col-sm-5 col-md-5">
+                        <!--<div class="row">-->
+                            <!--div class="col-xs-12 col-sm-12 col-md-12">-->
+                                <p class="titoloEtichetta"  style="margin-left:13%">EDITORE DEL DATASET: {{ dataset.maintainer }}</p>
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">-->
+                                <p class="titoloEtichetta"  style="margin-left:13%">PUBBLICATO DA: {{ homepage }}</p>
+                            <!--</div>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+
+            <!--<div class="col-xs-1 col-sm-1 col-md-1"></div>-->
+        </div>
+
+    </div>
+
+    <div class="row"><div class="col-xs-12 col-sm-12 col-md-12"><br /></div></div>
+</div>
+<!--</div>--><!--fine container-->
+<script defer>
+    /*$('#main-wrapper').css("background-color", "#e8f2fc");*/
+    //document.body.style.backgroundColor = "#e8f2fc";
+    //alert("1");
+    //document.getElementById('block-agid-theme-page-title').style.display ="none";
+    //alert("2");
+    //document.getElementById('rigaRicercaAvanzata').style.display ="none";
+    //alert("3");
+    //document.getElementById('tagRicercaAvanzata').style.display ="none";
+    //alert("4");
+    //document.getElementById("esploraDati").style.display ="none";
+    //alert("5");
+    //document.getElementById('carouselNotizieInEvidenza').style.display ="none";
+    //alert("6");
+    var item=document.getElementById('rigaRicercaAvanzata');
+    //alert("7");
+    item.parentNode.removeChild(element);
+    //alert("8");
+    item=document.getElementById('tagRicercaAvanzata');
+    //alert("9");
+    item.parentNode.removeChild(element);
+    //alert("10");
+    item=document.getElementById('esploraDati');
+    if(item != null){
+        // alert("elemento diverso da null");
+    }
+    else{
+        //alert("elemento null");
+    }
+    //alert("11");
+    item.parentNode.removeChild(element);
+    //alert("12");
+    item=document.getElementById('carouselNotizieInEvidenza');
+    //alert("3");
+    item.parentNode.removeChild(element);
+    //alert("14");
+    function copyToClipboard(text) {
+        alert("link copiato");
+        if (window.clipboardData && window.clipboardData.setData) {
+            // Internet Explorer-specific code path to prevent textarea being shown while dialog is visible.
+            return clipboardData.setData("Text", text);
+
+        }
+        else if (document.queryCommandSupported && document.queryCommandSupported("copy")) {
+            var textarea = document.createElement("textarea");
+            textarea.textContent = text;
+            textarea.style.position = "fixed";  // Prevent scrolling to bottom of page in Microsoft Edge.
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                return document.execCommand("copy");  // Security exception may be thrown by some browsers.
+            }
+            catch (ex) {
+                console.warn("Copy to clipboard failed.", ex);
+                return false;
+            }
+            finally {
+                document.body.removeChild(textarea);
+            }
+        }
+        //alert("2");
+    }
+
+    function scaricaFile(url){
+        //alert("Valore di url "+url);
+        var a = document.createElement("a");
+        a.href = url;
+        fileName = url.split("/").pop();
+        a.download = fileName;
+        document.body.appendChild(a);
+        a.click();
+        window.URL.revokeObjectURL(url);
+        a.remove();
+    }
+
+</script>
+{% include active_theme_path() ~ '/dist/svg/sprite.svg' %}
+

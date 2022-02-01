@@ -1,0 +1,12 @@
+name: 'Watchdog Delete Filter'
+description: 'This module offers useful filters to selectively delete entries in the Watchdog provided by the core Dblog module.'
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
+dependencies:
+  - drupal:dblog
+
+# Information added by Drupal.org packaging script on 2020-06-14
+version: '8.x-1.2'
+project: 'watchdog_delete_filter'
+datestamp: 1592121329

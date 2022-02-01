@@ -1,0 +1,248 @@
+{{ attach_library('agid_theme/fontawesome') }}
+{{ attach_library('agid_theme/bootstrap') }}
+
+
+{#{% for item in menu["cataloghi"] %}
+    <p>Stampo elemento {{  item.tid }}  {{  item.value }}</p>
+{% endfor %}
+#}
+
+<!-- Dimensione menu principale 25px, colore #0066cc-->
+<div class="container">
+<div class="row">
+  <div class="col-xs-4 col-sm-4 col-md-4 sfondoMenuElencoDataset">
+  <br />
+
+      <div class="form-group">
+      <input type="search" class="autocomplete" placeholder="Testo da cercare"
+        id="autocomplete-test"
+        name="autocomplete-test"
+        data-autocomplete='[{"icon":"<div class=\"avatar size-sm\"><img src=\"https://lipis.github.io/flag-icon-css/flags/4x3/it.svg\" alt=\"Italia\"></div>","text":"Italia","label":"Label 1","link":"#"},{"icon":"<div class=\"avatar size-sm\"><img src=\"https://lipis.github.io/flag-icon-css/flags/4x3/fr.svg\" alt=\"Francia\"></div>","text":"Francia","label":"Label 2","link":"#"}]'>
+      <span class="autocomplete-icon" aria-hidden="true">
+        <svg class="icon icon-sm"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-search"></use></svg>
+      </span>
+      <label for="autocomplete-test" class="sr-only">Cerca nel sito</label>
+      </div><!--fine div form group casella ricerca--->
+      <!-- bootstrap italia inizio liste collapsable-->
+      <div class="link-list-wrapper">
+      <ul class="link-list">
+        <li><a class="list-item large medium right-icon" href="#collapseOne" data-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
+          <span>TEMI</span>
+          <svg class="icon icon-primary right"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use></svg></a>
+          <ul class="link-sublist collapse" id="collapseOne">
+              {% for item in menu["temi"] %}
+                  <li><a class="list-item" href="#"><span>{{  item.value }}</span></a></li>
+              {% endfor %}
+          </ul>
+        </li>
+        <li><a class="list-item large medium right-icon" href="#collapseTwo" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+          <span>Cataloghi</span>
+          <svg class="icon icon-primary right"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use></svg></a>
+          <ul class="link-sublist collapse" id="collapseTwo">
+              {% for item in menu["cataloghi"] %}
+                  <li><a class="list-item" href="#"><span>{{  item.value }}</span></a></li>
+              {% endfor %}
+
+          </ul>
+        </li>
+        <li><a class="list-item large medium right-icon" href="#collapseThree" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
+          <span>Formati</span>
+          <svg class="icon icon-primary right"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use></svg></a>
+          <ul class="link-sublist collapse" id="collapseThree">
+            <li><a class="list-item" href="#"><span>Link list 1</span></a>
+            </li>
+            <li><a class="list-item" href="#"><span>Link list 1</span></a>
+            </li>
+            <li><a class="list-item" href="#"><span>Link list 1</span></a>
+            </li>
+          </ul>
+        </li>
+        <li><a class="list-item large medium right-icon" href="#collapseThree" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
+          <span>Licenze</span>
+          <svg class="icon icon-primary right"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use></svg></a>
+          <ul class="link-sublist collapse" id="collapseThree">
+            <li><a class="list-item" href="#"><span>Link list 1</span></a>
+            </li>
+            <li><a class="list-item" href="#"><span>Link list 1</span></a>
+            </li>
+            <li><a class="list-item" href="#"><span>Link list 1</span></a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    
+      <!-- bootstrap italia fine liste collapsable-->
+  </div><!--fine div colonna menu-->
+  <div class="col-xs-8 col-sm-8 col-md-8">
+		{% for item in elencoDataset %}
+			 <div class="row"> <!-- inizio riga card -->
+					<div class="col-xs-12 col-sm-12 col-md-12">
+							<div class="card-wrapper bordoCardDataset"> <!--inizio card -->
+									<div class="card card-bg card-big">
+											 <div class="card-body">
+														<div class="row">  <!-- inizio riga card principale -->
+																<div class="col-xs-6 col-sm-6 col-md-6"> <!--inizio colonna dati -->
+																			<div class="row">
+                                                                                    <div class="col-xs-12 col-sm-12 col-md-12 w-100">
+																					<!--<p class="valoreEtichettaElencoDataset">{{ item.title}}</p> -->
+                                                                                    {% if "dati4" in item.holder_name  %}
+                                                                                    <p class="pubblicatoDaTemi">
+                                                                                        <a class="valoreEtichettaElencoDataset" href="/admin/config/gestioneutenti/datasetDettaglio/dati-gov/{{ item.title}}">{{ item.title}}</a>
+                                                                                    </p>
+                                                                                    {% else   %}
+                                                                                        <p class="pubblicatoDaTemi">
+                                                                                           basigov
+                                                                                        </p>
+                                                                                    {% endif %}
+                                                                                    </div>
+																			</div>
+																			<div class="row">
+                                                                                <div class="col-xs-12 col-sm-12 col-md-12 w-100">
+																					<p class="descrizioneDataset">
+																						{{ item.notes }}
+																					</p>
+                                                                                </div>
+																			</div>
+																			<div class="row">
+                                                                                <div class="col-xs-12 col-sm-12 col-md-12 w-100">
+																					<p class="pubblicatoDaTemi">
+																							Pubblicato da: {{ item.author }}
+																					</p>
+                                                                                </div>
+																			</div>
+																</div> <!--fine colonna dati -->
+																<div class="col-xs-1 col-sm-1 col-md-1"></div>
+																<div class="col-xs-5 col-sm-5 col-md-5">
+																		{% set i = 1 %}
+																		{% for risorsa in item.resources	%}
+																					{% if i <= 3 %}
+																						 <div id="elencoRisorsa" style="display:inline-block;margin-top:2%">
+																									{% if risorsa.format == "CSV" %}
+																										<p class="dis_format_d CSV">
+																												<a href="/view-dataset?res_format:CSV">
+                                                                                                                   {{	risorsa.distribution_format	}}
+                                                                                                                </a>   
+																										</p>
+                                                                                                    {% elseif risorsa.format == "PNG" %}
+																										<p class="dis_format_d PNG">
+																												<a href="/view-dataset?res_format:PNG">
+                                                                                                                   {{	risorsa.distribution_format	}}
+                                                                                                                </a>   
+																										</p>
+                                                                                                        
+																									{% elseif risorsa.format == "RDF"  %}
+																										<p class="dis_format_d RDF">
+																												<a href="/view-dataset?res_format:RDF">
+                                                                                                                   {{	risorsa.distribution_format	}}
+                                                                                                                </a>
+																										</p>
+
+																									{% elseif risorsa.format == "HTML"  %}
+																										<p class="dis_format_d HTML">
+																												<a href="/view-dataset?res_format:HTML">
+                                                                                                                   {{	risorsa.distribution_format	}}
+                                                                                                                </a>
+																										</p>
+																									{% elseif risorsa.format == "KMZ"  %}
+																										<p class="dis_format_d KMZ">
+																												<a href="/view-dataset?res_format:KMZ">
+                                                                                                                   {{	risorsa.distribution_format	}}
+                                                                                                                </a>
+																										</p>
+																									{% elseif risorsa.format == "GEOJSON"  %}
+																										<p class="dis_format_d GEOJSON">
+																												<a href="/view-dataset?res_format:GEOJSON">
+                                                                                                                   {{	risorsa.distribution_format	}}
+                                                                                                                </a>
+																										</p>
+																									{% endif %}
+																						</div>
+																				{% endif %}
+																				{% if i == 3 %}
+																					{% set i = 0 %}<br />
+																				{% endif %}
+																				{% set i = i + 1 %}
+																	{% endfor %}
+                                                                    <div class="row">
+                                                                        <div class="col-xs-12 col-sm-12 col-md-12">
+                                                                            {% for extras in item.extras	%}
+                                                                                {% if extras.key == "theme" %}
+                                                                                        {% if "AGRI" in extras.value  %}
+                                                                                             <p class="pubblicatoDaTemi">
+                                                                                                 <a href="/view-dataset?groups==agricoltura">Agricoltura, pesca, silvicoltura e prodotti alimentari
+                                                                                             </p>
+                                                                                        {% elseif "ECON" in extras.value  %}
+                                                                                            <p class="pubblicatoDaTemi">
+                                                                                                <a href="/view-dataset?groups=economia">Economia e finanze</a>
+                                                                                            </p>
+                                                                                        {% elseif "EDUC" in extras.value  %}
+                                                                                            <p class="pubblicatoDaTemi">
+                                                                                                <a href="/view-dataset?groups=cultura">Istruzione, cultura e sport</a>
+                                                                                            </p>
+                                                                                        {% elseif "ENER" in extras.value  %}
+                                                                                            <p class="pubblicatoDaTemi">
+                                                                                                <a href="/view-dataset?groups=energia">Energia</a>
+                                                                                            </p>
+                                                                                        {% elseif "ENVI" in extras.value  %}
+                                                                                            <p class="pubblicatoDaTemi">
+                                                                                                <a href="/view-dataset?groups=ambiente">Ambiente</a>
+                                                                                            </p>
+                                                                                        {% elseif "GOVE" in extras.value  %}
+                                                                                            <p class="pubblicatoDaTemi">
+                                                                                                <a href="/view-dataset?groups=governo">Governo e settore pubblico</a>
+                                                                                            </p>
+                                                                                        {% elseif "HEAL" in extras.value  %}
+                                                                                            <p class="pubblicatoDaTemi">
+                                                                                                <a href="/view-dataset?groups=salute">Salute</a>
+                                                                                            </p>
+                                                                                        {% elseif "INTR" in extras.value  %}
+                                                                                            <p class="pubblicatoDaTemi">
+                                                                                                <a href="/view-dataset?groups=internazionali">Tematiche internazionali</a>
+                                                                                            </p>
+                                                                                        {% elseif "JUST" in extras.value  %}
+                                                                                            <p class="pubblicatoDaTemi">
+                                                                                                <a href="/view-dataset?groups=giustizia">Giustizia, sistema giuridico e sicurezza pubblica</a>
+                                                                                            </p>
+                                                                                        {% elseif "OP_DATPRO" in extras.value  %}
+                                                                                            <p class="pubblicatoDaTemi">
+                                                                                                <a href="/view-dataset?groups=dati">Dati provvisori</a>
+                                                                                            </p>
+                                                                                        {% elseif "REGI" in extras.value  %}
+                                                                                            <p class="pubblicatoDaTemi">
+                                                                                                <a href="/view-dataset?groups=regioni">Regioni e città</a>
+                                                                                            </p>
+                                                                                        {% elseif "SOCI" in extras.value  %}
+                                                                                            <p class="pubblicatoDaTemi">
+                                                                                                <a href="/view-dataset?groups=popolazione">Popolazione e società</a>
+                                                                                            </p>
+                                                                                        {% elseif "TECH" in extras.value  %}
+                                                                                            <p class="pubblicatoDaTemi">
+                                                                                                <a href="/view-dataset?groups=scienza">Scienza e tecnologia</a>
+                                                                                            </p>
+                                                                                        {% elseif "TRAN" in extras.value  %}
+                                                                                            <p class="pubblicatoDaTemi">
+                                                                                                <a href="/view-dataset?groups=trasporti">Transporti</a>
+                                                                                            </p>
+                                                                                         {% endif %}<!--Fine if tipo tema-->
+                                                                                {% endif %}<!--Fine if campo extras, per trovare il campo tema-->
+                                                                            {% endfor %}
+
+                                                                        </div>
+                                                                    </div>
+
+																</div><!--fine colonna risorse-->
+														</div>   <!-- fine riga card principale -->
+											 </div>
+									</div>
+							</div>  <!--fine card -->
+					 </div>
+			 </div> <!-- fine riga card -->
+<br>
+    {% endfor %}
+
+  </div>
+
+</div>
+</div>
+{#{% include active_theme_path() ~ '/bootstrap-italia/svg/sprite.svg' %} #}

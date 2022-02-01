@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Linktitle module.
+ */
+
+/**
+ * Implements hook_post_update_NAME().
+ */
+
+/**
+ * WARNING: Update will break editors.
+ *
+ * The update to alpha5 will break
+ * all text editors. Disable the
+ * Linktitle-option in your text
+ * editor(s) or disable the module
+ * before updating the code.
+ */
+function linktitle_post_update_warning(&$sandbox) {
+  // Just display the warning.
+}

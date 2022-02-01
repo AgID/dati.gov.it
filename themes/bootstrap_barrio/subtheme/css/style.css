@@ -1,0 +1,36 @@
+/**
+ * @file
+ * Subtheme specific CSS.
+ */
+
+ .it-header-center-wrapper {
+    transition: all 0.3s ease;
+}
+
+body.scrolled #main{
+    padding-top: 218px;
+}
+@media (max-width: 991px){
+    .header{
+        margin-top: 0px;
+    }   
+}
+@media (max-width: 768px){
+    body.scrolled #main{
+        padding-top: 180px;
+    }   
+}
+@media (max-width: 767px){
+.path-notizie .view-notizie {
+    width: 90%;
+}
+.path-notizie .view-notizie img{
+    width: 70%;
+}
+}
+
+@media (min-width: 769px){
+    .path-notizie #sidebar_second {
+        margin-top: 120px;
+    }
+}

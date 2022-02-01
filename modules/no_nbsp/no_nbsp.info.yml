@@ -1,0 +1,10 @@
+name: No Non-breaking Space Filter
+description: A filter module that deletes all non-breaking spaces.
+core: 8.x
+package: Filter
+type: module
+
+# Information added by Drupal.org packaging script on 2020-06-07
+version: '8.x-1.1'
+project: 'no_nbsp'
+datestamp: 1591543057

@@ -1,0 +1,5 @@
+services:
+  linktitle:
+    class: Drupal\linktitle\LinkTitle
+    arguments:
+      - '@http_client'

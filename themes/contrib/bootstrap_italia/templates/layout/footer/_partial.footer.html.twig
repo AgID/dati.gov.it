@@ -1,0 +1,26 @@
+{% block footer %}
+  <footer class="it-footer">
+    <div class="it-footer-main">
+      <div class="container">
+        <div class="row pt-5 pb-3">
+            <div class="col-lg-4 col-md-4 col-sm-4" >
+              {% include '@bootstrap_italia/layout/footer/_partial.footer-brand.html.twig' %}
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8" >
+              {% include '@bootstrap_italia/layout/footer/_partial.footer-menu.html.twig' %}
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="it-footer-small-prints  clearfix" style="background: #003366">
+
+      {% include '@bootstrap_italia/layout/footer/_partial.footer-blocks.html.twig' %}
+      {#          </div>#}
+    </div>
+{#    <div class="it-footer-small-prints clearfix">#}
+{#      <div class="container">#}
+{#        {% include '@bootstrap_italia/layout/footer/_partial.footer-small-prints.html.twig' %}#}
+{#      </div>#}
+{#    </div>#}
+  </footer>
+{% endblock %}

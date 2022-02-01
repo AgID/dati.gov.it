@@ -1,0 +1,10 @@
+{
+  "name": "drupal/views_json_query",
+  "type": "drupal-module",
+  "description": "Adds a views backend to query Json files.",
+  "homepage": "https://www.drupal.org/project/views_json_query",
+  "license": "GPL-2.0+",
+  "require": {
+    "drupal/core": "~8.7"
+  }
+}

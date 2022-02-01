@@ -1,0 +1,17 @@
+{% if page.conten_modal_full %}
+    <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-full" role="document">
+            <div class="modal-content perfect-scrollbar">
+                <div class="modal-header">
+                    <h2 class="modal-title">Cerca</h2>
+                    <button id="search-modal-button" class="close" type="button" data-dismiss="modal" aria-label="Close" aria-labelby="search-modal-button search-modal">
+                        {% include '@bootstrap_italia_components/icon/icon.twig' with { name: 'it-close', size:'xl' } %}
+                    </button>
+                </div>
+                <div class="modal-body">
+                    {{ page.conten_modal_full }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}

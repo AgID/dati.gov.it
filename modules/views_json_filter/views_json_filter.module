@@ -1,0 +1,91 @@
+<?php
+
+/**
+ * @file
+ * Contains views_json_filter.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\views\ViewExecutable;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+use Drupal\dictionary\Entity;
+use Drupal\views\Views;
+
+
+/**
+ * Implements hook_help().
+ */
+function views_json_filter_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the views_json_filter module.
+    case 'help.page.views_json_filter':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module provide the function to filter views.') . '</p>';
+      return $output;
+    default:
+  }
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function views_json_filter_views_pre_render(\Drupal\views\ViewExecutable $view) {
+  $view_name = 'holder_name';
+  $final_filter = '\b(?i)'; 
+  $filter = \Drupal::request()->query->get('filter');
+  $support = [];
+  $rows = [];
+
+  if($view->id() === $view_name && $view->getDisplay()->view->current_display === 'block_2') {
+    if(!empty($filter)) {
+      $filter = explode(' ', \Drupal::request()->query->get('filter'));
+
+      foreach($filter as $current_word) {
+        $final_filter .= '(?=.*';
+        $final_filter .= $current_word;
+        $final_filter .= ')';
+      } $final_filter .= '\b';
+
+      $view_all_results = \Drupal\views\Views::getView($view_name);
+      $view_all_results->setDisplay('block_3');
+      $view_all_results->execute();
+      $array_results = $view_all_results->result;
+
+      foreach($array_results as $key => $value) {
+        $current_row = $value;
+        $value = (array)$value;
+        if(preg_match("/$final_filter/", $value['display_name'])) {
+          array_push($support, $value);
+          array_push($rows, $current_row);
+        }
+      }
+
+      $index = 0; 
+      foreach($rows as $current_row) {
+        $current_row->index = $index++; 
+      }
+      
+      $view->result = $rows;
+      unset($view->pager);
+    } else {
+      if(count($view->result) === 0) {
+        unset($view->pager);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_views_view().
+ */
+function views_json_filter_preprocess_views_view(&$vars) {
+  $current_path = \Drupal::service('path.current')->getPath();
+  $result = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
+  $exploded_result = explode('/', $result);
+  $current_path_first = $exploded_result[1]; 
+
+  if($current_path_first === 'amministrazioni') {
+    $vars['#attached']['library'][] = 'views_json_filter/administrations';
+  }
+}

@@ -1,0 +1,3050 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.2.2-SNAPSHOT), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://purl.org/dc/terms", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/2004/03/trix/rdfg-1", "http://xmlns.com/foaf/0.1", "http://rdfs.org/sioc/ns" ],
+    "iri" : "http://rdfs.org/sioc/ns#",
+    "version" : "Revision: 1.35",
+    "other" : {
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "Revision: 1.35",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/spec",
+        "type" : "iri"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "metrics" : {
+    "classCount" : 22,
+    "datatypeCount" : 29,
+    "objectPropertyCount" : 90,
+    "datatypePropertyCount" : 25,
+    "propertyCount" : 115,
+    "nodeCount" : 51,
+    "individualCount" : 1
+  },
+  "class" : [ {
+    "id" : "4",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "74",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "67",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "46",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "87",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "49",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "88",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "15",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "9",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "96",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "99",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "103",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "104",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "105",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "107",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "94",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "98",
+    "type" : "owl:Class"
+  }, {
+    "id" : "77",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "133",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "4",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#Forum",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Forum",
+      "en" : "Forum"
+    },
+    "comment" : {
+      "en" : "A discussion area on which Posts or entries are made."
+    },
+    "id" : "5",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Agent",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Agent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "7"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "21",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "22",
+    "label" : {
+      "IRI-based" : "nonNegativeInteger"
+    }
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#Thread",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Thread",
+      "en" : "Thread"
+    },
+    "comment" : {
+      "en" : "A container for a series of threaded discussion Posts or Items."
+    },
+    "id" : "23",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "26",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "27",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "nonNegativeInteger"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "30",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "38",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "41",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "72",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "73",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "74",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#User",
+    "equivalent" : [ "35" ],
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "This class is deprecated. Use sioc:UserAccount from the SIOC ontology instead.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "User",
+      "en" : "User"
+    },
+    "comment" : {
+      "en" : "UserAccount is now preferred. This is a deprecated class for a User in an online community site."
+    },
+    "attributes" : [ "equivalent", "deprecated" ],
+    "id" : "67",
+    "superClasses" : [ "77" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "46",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "19",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "87",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "49",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "88",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "89",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "15",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "9",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "96",
+    "label" : {
+      "IRI-based" : "nonNegativeInteger"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "99",
+    "label" : {
+      "IRI-based" : "nonNegativeInteger"
+    }
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#Item",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Item",
+      "en" : "Item"
+    },
+    "subClasses" : [ "37" ],
+    "comment" : {
+      "en" : "An Item is something which can be in a Container."
+    },
+    "id" : "1"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "103",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "83",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "85",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "104",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "44",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "105",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "107",
+    "label" : {
+      "IRI-based" : "nonNegativeInteger"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "94",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "79",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#Container",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Container",
+      "en" : "Container"
+    },
+    "subClasses" : [ "5", "23" ],
+    "comment" : {
+      "en" : "An area in which content Items are contained."
+    },
+    "id" : "6"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#Role",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Role",
+      "en" : "Role"
+    },
+    "comment" : {
+      "en" : "A Role is a function of a UserAccount within a scope of a particular Forum, Site, etc."
+    },
+    "id" : "98"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/OnlineAccount",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OnlineAccount"
+    },
+    "subClasses" : [ "35", "67" ],
+    "attributes" : [ "external" ],
+    "id" : "77"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#Usergroup",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Usergroup",
+      "en" : "Usergroup"
+    },
+    "comment" : {
+      "en" : "A set of UserAccounts whose owners have a common purpose or interest. Can be used for access control purposes."
+    },
+    "id" : "32"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#Community",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Community",
+      "en" : "Community"
+    },
+    "comment" : {
+      "en" : "Community is a high-level concept that defines an online community and what it consists of."
+    },
+    "id" : "70"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#UserAccount",
+    "equivalent" : [ "67" ],
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "UserAccount",
+      "en" : "User Account"
+    },
+    "comment" : {
+      "en" : "A user account in an online community site."
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "35",
+    "superClasses" : [ "77" ]
+  }, {
+    "iri" : "http://www.w3.org/2004/03/trix/rdfg-1/Graph",
+    "baseIri" : "http://www.w3.org/2004/03/trix/rdfg-1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Graph"
+    },
+    "attributes" : [ "external" ],
+    "id" : "55"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#Site",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Site",
+      "en" : "Site"
+    },
+    "comment" : {
+      "en" : "A Site can be the location of an online community or set of communities, with UserAccounts and Usergroups creating Items in a set of Containers. It can be thought of as a web-accessible data Space."
+    },
+    "id" : "60",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#Space",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Space",
+      "en" : "Space"
+    },
+    "subClasses" : [ "60" ],
+    "comment" : {
+      "en" : "A Space is a place where data resides, e.g. on a website, desktop, fileshare, etc."
+    },
+    "id" : "10"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#Post",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Post",
+      "en" : "Post"
+    },
+    "comment" : {
+      "en" : "An article or message that can be posted to a Forum."
+    },
+    "id" : "37",
+    "superClasses" : [ "133", "1" ]
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Document",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Document"
+    },
+    "subClasses" : [ "37" ],
+    "attributes" : [ "external" ],
+    "id" : "133"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "2",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "8",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "24",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "29",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "31",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "34",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "36",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "39",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "40",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "33",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "42",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "43",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "50",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "51",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "54",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "58",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "59",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "63",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "64",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "66",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "68",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "69",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "71",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "75",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "76",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "80",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "81",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "82",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "84",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "47",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "90",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "92",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "93",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "95",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "97",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "100",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "101",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "102",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "91",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "106",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "108",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "109",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "111",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "112",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "113",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "114",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "116",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "117",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "118",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "119",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "121",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "122",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "123",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "124",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "125",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "126",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "127",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "115",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "128",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "129",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "130",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "131",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "132",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "134",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "135",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "136",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "137",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "138",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "139",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "140",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "141",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "142",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "143",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "144",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "145",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "146",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "147",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "148",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "149",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "150",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "151",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "152",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "153",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "120",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "154",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "155",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "156",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "56",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "157",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "11",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "158",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "110",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "159",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "160",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "161",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://rdfs.org/sioc/ns#previous_by_date",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "previous_by_date",
+      "en" : "previous by date"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Previous Item or Post in a given Container sorted by date."
+    },
+    "id" : "0"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#later_version",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "later_version",
+      "en" : "later version"
+    },
+    "domain" : "1",
+    "subproperty" : [ "3" ],
+    "comment" : {
+      "en" : "Links to a later (newer) revision of this Item or Post."
+    },
+    "attributes" : [ "transitive" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#has_space",
+    "inverse" : "11",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "10",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "has_space",
+      "en" : "has space"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "A data Space which this resource is a part of."
+    },
+    "id" : "8"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#has_parent",
+    "inverse" : "13",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "6",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "has_parent",
+      "en" : "has parent"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "A Container or Forum that this Container or Forum is a child of."
+    },
+    "id" : "12"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#part_of",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "15",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "This property is deprecated. Use dcterms:isPartOf from the Dublin Core ontology instead.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "part_of",
+      "en" : "part of"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "A resource that the subject is a part of."
+    },
+    "attributes" : [ "deprecated" ],
+    "id" : "14"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#reply_of",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "reply_of",
+      "en" : "reply of"
+    },
+    "superproperty" : [ "17" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "Links to an Item or Post which this Item or Post is a reply to."
+    },
+    "id" : "16"
+  }, {
+    "iri" : "http://purl.org/dc/terms/date",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "date"
+    },
+    "domain" : "15",
+    "attributes" : [ "external" ],
+    "id" : "18"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#has_reply",
+    "inverse" : "16",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "has_reply",
+      "en" : "has reply"
+    },
+    "superproperty" : [ "17" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "Points to an Item or Post that is a reply or response to this Item or Post."
+    },
+    "id" : "20"
+  }, {
+    "iri" : "http://purl.org/dc/terms/subject",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "subject"
+    },
+    "domain" : "15",
+    "subproperty" : [ "25" ],
+    "attributes" : [ "external" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#has_group",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "15",
+    "annotations" : {
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "This property has been renamed. Use sioc:has_usergroup instead.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "has_group",
+      "en" : "has group"
+    },
+    "domain" : "15",
+    "attributes" : [ "deprecated" ],
+    "id" : "29"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#has_usergroup",
+    "inverse" : "33",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "32",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "has_usergroup",
+      "en" : "has usergroup"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "Points to a Usergroup that has certain access to this Space."
+    },
+    "id" : "31"
+  }, {
+    "range" : "35",
+    "domain" : "1",
+    "attributes" : [ "anonymous" ],
+    "id" : "34"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#content_encoded",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "38",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "This property is deprecated. Use content:encoded from the RSS 1.0 content module instead.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "content_encoded",
+      "en" : "content encoded"
+    },
+    "domain" : "37",
+    "comment" : {
+      "en" : "The encoded content of the Post, contained in CDATA areas."
+    },
+    "attributes" : [ "deprecated" ],
+    "id" : "36"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#has_container",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "6",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "has_container",
+      "en" : "has container"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The Container to which this Item belongs."
+    },
+    "id" : "39"
+  }, {
+    "range" : "35",
+    "domain" : "6",
+    "attributes" : [ "anonymous" ],
+    "id" : "40"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#usergroup_of",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "10",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "usergroup_of",
+      "en" : "usergroup of"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "A Space that the Usergroup has access to."
+    },
+    "id" : "33"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#moderator_of",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "5",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "moderator_of",
+      "en" : "moderator of"
+    },
+    "domain" : "35",
+    "comment" : {
+      "en" : "A Forum that a UserAccount is a moderator of."
+    },
+    "id" : "42"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#id",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "44",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "id",
+      "en" : "id"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "An identifier of a SIOC concept instance. For example, a user ID. Must be unique for instances of each type of SIOC concept within the same site."
+    },
+    "id" : "43"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#avatar",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "46",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "avatar",
+      "en" : "avatar"
+    },
+    "superproperty" : [ "47" ],
+    "domain" : "35",
+    "comment" : {
+      "en" : "An image or depiction used to represent this UserAccount."
+    },
+    "id" : "45"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#about",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "49",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "about",
+      "en" : "about"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Specifies that this Item is about a particular resource, e.g. a Post describing a book, hotel, etc."
+    },
+    "id" : "48"
+  }, {
+    "range" : "32",
+    "domain" : "6",
+    "attributes" : [ "anonymous" ],
+    "id" : "50"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#has_member",
+    "inverse" : "52",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "35",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "has_member",
+      "en" : "has member"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "A UserAccount that is a member of this Usergroup."
+    },
+    "id" : "51"
+  }, {
+    "range" : "35",
+    "domain" : "32",
+    "attributes" : [ "anonymous" ],
+    "id" : "53"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#embeds_knowledge",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "55",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "embeds_knowledge",
+      "en" : "embeds knowledge"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "This links Items to embedded statements, facts and structured content."
+    },
+    "id" : "54"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#next_version",
+    "inverse" : "56",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "next_version",
+      "en" : "next version"
+    },
+    "superproperty" : [ "2" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "Links to the next revision of this Item or Post."
+    },
+    "id" : "3"
+  }, {
+    "range" : "1",
+    "domain" : "6",
+    "attributes" : [ "anonymous" ],
+    "id" : "57"
+  }, {
+    "range" : "10",
+    "domain" : "35",
+    "attributes" : [ "anonymous" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#has_host",
+    "inverse" : "61",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "60",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "has_host",
+      "en" : "has host"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "The Site that hosts this Forum."
+    },
+    "id" : "59"
+  }, {
+    "range" : "10",
+    "domain" : "32",
+    "attributes" : [ "anonymous" ],
+    "id" : "62"
+  }, {
+    "range" : "32",
+    "domain" : "1",
+    "attributes" : [ "anonymous" ],
+    "id" : "63"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#earlier_version",
+    "inverse" : "2",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "earlier_version",
+      "en" : "earlier version"
+    },
+    "domain" : "1",
+    "subproperty" : [ "56" ],
+    "comment" : {
+      "en" : "Links to a previous (older) revision of this Item or Post."
+    },
+    "attributes" : [ "transitive" ],
+    "id" : "64"
+  }, {
+    "range" : "10",
+    "domain" : "1",
+    "attributes" : [ "anonymous" ],
+    "id" : "65"
+  }, {
+    "range" : "67",
+    "domain" : "6",
+    "attributes" : [ "anonymous" ],
+    "id" : "66"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#owner_of",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "46",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "owner_of",
+      "en" : "owner of"
+    },
+    "domain" : "35",
+    "comment" : {
+      "en" : "A resource owned by a particular UserAccount, for example, a weblog or image gallery."
+    },
+    "id" : "68"
+  }, {
+    "range" : "70",
+    "domain" : "1",
+    "attributes" : [ "anonymous" ],
+    "id" : "69"
+  }, {
+    "range" : "35",
+    "domain" : "70",
+    "attributes" : [ "anonymous" ],
+    "id" : "71"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#last_item_date",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "30",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "last_item_date",
+      "en" : "last item date"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "The date and time of the last Post (or Item) in a Forum (or a Container), in ISO 8601 format."
+    },
+    "id" : "75"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#attachment",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "49",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "attachment",
+      "en" : "attachment"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The URI of a file attached to an Item."
+    },
+    "id" : "76"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#description",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "79",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "This property is deprecated. Use sioc:content or other methods (AtomOwl, content:encoded from RSS 1.0, etc.) instead.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "description",
+      "en" : "description"
+    },
+    "domain" : "37",
+    "comment" : {
+      "en" : "The content of the Post."
+    },
+    "attributes" : [ "deprecated" ],
+    "id" : "78"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#link",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "15",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "link",
+      "en" : "link"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "A URI of a document which contains this SIOC object."
+    },
+    "id" : "80"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#has_administrator",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "35",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "has_administrator",
+      "en" : "has administrator"
+    },
+    "domain" : "60",
+    "comment" : {
+      "en" : "A UserAccount that is an administrator of this Site."
+    },
+    "id" : "81"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#content",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "83",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "content",
+      "en" : "content"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The content of the Item in plain text format."
+    },
+    "id" : "82"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#note",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "85",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "note",
+      "en" : "note"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "A note associated with this resource, for example, if it has been edited by a UserAccount."
+    },
+    "id" : "84"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#email_sha1",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "4",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "email_sha1",
+      "en" : "email sha1"
+    },
+    "domain" : "35",
+    "comment" : {
+      "en" : "An electronic mail address of the UserAccount, encoded using SHA1."
+    },
+    "id" : "86"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/depiction",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "depiction"
+    },
+    "domain" : "15",
+    "subproperty" : [ "45" ],
+    "attributes" : [ "external" ],
+    "id" : "47"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#has_modifier",
+    "inverse" : "91",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "35",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "has_modifier",
+      "en" : "has modifier"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "A UserAccount that modified this Item."
+    },
+    "id" : "90"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#follows",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "35",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "follows",
+      "en" : "follows"
+    },
+    "domain" : "35",
+    "comment" : {
+      "en" : "Indicates that one UserAccount follows another UserAccount (e.g. for microblog posts or other content item updates)."
+    },
+    "id" : "92"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#last_activity_date",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "94",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "last_activity_date",
+      "en" : "last activity date"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "The date and time of the last activity associated with a SIOC concept instance, and expressed in ISO 8601 format. This could be due to a reply Post or Comment, a modification to an Item, etc."
+    },
+    "id" : "93"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#num_items",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "22",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "num_items",
+      "en" : "num items"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "The number of Posts (or Items) in a Forum (or a Container)."
+    },
+    "id" : "95"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#has_function",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "98",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "has_function",
+      "en" : "has function"
+    },
+    "domain" : "87",
+    "comment" : {
+      "en" : "A Role that this UserAccount has."
+    },
+    "id" : "97"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#last_reply_date",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "41",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "last_reply_date",
+      "en" : "last reply date"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "The date and time of the last reply Post or Comment, which could be associated with a starter Item or Post or with a Thread, and expressed in ISO 8601 format."
+    },
+    "id" : "100"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#email",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "46",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "email",
+      "en" : "email"
+    },
+    "domain" : "35",
+    "comment" : {
+      "en" : "An electronic mail address of the UserAccount."
+    },
+    "id" : "101"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/account",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "account"
+    },
+    "domain" : "15",
+    "attributes" : [ "external" ],
+    "id" : "102"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#modifier_of",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "modifier_of",
+      "en" : "modifier of"
+    },
+    "domain" : "35",
+    "comment" : {
+      "en" : "An Item that this UserAccount has modified."
+    },
+    "id" : "91"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#host_of",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "5",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "host_of",
+      "en" : "host of"
+    },
+    "domain" : "60",
+    "comment" : {
+      "en" : "A Forum that is hosted on this Site."
+    },
+    "id" : "61"
+  }, {
+    "iri" : "http://purl.org/dc/terms/title",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "72",
+    "label" : {
+      "IRI-based" : "title"
+    },
+    "domain" : "15",
+    "attributes" : [ "external" ],
+    "id" : "106"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#account_of",
+    "inverse" : "102",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "account_of",
+      "en" : "account of"
+    },
+    "domain" : "35",
+    "comment" : {
+      "en" : "Refers to the foaf:Agent or foaf:Person who owns this sioc:UserAccount."
+    },
+    "id" : "108"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#has_subscriber",
+    "inverse" : "110",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "35",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#feed",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "has_subscriber",
+      "en" : "has subscriber"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "A UserAccount that is subscribed to this Container."
+    },
+    "id" : "109"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#related_to",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "15",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "related_to",
+      "en" : "related to"
+    },
+    "domain" : "15",
+    "subproperty" : [ "16", "20" ],
+    "comment" : {
+      "en" : "Related Posts for this Post, perhaps determined implicitly from topics or references."
+    },
+    "id" : "17"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#modified_at",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "89",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "This property is deprecated. Use dcterms:modified from the Dublin Core ontology instead.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "modified_at",
+      "en" : "modified at"
+    },
+    "domain" : "37",
+    "comment" : {
+      "en" : "When this was modified, in ISO 8601 format."
+    },
+    "attributes" : [ "deprecated" ],
+    "id" : "111"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#administrator_of",
+    "inverse" : "81",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "60",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "administrator_of",
+      "en" : "administrator of"
+    },
+    "domain" : "35",
+    "comment" : {
+      "en" : "A Site that the UserAccount is an administrator of."
+    },
+    "id" : "112"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#subject",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "26",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "This property is deprecated. Use dcterms:subject from the Dublin Core ontology for text keywords and sioc:topic if the subject can be represented by a URI instead.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "subject",
+      "en" : "subject"
+    },
+    "domain" : "37",
+    "comment" : {
+      "en" : "Keyword(s) describing subject of the Post."
+    },
+    "attributes" : [ "deprecated" ],
+    "id" : "113"
+  }, {
+    "iri" : "http://purl.org/dc/terms/references",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "references"
+    },
+    "domain" : "15",
+    "subproperty" : [ "115" ],
+    "attributes" : [ "external" ],
+    "id" : "114"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#reference",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "74",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "Renamed to sioc:links_to.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "reference",
+      "en" : "reference"
+    },
+    "domain" : "37",
+    "comment" : {
+      "en" : "Links either created explicitly or extracted implicitly on the HTML level from the Post."
+    },
+    "attributes" : [ "deprecated" ],
+    "id" : "116"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#last_name",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "88",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "This property is deprecated. Use foaf:name or foaf:surname from the FOAF vocabulary instead.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "last_name",
+      "en" : "last name"
+    },
+    "domain" : "35",
+    "comment" : {
+      "en" : "Last (real) name of this user. Synonyms include surname or family name."
+    },
+    "attributes" : [ "deprecated" ],
+    "id" : "117"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#first_name",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "105",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "This property is deprecated. Use foaf:name or foaf:firstName from the FOAF vocabulary instead.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "first_name",
+      "en" : "first name"
+    },
+    "domain" : "35",
+    "comment" : {
+      "en" : "First (real) name of this User. Synonyms include given name or christian name."
+    },
+    "attributes" : [ "deprecated" ],
+    "id" : "118"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#creator_of",
+    "inverse" : "120",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "46",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "creator_of",
+      "en" : "creator of"
+    },
+    "domain" : "35",
+    "comment" : {
+      "en" : "A resource that the UserAccount is a creator of."
+    },
+    "id" : "119"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#member_of",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "32",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "member_of",
+      "en" : "member of"
+    },
+    "domain" : "35",
+    "comment" : {
+      "en" : "A Usergroup that this UserAccount is a member of."
+    },
+    "id" : "52"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#num_authors",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "96",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "num_authors",
+      "en" : "num authors"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "The number of unique authors (UserAccounts and unregistered posters) who have contributed to this Item, Thread, Post, etc."
+    },
+    "id" : "121"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#has_discussion",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "49",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "has_discussion",
+      "en" : "has discussion"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The discussion that is related to this Item."
+    },
+    "id" : "122"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#num_views",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "99",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "num_views",
+      "en" : "num views"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "The number of times this Item, Thread, UserAccount profile, etc. has been viewed."
+    },
+    "id" : "123"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#sibling",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "sibling",
+      "en" : "sibling"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "An Item may have a sibling or a twin that exists in a different Container, but the siblings may differ in some small way (for example, language, category, etc.). The sibling of this Item should be self-describing (that is, it should contain all available information)."
+    },
+    "attributes" : [ "symmetric" ],
+    "id" : "124"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#function_of",
+    "inverse" : "97",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "87",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "function_of",
+      "en" : "function of"
+    },
+    "domain" : "98",
+    "comment" : {
+      "en" : "A UserAccount that has this Role."
+    },
+    "id" : "125"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#num_replies",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "107",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "num_replies",
+      "en" : "num replies"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "The number of replies that this Item, Thread, Post, etc. has. Useful for when the reply structure is absent."
+    },
+    "id" : "126"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#created_at",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "104",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "This property is deprecated. Use dcterms:created from the Dublin Core ontology instead.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "created_at",
+      "en" : "created at"
+    },
+    "domain" : "37",
+    "comment" : {
+      "en" : "When this was created, in ISO 8601 format."
+    },
+    "attributes" : [ "deprecated" ],
+    "id" : "127"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#links_to",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "15",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "links_to",
+      "en" : "links to"
+    },
+    "superproperty" : [ "114" ],
+    "domain" : "15",
+    "comment" : {
+      "en" : "Links extracted from hyperlinks within a SIOC concept, e.g. Post or Site."
+    },
+    "id" : "115"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#ip_address",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "21",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ip_address",
+      "en" : "ip address"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The IP address used when creating this Item. This can be associated with a creator. Some wiki articles list the IP addresses for the creator or modifiers when the usernames are absent."
+    },
+    "id" : "128"
+  }, {
+    "range" : "10",
+    "domain" : "60",
+    "attributes" : [ "anonymous" ],
+    "id" : "129"
+  }, {
+    "range" : "77",
+    "domain" : "67",
+    "attributes" : [ "anonymous" ],
+    "id" : "130"
+  }, {
+    "iri" : "http://purl.org/dc/terms/description",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "73",
+    "label" : {
+      "IRI-based" : "description"
+    },
+    "domain" : "15",
+    "attributes" : [ "external" ],
+    "id" : "131"
+  }, {
+    "range" : "133",
+    "domain" : "37",
+    "attributes" : [ "anonymous" ],
+    "id" : "132"
+  }, {
+    "range" : "6",
+    "domain" : "5",
+    "attributes" : [ "anonymous" ],
+    "id" : "134"
+  }, {
+    "range" : "1",
+    "domain" : "37",
+    "attributes" : [ "anonymous" ],
+    "id" : "135"
+  }, {
+    "range" : "77",
+    "domain" : "35",
+    "attributes" : [ "anonymous" ],
+    "id" : "136"
+  }, {
+    "range" : "6",
+    "domain" : "23",
+    "attributes" : [ "anonymous" ],
+    "id" : "137"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#next_by_date",
+    "inverse" : "0",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "next_by_date",
+      "en" : "next by date"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Next Item or Post in a given Container sorted by date."
+    },
+    "id" : "138"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#scope_of",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "98",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "scope_of",
+      "en" : "scope of"
+    },
+    "domain" : "87",
+    "comment" : {
+      "en" : "A Role that has a scope of this resource."
+    },
+    "id" : "139"
+  }, {
+    "range" : "98",
+    "domain" : "70",
+    "attributes" : [ "anonymous" ],
+    "id" : "140"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#container_of",
+    "inverse" : "39",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "container_of",
+      "en" : "container of"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "An Item that this Container contains."
+    },
+    "id" : "141"
+  }, {
+    "range" : "98",
+    "domain" : "10",
+    "attributes" : [ "anonymous" ],
+    "id" : "142"
+  }, {
+    "range" : "98",
+    "domain" : "32",
+    "attributes" : [ "anonymous" ],
+    "id" : "143"
+  }, {
+    "range" : "98",
+    "domain" : "6",
+    "attributes" : [ "anonymous" ],
+    "id" : "144"
+  }, {
+    "range" : "98",
+    "domain" : "67",
+    "attributes" : [ "anonymous" ],
+    "id" : "145"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#latest_version",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "latest_version",
+      "en" : "latest version"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Links to the latest revision of this Item or Post."
+    },
+    "id" : "146"
+  }, {
+    "range" : "10",
+    "domain" : "67",
+    "attributes" : [ "anonymous" ],
+    "id" : "147"
+  }, {
+    "range" : "67",
+    "domain" : "1",
+    "attributes" : [ "anonymous" ],
+    "id" : "148"
+  }, {
+    "range" : "32",
+    "domain" : "67",
+    "attributes" : [ "anonymous" ],
+    "id" : "149"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#title",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "27",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "This property is deprecated. Use dcterms:title from the Dublin Core ontology instead.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "title",
+      "en" : "title"
+    },
+    "domain" : "37",
+    "comment" : {
+      "en" : "This is the title (subject line) of the Post. Note that for a Post within a threaded discussion that has no parents, it would detail the topic thread."
+    },
+    "attributes" : [ "deprecated" ],
+    "id" : "150"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#has_scope",
+    "inverse" : "139",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "87",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "has_scope",
+      "en" : "has scope"
+    },
+    "domain" : "98",
+    "comment" : {
+      "en" : "A resource that this Role applies to."
+    },
+    "id" : "151"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#parent_of",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "6",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "parent_of",
+      "en" : "parent of"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "A child Container or Forum that this Container or Forum is a parent of."
+    },
+    "id" : "13"
+  }, {
+    "range" : "98",
+    "domain" : "1",
+    "attributes" : [ "anonymous" ],
+    "id" : "152"
+  }, {
+    "range" : "98",
+    "domain" : "35",
+    "attributes" : [ "anonymous" ],
+    "id" : "153"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#has_creator",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "35",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "has_creator",
+      "en" : "has creator"
+    },
+    "domain" : "46",
+    "comment" : {
+      "en" : "This is the UserAccount that made this resource."
+    },
+    "id" : "120"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#has_moderator",
+    "inverse" : "42",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "35",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "has_moderator",
+      "en" : "has moderator"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "A UserAccount that is a moderator of this Forum."
+    },
+    "id" : "154"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#has_part",
+    "inverse" : "14",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "15",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "This property is deprecated. Use dcterms:hasPart from the Dublin Core ontology instead.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "has_part",
+      "en" : "has part"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "An resource that is a part of this subject."
+    },
+    "attributes" : [ "deprecated" ],
+    "id" : "155"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#name",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "103",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "name",
+      "en" : "name"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "The name of a SIOC concept instance, e.g. a username for a UserAccount, group name for a Usergroup, etc."
+    },
+    "id" : "156"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#previous_version",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "previous_version",
+      "en" : "previous version"
+    },
+    "superproperty" : [ "64" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "Links to the previous revision of this Item or Post."
+    },
+    "id" : "56"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#addressed_to",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "49",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "addressed_to",
+      "en" : "addressed to"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Refers to who (e.g. a UserAccount, e-mail address, etc.) a particular Item is addressed to."
+    },
+    "id" : "157"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#space_of",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "space_of",
+      "en" : "space of"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "A resource which belongs to this data Space."
+    },
+    "id" : "11"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#num_threads",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "28",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "num_threads",
+      "en" : "num threads"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "The number of Threads (AKA discussion topics) in a Forum."
+    },
+    "id" : "158"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#subscriber_of",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "6",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#feed",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "subscriber_of",
+      "en" : "subscriber of"
+    },
+    "domain" : "35",
+    "comment" : {
+      "en" : "A Container that a UserAccount is subscribed to."
+    },
+    "id" : "110"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#feed",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "15",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "feed",
+      "en" : "feed"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "A feed (e.g. RSS, Atom, etc.) pertaining to this resource (e.g. for a Forum, Site, UserAccount, etc.)."
+    },
+    "id" : "159"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#has_owner",
+    "inverse" : "68",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "35",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "has_owner",
+      "en" : "has owner"
+    },
+    "domain" : "46",
+    "comment" : {
+      "en" : "A UserAccount that this resource is owned by."
+    },
+    "id" : "160"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#group_of",
+    "inverse" : "29",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "15",
+    "annotations" : {
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "This property has been renamed. Use sioc:usergroup_of instead.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "group_of",
+      "en" : "group of"
+    },
+    "domain" : "15",
+    "attributes" : [ "deprecated" ],
+    "id" : "161"
+  }, {
+    "iri" : "http://rdfs.org/sioc/ns#topic",
+    "baseIri" : "http://rdfs.org/sioc/ns",
+    "range" : "15",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://rdfs.org/sioc/ns#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "topic",
+      "en" : "topic"
+    },
+    "superproperty" : [ "24" ],
+    "domain" : "15",
+    "comment" : {
+      "en" : "A topic of interest, linking to the appropriate URI, e.g. in the Open Directory Project or of a SKOS category."
+    },
+    "id" : "25"
+  } ]
+}

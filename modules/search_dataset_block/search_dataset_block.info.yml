@@ -1,0 +1,9 @@
+name: search_dataset_block
+type: module
+description: 'search_dataset_block'
+package: Custom
+version: 8.x
+core: 8.x
+dependencies:
+  - node
+  - block

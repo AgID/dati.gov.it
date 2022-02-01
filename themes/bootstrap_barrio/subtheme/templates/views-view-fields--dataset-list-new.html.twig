@@ -1,0 +1,83 @@
+{#
+/**
+ * @file
+ * Default view template to display all the fields in a row.
+ *
+ * Available variables:
+ * - view: The view in use.
+ * - fields: A list of fields, each one contains:
+ *   - content: The output of the field.
+ *   - raw: The raw data for the field, if it exists. This is NOT output safe.
+ *   - class: The safe class ID to use.
+ *   - handler: The Views field handler controlling this field.
+ *   - inline: Whether or not the field should be inline.
+ *   - wrapper_element: An HTML element for a wrapper.
+ *   - wrapper_attributes: List of attributes for wrapper element.
+ *   - separator: An optional separator that may appear before a field.
+ *   - label: The field's label text.
+ *   - label_element: An HTML element for a label wrapper.
+ *   - label_attributes: List of attributes for label wrapper.
+ *   - label_suffix: Colon after the label.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ *   - has_label_colon: A boolean indicating whether to display a colon after
+ *     the label.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ * - row: The raw result from the query, with all data it fetched.
+ *
+ * @see template_preprocess_views_view_fields()
+ *
+ * @ingroup themeable
+ */
+#}
+
+
+<article id="node-1048178" class="node node-dataset clearfix" >
+	<div class="row">
+		<div class="col-12 col-lg-9 col-md-9">
+			<header>
+				<h2><a href="dataset?id={{ fields.value.content }}">{{ fields.value_5.content }}</a></h2>
+			</header>
+			<div class="field-items">
+				<div class="field-item even" >
+					<p class="card-text">
+						{{ fields.value_2.content }}
+					</p>
+				</div>
+			</div>
+
+			<div class="field field-name-og-group-ref field-type-entityreference field-label-inline clearfix">
+				<div class="field-label">
+					Pubblicato da:
+				</div>
+				<div class="field-items">
+					{{ fields.value_1.content }}<div class="field-item even"></div>
+				</div>
+			</div>
+			<div class="field field-name-field-modified-source-date field-type-datestamp field-label-inline clearfix">
+				<div class="field-label">
+					Data di ultima modifica:&nbsp;
+				</div>
+				<div class="field-items">
+					<div class="field-item even">
+						<span class="date-display-single" >{{ fields.value_4.content }}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-12 col-lg-3 col-md-3">
+			<div class="form-item form-type-item form-group">
+				<ul class="resource-list clearfix">
+					<li>
+						<a href="{{ fields.value_3.content }}" class="label" title="Resources: Livello Trofico dei Laghi per lo stato ecologico (LTLeco)" data-format="csv">csv</a>
+					</li>
+					<li>
+						<a href="#" class="label" title="Resources: Livello Trofico dei Laghi per lo stato ecologico (LTLeco)" data-format="odata">odata</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</article>

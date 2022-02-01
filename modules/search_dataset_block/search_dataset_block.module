@@ -1,0 +1,43 @@
+<?php
+
+use Drupal\node\Entity\Node;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
+use \GuzzleHttp\Client;
+
+use Drupal\Core\Url;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+
+
+    /**
+       * Fetch file.
+       *//*
+function _count_format_dataset($formato){
+  if ($formato){
+$uri="http://192.168.0.89:5000/api/3/action/package_search?q=" .$formato;
+
+$response = $guzzle->get($uri, ['headers' => $request_options, 'verify' => false]);
+
+
+
+    if ($response->getStatusCode() >= 400) {
+      $args = array('%error' => $response->getStatusCode(), '%uri' => $uri);
+    $message = t('HTTP response: %error. URI: %uri', $args);
+    throw new \Exception($message);
+    }
+
+    $res =  $response->getBody();
+    $res = $res->getContents();
+
+    $res = json_decode($res);
+    var_dump($res);
+    return $res;
+
+  }
+}
+*/
+
+
+
+
+
+      

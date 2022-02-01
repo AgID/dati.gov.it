@@ -1,0 +1,45 @@
+gestioneutenti-js:
+  js:
+#    js/funzioniutenti.js : {}
+#    js/prova.js : {}
+#    js/rimuovistandard.js : {}
+    js/advanced_search.js : {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/ajax
+    - core/jquery.ui.datepicker
+    - core/drupal.dialog.ajax #Required for dialogs
+    - core/jquery.form #If you also want to use Ajax for form operations
+
+bootsrap-tagsinput:
+  js:
+    js/tagsinput.js: {}
+    js/dataset.js: {}
+  css:
+    theme:
+      css/tagsinput.css: {}
+
+gestioneutenti-risorse:
+  js:
+    js/risorse.js: {}
+
+
+gestioneutenti-registrazione:
+  js:
+    js/registrazione.js: {}
+
+gestioneutenti-modifica:
+  js:
+    js/modificaUtente.js: {}
+
+gestioneutenti-modifica-anagrafica:
+  js:
+    js/modifica_anagrafica.js: {}
+
+advanced-search:
+  js:
+    js/advanced_search.js : {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once

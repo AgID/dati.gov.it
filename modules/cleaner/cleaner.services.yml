@@ -1,0 +1,13 @@
+services:
+  cleaner:
+    class: Drupal\cleaner\Cleaner
+  cleaner_tables:
+    class: Drupal\cleaner\Controller\CleanerCacheController
+  cleaner_session:
+    class: Drupal\cleaner\Controller\CleanerSessionController
+  cleaner_watchdog:
+    class: Drupal\cleaner\Controller\CleanerWatchdogController
+  cleaner_mysql:
+    class: Drupal\cleaner\Controller\CleanerMySqlOptimizationController
+  cleaner_logger:
+    class: Drupal\cleaner\Logger\CleanerLogger

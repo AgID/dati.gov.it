@@ -1,0 +1,5 @@
+name: 'Getter From URL'
+type: module
+description: 'This module provide a getter function from URL.'
+core: 8.x
+package: 'Custom'

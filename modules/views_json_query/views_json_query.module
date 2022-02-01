@@ -1,0 +1,29 @@
+<?php
+/**
+ * @file
+ * Views JSON Query module.
+ */
+
+/**
+ * Implements hook_views_data().
+ */
+
+function views_json_query_views_data() {
+  $data = array();
+  $data['json']['table']['group'] = t('External Json');
+
+  $data['json']['table']['base'] = array(
+    'title' => t('Json'),
+    'help' => t('Queries an Json file.'),
+    'query_id' => 'external_json_api',
+  );
+  
+  $data['json']['value'] = array(
+    'title' => t('value'),
+    'help' => t('value in the Json file.'),
+    'field' => [
+		'id' => 'external_json_data',
+	],
+  );
+  return $data;
+}

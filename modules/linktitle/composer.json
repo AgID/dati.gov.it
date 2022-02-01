@@ -1,0 +1,14 @@
+{
+  "name": "drupal/linktitle",
+  "description": "Adds an automated title-attribute to links.",
+  "type": "drupal-module",
+  "keywords": ["Drupal", "Filter"],
+  "homepage": "https://www.drupal.org/project/linktitle",
+  "license": "GPL-2.0+",
+  "authors": [ 
+  ],
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/linktitle",
+    "source": "https://cgit.drupalcode.org/linktitle"
+  }
+}

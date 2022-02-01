@@ -1,0 +1,6 @@
+name: GestioneUtenti  
+type: module  
+description: Gestione utenti drupal - ckan
+core: 8.x  
+package: GestioneUtenti  
+configure: gestioneutenti.settings

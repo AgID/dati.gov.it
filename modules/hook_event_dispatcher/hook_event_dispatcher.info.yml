@@ -1,0 +1,10 @@
+name: Hook Event Dispatcher
+type: module
+description: Dispatches events for several drupal hooks
+core_version_requirement: ^8 || ^9
+package: Hook events
+
+# Information added by Drupal.org packaging script on 2020-10-03
+version: '8.x-2.04'
+project: 'hook_event_dispatcher'
+datestamp: 1601714790

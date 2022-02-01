@@ -1,0 +1,13 @@
+name: Webform Event Dispatcher
+type: module
+description: Dispatches events for multiple webform hooks
+core_version_requirement: ^8 || ^9
+package: Hook events
+dependencies:
+  - hook_event_dispatcher:hook_event_dispatcher
+  - webform:webform
+
+# Information added by Drupal.org packaging script on 2020-10-03
+version: '8.x-2.04'
+project: 'hook_event_dispatcher'
+datestamp: 1601714790

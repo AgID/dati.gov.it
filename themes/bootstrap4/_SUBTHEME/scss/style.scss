@@ -1,0 +1,10 @@
+@import 'overrides/variables';
+
+// Path to default bootstrap4 sass.
+// @import '../../../../../../../vendor/twbs/bootstrap/scss/bootstrap';
+
+// Path to default bootstrap4 theme sass.
+// @import '../../../../../../themes/custom/bootstrap4/scss/theme';
+
+// Include custom sub theme.
+@import 'custom/variables';

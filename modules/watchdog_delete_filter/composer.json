@@ -1,0 +1,19 @@
+{
+  "name": "drupal/watchdog_delete_filter",
+  "description": "Delete watchdog messages by type and/or severity'.",
+  "type": "drupal-module",
+  "keywords": ["Drupal", "Dblog", "Watchdog"],
+  "homepage": "http://drupal.org/project/watchdog_delete_filter",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Interdruper",
+      "homepage": "https://www.drupal.org/u/interdruper",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/watchdog_delete_filter",
+    "source": "http://cgit.drupalcode.org/watchdog_delete_filter"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "drupal/SUBTHEME",
+  "description": "Subtheme for bootstrap4 drupal 8 theme.",
+  "type": "drupal-theme",
+  "license": "GPL-2.0",
+  "homepage": "https://www.drupal.org/project/bootstrap4",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  ],
+  "require": {
+    "leafo/scssphp": "^0.7.7",
+    "twbs/bootstrap": "^4.0",
+    "drupal/bootstrap4": "^4.0"
+  },
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Vladimir Roudakov (vladimiraus)",
+      "homepage": "https://www.drupal.org/u/vladimiraus",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/bootstrap4"
+  }
+}

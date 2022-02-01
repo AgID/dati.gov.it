@@ -1,0 +1,6 @@
+administrations:
+  js:
+    assets/js/administrations_view_pager.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

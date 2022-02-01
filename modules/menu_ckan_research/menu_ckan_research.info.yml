@@ -1,0 +1,9 @@
+name: Blocco Ricerca Per Menu CKAN
+type: module
+description: 'Blocc per la visualizzazione form di ricerca'
+package: Custom
+version: 8.x
+core: 8.x
+dependencies:
+  - node
+  - block

@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * A filter module that deletes all non-breaking spaces.
+ */
+
+/**
+ * A filter module that deletes all non-breaking spaces.
+ *
+ * @mainpage
+ *
+ * @section project_page Project page
+ * - @link http://drupal.org/project/no_nbsp Drupal project "No &nbsp; (non-breaking space)" (no_nbsp) @endlink
+ *
+ * @section git_repository Git repository
+ * - @link http://drupalcode.org/project/no_nbsp.git Drupal git repository @endlink
+ */
+
+/**
+ * Erase the string '&nbsp;'.
+ *
+ * @param string $text
+ *   A string to pass through the eraser.
+ * @param bool $preserve_placeholders
+ *   Preserve non-breaking spaces, that serve as placeholders.
+ *
+ * @return string
+ *   The erased string.
+ */
+function _no_nbsp_eraser($text, $preserve_placeholders = FALSE) {
+  if ($preserve_placeholders) {
+    // See https://stackoverflow.com/a/50301496.
+    $text = preg_replace("/([^>])&nbsp;/ui", "$1 ", $text);
+  }
+  else {
+    $text = preg_replace('/&nbsp;/i', ' ', $text);
+  }
+  return preg_replace('/ +/i', ' ', $text);
+}

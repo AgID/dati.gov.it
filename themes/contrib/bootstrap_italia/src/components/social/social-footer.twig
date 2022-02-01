@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Template for Social component.
+ * Docs: https://italia.github.io/bootstrap-italia/docs/menu-di-navigazione/header/#header-centrale
+ * Last review: 1.4.1
+ *
+ * Available config:
+ * - socials: array
+ */
+#}
+{% if socials %}
+{#  <div class="it-socials d-none d-md-flex">#}
+{#    <h4>#}
+{#        <a href="#" title="Vai alla pagina: Seguici su" class="">{{ 'Seguici su'|t }}</a>#}
+{#    </h4>#}
+    <ul class="list-inline text-left social ml-3 mr-3">
+      {% for social in socials %}
+        {% if social.url %}
+          <li class="list-inline-item">
+            <a aria-label="{{ social.label }}" href="{{ social.url }}" target="_blank" class="text-white">
+              {% include '@bootstrap_italia_components/icon/icon.twig' with { name: 'it-' ~ (social.label|lower), color: 'white' } %}
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+{#  </div>#}
+{% endif %}

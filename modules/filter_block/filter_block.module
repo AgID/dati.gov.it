@@ -1,0 +1,235 @@
+<?php
+
+use Drupal\node\Entity\Node;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
+use \GuzzleHttp\Client;
+
+use Drupal\Core\Url;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+
+
+    /**
+       * Fetch file.
+       *//*
+function _count_format_dataset($formato){
+  if ($formato){
+$uri="http://192.168.0.89:5000/api/3/action/package_search?q=" .$formato;
+
+$response = $guzzle->get($uri, ['headers' => $request_options, 'verify' => false]);
+
+
+
+    if ($response->getStatusCode() >= 400) {
+      $args = array('%error' => $response->getStatusCode(), '%uri' => $uri);
+    $message = t('HTTP response: %error. URI: %uri', $args);
+    throw new \Exception($message);
+    }
+
+    $res =  $response->getBody();
+    $res = $res->getContents();
+
+    $res = json_decode($res);
+    var_dump($res);
+    return $res;
+
+  }
+}
+*/
+function _filter_block_change_params($params){
+ if(strpos($params, '&')){
+  $parametri=explode('&', $params);
+    foreach($parametri as $par){
+      if(strpos($par, 'groups')!==false){
+        $par= str_replace("groups=","",$par);
+        if(strpos($par, '|')){          
+          $ret_group='(';
+          $gruppi=explode('|', $par);
+          foreach($gruppi as $gruppo){
+            $ret_group .='+' .$gruppo;            
+          }
+          $ret_group= $ret_group .')';
+        }
+        else{
+          $ret_group=$par;
+        }
+        $ret_group='groups:'. $ret_group;
+       }
+       elseif(strpos($par, 'organization')!==false){
+        $par= str_replace("organization=","",$par);
+        $ret_organ='organization:' .$par;
+       }
+       elseif(strpos($par, 'holder_name')!==false){
+        $par= str_replace("holder_name=","",$par);
+        $ret_hold='holder_name:' .$par;
+       }
+       elseif(strpos($par, 'format')!==false){
+        $par= str_replace("format=","",$par);
+        if(strpos($par, '|')){          
+          $ret_format='(';
+          $formati=explode('|', $par);
+          foreach($formati as $formato){
+            $ret_format .='+' .$formato;            
+          }
+          $ret_format= $ret_format .')';
+        }
+        else{
+          $ret_format=$par;
+        }
+       }
+       elseif(strpos($par, 'licenze')!==false){
+        $par= str_replace("licenze=","",$par);
+        $ret_licen='license_id:' .$par;
+       }
+    }
+ }else{
+ if(strpos($params, 'groups')!==false){
+  $params= str_replace("groups=","",$params);
+  if(strpos($params, '|')){          
+    $ret_group='(';
+    $gruppi=explode('|', $params);
+    foreach($gruppi as $gruppo){
+      $ret_group .='+' .$gruppo;            
+    }
+    $ret_group= $ret_group .')';
+  }
+  else{
+    $ret_group=$params;
+  }
+  $ret_group='groups:'. $ret_group;
+ }
+ elseif(strpos($params, 'organization')!==false){
+  $par= str_replace("organization=","",$params);
+  $ret_organ='organization:' .$par;
+ }
+ elseif(strpos($params, 'format')!==false){
+  $par= str_replace("format=","",$params);
+  if(strpos($par, '|')){          
+    $ret_format='(';
+    $formati=explode('|', $par);
+    foreach($formati as $formato){
+      $ret_format .='+' .$formato;            
+    }
+    $ret_format= $ret_format .')';
+  }
+  else{
+    $ret_format=$params;
+  }
+ }
+ elseif(strpos($params, 'licenze')!==false){
+  $par= str_replace("licenze=","",$params);
+  $ret_licen='license_id:' .$par;
+ }
+}
+
+
+
+
+
+  //$org='http://192.168.0.89:5000/api/3/action/package_search?';
+  $org =  getenv('CKAN_HOST').':'. getenv('CKAN_PORT').'/api/3/action/package_search?';
+  $org2='';
+  $org3='';
+  if($ret_group){
+    $org2='fq='.$ret_group;
+    if($ret_organ){
+      $org2.='+'.$ret_organ;
+        if($ret_licen)
+          $org2.='+'.$ret_licen;
+    }
+  }
+  elseif($ret_organ){
+    $org2='fq='.$ret_organ;
+        if($ret_licen)
+          $org2.='+'.$ret_licen;
+  }
+  elseif($ret_licen)
+    $org2='fq='.$ret_licen;
+    
+  else{
+
+  }
+  if($ret_format){
+    if($org2){
+      $org3='&q='.$ret_format;
+    }
+    else
+      $org3='&q='.$ret_format;
+  }
+$query=$org .$org2 .$org3;
+
+  $response = _filter_block_fetch_file($query);
+ $ret=$response->result->count;
+ 
+ 
+  return $ret;
+}
+
+
+
+
+
+      function _filter_block_fetch_file($uri) {
+     
+      $parsed = parse_url($uri);
+    
+        // Check for local file.
+        if (empty($parsed['host'])) {
+          throw new Exception(t('Local file!!!'));
+        }
+
+
+        $headers = array();
+
+        // Rebuild the JSON file URL.
+        $request_options = array('headers' => $headers);
+        $request_context_options = array();
+/*var_dump("ciao");
+var_dump($this); die();
+        if (parse_url($uri, PHP_URL_SCHEME) == 'https') {
+          foreach ($this->options as $option => $value) {
+            if (strpos($option, 'ssl_') === 0 && $value) {
+              $request_context_options['ssl'][substr($option, 4)] = $value;
+            }
+          }
+        }
+
+*/
+        if ($request_context_options) {
+          $request_options['context'] =  stream_context_create($request_context_options);
+        }
+    	$guzzle = new Client();
+        //$result = drupal_http_request($uri, $request_options);
+    	$response = $guzzle->get($uri, ['headers' => $request_options, 'verify' => false]);
+
+        if ($response->getStatusCode() >= 400) {
+          $args = array('%error' => $response->getStatusCode(), '%uri' => $uri);
+    	  $message = t('HTTP response: %error. URI: %uri', $args);
+    	  throw new \Exception($message);
+        }
+        //cache_clear_all();
+        
+        ///$cache_file_uri = "$destination/$cache_file";
+        /*if ($response->getStatusCode() == 304) {
+          if (file_exists($cache_file_uri)) {
+            return file_get_contents($cache_file_uri);
+          }
+          // We have the headers but no cache file. :(
+          // Run it back.
+          //cache_clear_all($cache_file, 'cache');
+    	  \Drupal::cache('cache')->invalidateAll();
+          return $this->fetch_file($uri);
+        }*/
+
+        // As learned from Feeds caching mechanism, save to file.
+        /*file_unmanaged_save_data((string) $response->getBody(), $cache_file_uri, FILE_EXISTS_REPLACE);
+        //cache_set($cache_file, $result->headers);
+    	\Drupal::cache()->set($cache_file, $response->getHeaders());*/
+        $res =  $response->getBody();
+        $res = $res->getContents();
+
+        $res = json_decode($res);
+       // drupal_flush_all_caches();
+
+       
+        return $res;
+      }

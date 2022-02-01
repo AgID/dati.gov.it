@@ -1,0 +1,32 @@
+<?php
+/**
+ * @file
+ * Allows the admin to set a schedule for clearing caches and other stuff.
+ */
+
+define('CLEANER_SETTINGS', 'cleaner.settings');
+
+/**
+ * Implements hook_cron().
+ */
+function cleaner_cron() {
+  $config   = \Drupal::config(CLEANER_SETTINGS);
+  $interval = (int) $config->get('cleaner_cron');
+  $last     = (int) $config->get('cleaner_last_cron');
+  if (REQUEST_TIME >= ($last + $interval)) {
+    \Drupal::moduleHandler()->invokeAll('cleaner_run');
+  }
+  \Drupal::configFactory()
+    ->getEditable(CLEANER_SETTINGS)
+    ->set('cleaner_last_cron', REQUEST_TIME)
+    ->save();
+}
+
+/**
+ * Implements hook_cleaner_run().
+ *
+ * This hook run all actions, which has been configured via admin settings page.
+ */
+function cleaner_cleaner_run() {
+  \Drupal::service('cleaner')->run();
+}

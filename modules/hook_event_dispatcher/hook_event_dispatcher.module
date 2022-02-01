@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Hook event dispatcher module.
+ */
+
+/**
+ * Implements hook_help().
+ *
+ * {@inheritdoc}
+ */
+function hook_event_dispatcher_help(string $routeName) {
+  if ($routeName === 'help.page.hook_event_dispatcher') {
+    $path = drupal_get_path('module', 'hook_event_dispatcher');
+    $output = file_get_contents($path . '/README.md');
+    return '<pre>' . $output . '</pre>';
+  }
+  return '';
+}

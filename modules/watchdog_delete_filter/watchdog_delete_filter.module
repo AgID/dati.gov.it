@@ -1,0 +1,16 @@
+<?php
+
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Logger\RfcLogLevel;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function watchdog_delete_filter_help($route_name, RouteMatchInterface $route_match) {
+  if ($route_name == 'watchdog_delete_filter.report') {
+    return '<p>' . t('This module adds the options to delete watchdog messages by type or severity in the Delete tab of theh dblog core module.') . '</p>';
+  }
+}
+

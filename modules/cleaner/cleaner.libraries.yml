@@ -1,0 +1,4 @@
+cleaner-admin:
+  css:
+    theme:
+      css/cleaner.css: {}

@@ -1,0 +1,5 @@
+name: 'Views Delete Duplicate'
+type: module
+description: 'This module provide the function to delete druplicates from views based on content id.'
+core: 8.x
+package: 'Custom'

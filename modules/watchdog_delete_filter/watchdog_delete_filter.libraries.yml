@@ -1,0 +1,5 @@
+watchdog_delete_filter:
+  js:
+    js/watchdog_delete_filter.js: {}
+  dependencies:
+    - core/jquery

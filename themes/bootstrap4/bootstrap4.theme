@@ -1,0 +1,132 @@
+<?php
+
+/**
+ * @file
+ * Bootstrap4 theme file.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function bootstrap4_form_system_theme_settings_alter(&$form, FormStateInterface $form_state, $form_id = NULL) {
+  // Work-around for a core bug affecting admin themes. See issue #943212.
+  if (isset($form_id)) {
+    return;
+  }
+
+  $options_bootstrap = [
+    '0' => 'None',
+    '4.3.1' => '4.3.1',
+    '4.2.1' => '4.2.1',
+    '4.1.3' => '4.1.3',
+    '4.0.0' => '4.0.0',
+  ];
+
+  $options = [
+    'light' => 'light',
+    'dark' => 'dark',
+    'custom' => 'custom',
+  ];
+
+  $options_bg = [
+    'light' => 'light',
+    'dark' => 'dark',
+    'primary' => 'primary',
+    'secondary' => 'secondary',
+    'success' => 'success',
+    'custom' => 'custom',
+  ];
+
+  $options_top_container = [
+    'container' => 'fixed',
+    'container-fluid m-0 p-0' => 'fluid',
+  ];
+
+  $form['b4_cdn_version_css'] = [
+    '#type' => 'select',
+    '#title' => t('CDN CSS version:'),
+    '#default_value' => (theme_get_setting('b4_cdn_version_css') !== NULL) ? theme_get_setting('b4_cdn_version_css') : '4.3.1',
+    '#description' => t("Select CDN CSS version or switch it off."),
+    '#options' => $options_bootstrap,
+  ];
+
+  $form['b4_cdn_version_js'] = [
+    '#type' => 'select',
+    '#title' => t('CDN JS version:'),
+    '#default_value' => (theme_get_setting('b4_cdn_version_js') !== NULL) ? theme_get_setting('b4_cdn_version_js') : '4.3.1',
+    '#description' => t("Select CDN JavaScript version or switch it off."),
+    '#options' => $options_bootstrap,
+  ];
+
+  $form['b4_navbar_schema'] = [
+    '#type' => 'select',
+    '#title' => t('Navbar:'),
+    '#default_value' => theme_get_setting('b4_navbar_schema'),
+    '#description' => t("Color scheme of the navbar."),
+    '#options' => $options,
+  ];
+
+  $form['b4_navbar_bg_schema'] = [
+    '#type' => 'select',
+    '#title' => t('Navbar: background'),
+    '#default_value' => theme_get_setting('b4_navbar_bg_schema'),
+    '#description' => t("Background color scheme of the navbar."),
+    '#options' => $options_bg,
+  ];
+
+  $form['b4_top_container'] = [
+    '#type' => 'select',
+    '#title' => t('Website container type'),
+    '#default_value' => theme_get_setting('b4_top_container'),
+    '#description' => t("Type of top level container: fluid (eg edge to edge) or fixed width"),
+    '#options' => $options_top_container,
+  ];
+
+  $form['b4_scss'] = [
+    '#type' => 'textarea',
+    '#title' => t('SCSS'),
+    '#default_value' => theme_get_setting('b4_scss'),
+    '#description' => t("SCSS is no longer compiled to CSS. Functionality was moved <a href='https://www.drupal.org/project/bootstrap4_tools' target='_blank'>Bootstrap4 Tools</a> module."),
+  ];
+}
+
+/**
+ * Implements theme_preprocess_page().
+ */
+function bootstrap4_preprocess_page(&$variables) {
+  // Pass variables to theme.
+  $variables['b4_navbar_schema'] = theme_get_setting('b4_navbar_schema');
+  $variables['b4_navbar_bg_schema'] = theme_get_setting('b4_navbar_bg_schema');
+  $variables['b4_top_container'] = theme_get_setting('b4_top_container');
+}
+
+/**
+ * Implements theme_preprocess_textarea().
+ */
+function bootstrap4_preprocess_textarea(&$variables) {
+  $variables['attributes']['class'][] = 'form-control';
+}
+
+/**
+ * Implements theme_preprocess_datetime_form().
+ */
+function bootstrap4_preprocess_datetime_form(&$variables) {
+  $variables['attributes']['class'][] = 'form-inline';
+}
+
+/**
+ * Implements theme_preprocess_html().
+ */
+function bootstrap4_preprocess_html(&$variables) {
+  // Add bootstrap4 JS library CDN.
+  if ($version = theme_get_setting('b4_cdn_version_js')) {
+    $variables['#attached']['library'][] = 'bootstrap4/cdn-bootstrap4-js-' . str_replace('.', '-', $version);
+  }
+
+  // Add bootstrap4 CSS library CDN.
+  if ($version = theme_get_setting('b4_cdn_version_css')) {
+    $variables['#attached']['library'][] = 'bootstrap4/cdn-bootstrap4-css-' . str_replace('.', '-', $version);
+  }
+}

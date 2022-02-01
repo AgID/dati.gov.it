@@ -1,0 +1,9 @@
+name: Blocco filtri dati
+type: module
+description: 'Blocc per la visualizzazione dei filtri correnti del menu'
+package: Custom
+version: 8.x
+core: 8.x
+dependencies:
+  - node
+  - block

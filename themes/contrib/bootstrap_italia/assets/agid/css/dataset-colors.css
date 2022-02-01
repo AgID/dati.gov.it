@@ -1,0 +1,51 @@
+.node-dataset .dataset-format[data-format=HTML],.dataset-format[data-format=HTML],.dataset-format[data-format*=HTML] {
+  background-color: #55a1ce;
+}
+
+.node-dataset .dataset-format[data-format=JPEG],.dataset-format[data-format=JPEG] {
+  background-color: blue;
+}
+
+.node-dataset .dataset-format[data-format=JSON],.dataset-format[data-format*=JSON] {
+  background-color: #ef7100;
+}
+
+.node-dataset .dataset-format[data-format=XML],.dataset-format[data-format*=XML] {
+  background-color: #ef7100;
+}
+
+.node-dataset .dataset-format[data-format=TEXT],.dataset-format[data-format*=TEXT] {
+  background-color: #74cbec;
+}
+
+.node-dataset .dataset-format[data-format=CSV],.dataset-format[data-format*=CSV] {
+  background-color: #dfb100;
+}
+
+.node-dataset .dataset-format[data-format=XLS],.dataset-format[data-format*=XLS] {
+  background-color: #2db55d;
+}
+
+.node-dataset-d .dataset-format[data-format=ZIP],.dataset-format[data-format*=ZIP] {
+  background-color: #9e9e9e;
+}
+
+.node-dataset .dataset-format[data-format=API],.dataset-format[data-format*=API] {
+  background-color: #ec96be;
+}
+
+.node-dataset .dataset-format[data-format=PDF],.dataset-format[data-format*=PDF] {
+  background-color: #e0051e;
+}
+
+.node-dataset .dataset-format[data-format=rdf],.dataset-format[data-format*=rdf],.dataset-format[data-format*=nquad],.dataset-format[data-format*=ntriples],.dataset-format[data-format*=turtle] {
+  background-color: #0b4498;
+}
+
+.node-dataset-d .dataset-format[data-format=data],.dataset-format[data-format*=data] {
+  background-color: olive;
+}
+
+.node-dataset .dataset-format[data-format=txt],.dataset-format[data-format*=txt] {
+  background-color: #70c6e5;
+}
